@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
@@ -10,17 +11,17 @@ const Footer = () => {
   <h3>Midas Health Pvt Ltd<span></span></h3>
 
   <p className="footer-links">
-    <a href="#" className="link-1">Home</a>
+    <Link href="/" clLinkssName="link-1">Home</Link>
 
-    <a href="#">Seller</a>
+    <Link href="/career">Career</Link>
 
-    <a href="#">Pricing</a>
+    <Link href="/healthcare">Healthcare</Link>
 
-    <a href="#">About</a>
+    <Link href="/technology">Technology</Link>
 
-    <a href="#">pages</a>
+    <Link href="/news">News</Link>
 
-    <a href="#">Contact</a>
+    <Link href="/contact">Contact</Link>
   </p>
 
   <p className="footer-company-name">Midas Health Pvt Ltd © 2015</p>
@@ -49,7 +50,7 @@ const Footer = () => {
 
   <p style={{color: "white"}} className="footer-company-about">
     <span>About the company</span>
-    E-commerce (electronic commerce) is the buying and selling of goods and services, or the transmitting of funds or data, over an electronic network, primarily the internet.
+    COnsulting  is the buying and selling of goods and services, or the transmitting of funds or data, over an electronic network, primarily the internet.
   </p>
 
   <div className="footer-icons">
