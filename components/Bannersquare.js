@@ -17,15 +17,15 @@ const Bannersquare = () => {
               Solutions
             </h1>
             <h4 style={{marginBottom:"80px"}}>
-            See how our focused industry expertise and decades of experience power higher quality hires and transformative workforce solutions.
+            Have a look at how our specialised industry knowledge and years of experience enable higher-quality recruits and revolutionary workforce solutions.
             </h4>
             </div>
     </div>
 
-    <Smallsquare color="#004582" href={"#"} title="Midas Technology"/>
-    <Smallsquare color="#002454" href={"#"} title="Midas Healthcare"/>
-    <Smallsquare color="#002454" href={"#"} title="Midas Life Science"/>
-    <Smallsquare color="#004582" href={"#"} title="Midas Enginerring"/>
+    <Smallsquare color="#004582" href={"/technology"} title="Midas Technology"/>
+    <Smallsquare color="#002454" href={"/healthcare"} title="Midas Healthcare"/>
+    {/* <Smallsquare color="#002454" href={"#"} title="Midas Life Science"/>
+    <Smallsquare color="#004582" href={"#"} title="Midas Enginerring"/> */}
     </div>
     </div>
     </>

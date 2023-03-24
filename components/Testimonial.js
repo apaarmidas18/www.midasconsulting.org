@@ -18,21 +18,21 @@ export default function Testimonial() {
       <div className='test-card' >
       
     
-        <p>Medix has provided excellent candidates for our team. Chad and CJ consistently inquire on each candidate who is interviewed to ensure they tailor the candidates for our team. We enjoy working with them and appreciate their professionalism and stellar character.</p>
+        <p>Midas has provided excellent candidates for our team. Chad and CJ consistently inquire on each candidate who is interviewed to ensure they tailor the candidates for our team. We enjoy working with them and appreciate their professionalism and stellar character.</p>
         <h3>Jay</h3>
         <h4>Healthcare Leader</h4>
       </div>
       <div className='test-card'>
 
         
-        <p>Medix has provided excellent candidates for our team. Chad and CJ consistently inquire on each candidate who is interviewed to ensure they tailor the candidates for our team. We enjoy working with them and appreciate their professionalism and stellar character.</p>
+        <p>Midas has provided excellent candidates for our team. Chad and CJ consistently inquire on each candidate who is interviewed to ensure they tailor the candidates for our team. We enjoy working with them and appreciate their professionalism and stellar character.</p>
         <h3>Michael</h3>
         <h4>Operations</h4>
       </div>
       <div className='test-card'>
 
         
-        <p>Medix has provided excellent candidates for our team. Chad and CJ consistently inquire on each candidate who is interviewed to ensure they tailor the candidates for our team. We enjoy working with them and appreciate their professionalism and stellar character.</p>
+        <p>Midas has provided excellent candidates for our team. Chad and CJ consistently inquire on each candidate who is interviewed to ensure they tailor the candidates for our team. We enjoy working with them and appreciate their professionalism and stellar character.</p>
         <h3>John</h3>
         <h4>Healthcare Leader</h4>
       </div>

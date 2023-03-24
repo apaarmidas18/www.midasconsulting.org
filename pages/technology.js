@@ -17,7 +17,7 @@ const technology = () => {
       <Navbar />
       <div className="container-fluid firstbanner">
         <div className="row">
-          <div className="col-md-8 color-row">
+          <div className="col-md-6 color-row">
             <div className="banner-data">
               <Heading heading="All Tech Transformation" />
               <Heading heading="Starts with Talent." />
@@ -27,7 +27,7 @@ const technology = () => {
             </div>
           </div>
           <div
-            className="col-md-4 firstimage"
+            className="col-md-6 firstimage"
             style={{
               backgroundImage: `url("/images/redhair.jpg")`,
             }}

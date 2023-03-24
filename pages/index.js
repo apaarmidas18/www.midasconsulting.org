@@ -1,10 +1,12 @@
-import Banner from "../components/Banner";
+// import Banner from "../components/Banner";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Bannersquare from "../components/Bannersquare";
 import Testimonial from "../components/Testimonial";
 import Foursquare from "../components/Foursquare";
 import Footer from "../components/Footer";
+import Heading from "../components/Heading";
+import Paragraph from "../components/Paragraph";
 
 export default function Home() {
   return (
@@ -16,13 +18,48 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Banner />
+      {/* <Banner /> */}
+      <div className="container-fluid firstbanner">
+        <div className="row">
+          <div className="col-md-6 color-row">
+            <div className="banner-data">
+              <Heading heading="Building a Stronger Healthcare Workforce, Together" />
+              <Heading heading="" />
+
+              <Paragraph para=" Midas is dedicated to providing reliable staffing solutions for healthcare facilities of all sizes, from hospitals and clinics to long-term care facilities and home healthcare agencies." />
+              <Paragraph para=" Contact us today to learn more about our healthcare staffing services and how we can help you build a stronger workforce." />
+        
+            </div>
+          </div>
+          <div
+            className="col-md-6 firstimage"
+            style={{
+              backgroundImage: `url("/images/youngwoman.jpg")`,
+            }}
+          ></div>
+
+          <div className="col-md-12 covidlines">
+            <div className="col-md-7 guidelines">
+              <h5>
+                Midas COVID-19 staffing support programs are helping hospitals,
+                medical practices, labs and businesses rapidly bolster their
+                resources and capabilities.
+              </h5>
+              <ul>
+                <li>See Occupational Health/Testing Site & Lab Services</li>
+                <li>See Contact Tracing Services</li>
+                <li>See COVID-19 Vaccinator Services</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="container center-info">
         <div className="container info-text">
-        <h2>It’s a Data-Driven Fact:</h2>
-        <h5>Midas is a staffing agency that delivers better candidates and better career opportunities. Ready to get started?</h5>
+        <h2>Data has proven it to be true.</h2>
+        <h5>A stronger candidate pool and greater employment options are provided by Midas, a staffing firm. You're all set to begin.</h5>
         </div>
-        <a className="info-link" href="https://www.midashealthcare.com/" >More About Medix ›</a>
+        <a className="info-link" href="https://www.midashealthcare.com/" >More About Midas ›</a>
       </div>
       <Bannersquare />
       <Testimonial />

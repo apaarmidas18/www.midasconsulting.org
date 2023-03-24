@@ -18,19 +18,19 @@ const healthcare = () => {
       <Navbar />
       <div className="container-fluid firstbanner">
         <div className="row">
-          <div className="col-md-8 color-row">
+          <div className="col-md-6 color-row">
             <div className="banner-data">
               <Heading heading="Midas Healthcare" />
               <Heading heading="Recruitment and Staffing" />
 
-              <Paragraph para="The importance of hiring the right healthcare specialists with speed and precision has never been more clear. Luckily, there has never been a healthcare staffing agency more dedicated to delivering high-quality, high-performing talent than Midas Healthcare." />
+              <Paragraph para="There has never been a clearer need for prompt, accurate hiring of the appropriate healthcare specialists. Fortunately, there has never been a healthcare staffing firm more committed to providing top-notch, high-performing people than Midas Healthcare." />
               <Buttonwhite buttonTitle="Contact Us" />
             </div>
           </div>
           <div
-            className="col-md-4 firstimage"
+            className="col-md-6 firstimage"
             style={{
-              backgroundImage: `url("/images/woman.jpg")`,
+              backgroundImage: `url("/images/male.jpg")`,
             }}
           ></div>
 
@@ -55,10 +55,10 @@ const healthcare = () => {
         <div className="row">
           <Lightheading light="Midas Healthcare’s Areas of Expertise" />
           <div className="col-md-3 span-tag">
-            <Category spantitle="CARE MANAGEMENT" />
+            <Category spantitle="INDUSTRY KNOWLEDGE" />
           </div>
           <div className="col-md-3 span-tag">
-            <Category spantitle="ALLIED/CLINICAL" />
+            <Category spantitle="TALENT ACQUISITION" />
           </div>
           <div className="col-md-3 span-tag">
             <Category spantitle="REVENUE CYCLE" />
@@ -71,8 +71,8 @@ const healthcare = () => {
       <div className="container plan-container">
         <div className="row">
           <div className="col-md-6 category-info">
-            <Blackheading head="Care Management" />
-            <Paragraph para="Excellence in health and clinical outcomes is achieved with care management specialists who deliver on quality, patient satisfaction and efficiency. Midas Healthcare helps the following businesses hire people who put patient care front and center:" />
+            <Blackheading head="Industry knowledge" />
+            <Paragraph para="Healthcare staffing professionals must have a deep understanding of the healthcare industry, including the latest trends and challenges that are affecting the industry." />
             <ul>
               <li>Health Plans</li>
               <li>Insurance Companies</li>
@@ -104,8 +104,8 @@ const healthcare = () => {
             <Picture image="/images/close.jpg" alt="Portrait Doctor" />
           </div>
           <div className="col-md-6 category-info">
-            <Blackheading head="Allied / Clinical" />
-            <Paragraph para="The Medix Allied/Clinical Health recruiting team delivers the skilled specialists and technicians patients depend on for expert care. Our talent services are designed to support the staffing needs of the following healthcare businesses:" />
+            <Blackheading head="Talent acquisition:" />
+            <Paragraph para="Healthcare staffing professionals must have a strong understanding of recruitment and talent acquisition strategies, including how to source and attract top-quality healthcare talent." />
             <ul>
               <li>Medical Groups</li>
               <li>Laboratories</li>
@@ -113,7 +113,7 @@ const healthcare = () => {
               <li>Pharmacies</li>
               <li>Diagnostic/Imaging Centers</li>
             </ul>
-            <Collapse coll="See the Allied/Clinical Jobs We Fill">
+            <Collapse coll="See the Talent acquisition We Fill">
               <ul>
                 <li>Medical Assistants</li>
                 <li>Medical Front Office</li>
@@ -206,8 +206,8 @@ const healthcare = () => {
 <div className="container plan-container" style={{marginBottom:"60px"}}>
     <div className="row">
 <div className="col-md-6">
-<Blackheading head="Embrace the Aha! Talent Advantage"/>
-<Paragraph para="Medix’s Aha! is our digital hiring and talent management platform that allows you to rapidly access pre-vetted tech talent on demand."/>
+<Blackheading head="Embrace the Midas! Talent Advantage"/>
+<Paragraph para="Midas Consulting is our digital hiring and talent management platform that allows you to rapidly access pre-vetted tech talent on demand."/>
 <ul>
     <li>Automated job order management</li>
     <li>Advanced soft skill assessments</li>

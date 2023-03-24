@@ -15,19 +15,19 @@ const Foursquare = () => {
               <Link className="white-link" href="#" >Learn More ›</Link>
             </div>
           </div>
-          <div className='col-md-6' style={{
+          <div className='col-md-6' style={{backgroundSize:"cover",
           backgroundImage: `url("/images/partner.jpg")`,
         }}>
     </div>
-    <div className='col-md-6' style={{
+    <div className='col-md-6' style={{backgroundSize:"cover",
           backgroundImage: `url("/images/group.jpg")`,
         }}>
     </div>
-    <div className="col-md-6 text-background" style={{background:"#008251"}}>
+    <div className="col-md-6 text-background" style={{background:"rgb(0, 69, 130)"}}>
             <div className="square-information four-heading">
               <h1>Join the <br/>Midas Team</h1>
               <h4>
-              We put people ahead of everything. Why? Because when you make the right choices for your people, purpose is clear and performance and success follow.
+              We understand that finding the right talent is critical to the success of any healthcare organization, and we are committed to ensuring that our clients have access to the best talent available.
               </h4>
               <h4 style={{ marginBottom: "10px" }} >
               Join us in positively impacting the world through jobs, opportunities and giving back.

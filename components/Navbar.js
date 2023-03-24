@@ -1,72 +1,70 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from 'react';
 
 
 const Navbar = () => {
-//   const [navbar, setNavbar] = useState("navbar");
-// const changeBackground = () => {
-//   if (window.scrollY >= 10) {
-//     setNavbar("sticky");
-//   } else {
-//     setNavbar("navbar");
-//   }
-// };
-// useEffect(() => {
-//   window.addEventListener("scroll", changeBackground);
-// }, []);
-
+  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
+  const [isActive, setActive] = useState(false);
+  const [navbar, setNavbar] = useState("navbar");
+const changeBackground = () => {
+  if (window.scrollY >= 0.5) {
+    setNavbar("sticky");
+  } else {
+    setNavbar("navbar");
+  }
+};
+useEffect(() => {
+  window.addEventListener("scroll", changeBackground);
+}, []);
+function handleClick() {
+  setMobileNavOpen(!isMobileNavOpen);
+  setActive(!isActive);
+}
   return (
     <>
-      <nav className={"navbar"}>
-        <div className="navbar-container container">
-          <input type="checkbox" />
-          <div className="hamburger-lines">
-            <span className="line line1"></span>
-            <span className="line line2"></span>
-            <span className="line line3"></span>
-          </div>
-          <ul className="menu-items">
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-            <div class="dropdown">
+     <div class="nav-wrapper">
+  <div class="grad-bar"></div>
+  <nav class={navbar}>
+    <img src="/images/logo.webp" alt="Company Logo" />
+    <div class={`menu-toggle ${isActive ? 'is-active' : ''}`} id="mobile-menu" onClick={handleClick}>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class={`nav ${isMobileNavOpen ? 'mobile-nav' : ''}`}>
+      <li class="nav-item" style={{textAlign:"center", marginLeft:"14px"}}><Link href="/">Home</Link></li>
+      <li class="nav-item"><div class="dropdown">
     <button class="dropbtn">Solutions
-      <i class="fa fa-caret-down" style={{marginLeft:"7px"}}></i>
+    <i class="fa-solid fa-chevron-down" style={{marginLeft:"7px", fontSize:"13px"}}></i>
     </button>
     <div class="dropdown-content">
       <div className="area-content">
-      <div className="area-one">
       <Link href="/career">Career</Link>
       <Link href="/healthcare">Midas Healthcare</Link>
-      <Link href="/technology">Midas Technology</Link>
-      </div>
+      {/* <Link href="/technology">Midas Technology</Link> */}
+    
       </div>
     </div>
-  </div>
-            </li>
-            <li>
-            <div class="dropdown">
+  </div></li>
+      <li class="nav-item"><div class="dropdown">
     <button class="dropbtn">Company
-      <i class="fa fa-caret-down" style={{marginLeft:"7px"}}></i>
+      <i class="fa-solid fa-chevron-down" style={{marginLeft:"7px", fontSize:"13px"}}></i>
     </button>
     <div class="dropdown-content">
       <div className="area-content">
-      <div className="area-one">
-      <Link href="/diversity">Midas Healthcare</Link>
-      <Link href="/technology">News & Events</Link>
-      </div>
+
+      <Link href="/diversity">Diversity</Link>
+      <Link href="/news">News & Events</Link>
+ 
       </div>
     </div>
+  </div></li>
+      {/* <li class="nav-item" style={{textAlign:"center"}}><a href="#">Why Us</a></li> */}
+      <li class="nav-item contact-btn" style={{textAlign:"center"}}><Link href="/contact">Contact Us</Link></li>
+    </ul>
+  </nav>
   </div>
-            </li>
-            <li>
-              <Link href="/contact">Contact Us</Link>
-            </li>
-          </ul>
-          <img src={"/images/logo.webp"} className="logo" />
-        </div>
-      </nav>
     </>
   );
 };

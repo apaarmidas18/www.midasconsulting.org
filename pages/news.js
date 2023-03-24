@@ -15,13 +15,13 @@ const news = () => {
       <Headingbanner title="News & Events" />
 
       <div className="container-fluid">
-        <div className="row">
+        <div className="row" style={{marginTop:"40px"}}>
           <div className="col-md-4">
             <Infocard
               cardimage="/images/animate.jpg"
               cardalt="illustration"
               cardlink={"#"}
-              cardname="Medix Expands East Coast Footprint with New Atlanta and Philadelphia Offices"
+              cardname="Midas Expands East Coast Footprint with New Atlanta and Philadelphia Offices"
             />
           </div>
           <div className="col-md-4">
@@ -29,7 +29,7 @@ const news = () => {
               cardimage="/images/animate.jpg"
               cardalt="illustration"
               cardlink={"#"}
-              cardname="Medix Technology Rated Among Top Vendors in the 2023 Best in KLAS Report"
+              cardname="Midas Technology Rated Among Top Vendors in the 2023 Best in KLAS Report"
             />
           </div>
           <div className="col-md-4">
@@ -37,7 +37,7 @@ const news = () => {
               cardimage="/images/animate.jpg"
               cardalt="illustration"
               cardlink={"#"}
-              cardname="Medix Wins ClearlyRated’s 2023 Best of Staffing Client Five Year Diamond, Talent and Employee Awards for Service Excellence"
+              cardname="Midas Wins ClearlyRated’s 2023 Best of Staffing Client"
             />
           </div>
         </div>
@@ -54,32 +54,32 @@ const news = () => {
           </div>
           <div className="col-md-6 news-row">
             <Newslist
-              news="Medix Workforce Trends Report Shows the Need for Workforce Agility Remains Acute in Healthcare, Technology, and Life Sciences"
+              news="Midas Workforce Trends Report Shows the Need for Workforce Agility Remains Acute in Healthcare, Technology, and Life Sciences"
               date="Oct 27, 2022"
             />
           </div>
           <div className="col-md-6 news-row">
             <Newslist
-              news="Medix Awarded The Joint Commission’s Gold Seal of Approval Certification"
+              news="Midas Awarded The Joint Commission’s Gold Seal of Approval Certification"
               date="Nov 9, 2022"
             />
           </div>
           <div className="col-md-6 news-row">
             <Newslist
-              news="Medix Named to Staffing Industry Analysts’ 2022 List of Fastest-Growing Staffing Firms"
+              news="Midas Named to Staffing Industry Analysts’ 2022 List of Fastest-Growing Staffing Firms"
               date="Sep 23, 2022"
             />
           </div>
           <div className="col-md-6 news-row">
             <Newslist
-              news="Chicago Tribune Names Medix a Winner of the Chicagoland Top Workplaces 2022 Award"
+              news="Chicago Tribune Names Midas a Winner of the Chicagoland Top Workplaces 2022 Award"
               date="Nov 7, 2022"
             />
           </div>
 
           <div className="col-md-6 news-row">
             <Newslist
-              news="Medix Announces Recipients of the 2022 Talentomorrow Talent Scholarship"
+              news="Midas Announces Recipients of the 2022 Talentomorrow Talent Scholarship"
               date="Sep 15, 2022"
             />
           </div>

@@ -7,6 +7,7 @@ import Paragraph from "../components/Paragraph";
 import Navlink from "../components/Navlink";
 import Infocard from "../components/Infocard";
 import Lightheading from "../components/Lightheading";
+import Footer from "../components/Footer";
 
 const career = () => {
   return (
@@ -14,13 +15,13 @@ const career = () => {
       <Navbar />
       <Headingbanner title="Career Advice" />
       <div className="container">
-        <div className="row">
+        <div className="row" style={{marginTop:"50px"}}>
           <div className="col-md-6">
             <Picture image="/images/young.jpg" alt="young doctor" />
           </div>
           <div className="col-md-6">
-            <Heading heading="Is a Medical Assistant Job the Right Fit for Your Career?" />
-            <Paragraph para="As with any good job search, it all begins by asking the right questions. Here are some answers to common questions you might ask yourself when considering a medical assistant job. " />
+            <Heading heading="Are you a good fit for a career as a medical assistant?" />
+            <Paragraph para="With the ever-increasing demand for healthcare services, medical assisting is a rapidly growing field that offers exciting opportunities for those seeking to enter the healthcare industry. " />
             <Navlink
               move={"#"}
               linktitle="Click here for expert advice from healthcare professionals"
@@ -36,7 +37,7 @@ const career = () => {
     cardimage="/images/animate.jpg"
     cardalt="illustration"
     cardlink={"#"}
-    cardname="Positively Impacting Lives with You"
+    cardname="Expert Advice for Healthcare Employers and Professionals"
     />
 </div>
 <div className="col-md-4">
@@ -44,7 +45,7 @@ const career = () => {
     cardimage="/images/smile.jpg"
     cardalt="smile girl"
     cardlink={"#"}
-    cardname="5 Reasons to Pursue Contract Work"
+    cardname="Innovations in Healthcare Staffing and Recruitment"
     />
 </div>
 <div className="col-md-4">
@@ -52,18 +53,18 @@ const career = () => {
     cardimage="/images/serious.jpg"
     cardalt="serious person"
     cardlink={"#"}
-    cardname="How to Find a Job in a Recession"
+    cardname="Career Development and Growth in the Healthcare Industry"
     />
 </div>
 
         </div>
       </div>
       <div className="container lightcontainer">
-      <Lightheading light="Looking for a job worth chasing? We’ve got plenty.
-Great opportunities at great employers."/>
+      <Lightheading light="Want a job worth chasing? We've got tons. Fantastic opportunities with great companies."/>
 <Navlink move={"#"}
 linktitle="Search Jobs"/>
 </div>
+<Footer />
     </>
   );
 };
