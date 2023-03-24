@@ -21,9 +21,8 @@ const Bannersquare = () => {
             </h4>
             </div>
     </div>
-
-    <Smallsquare color="#004582" href={"/technology"} title="Midas Technology"/>
-    <Smallsquare color="#002454" href={"/healthcare"} title="Midas Healthcare"/>
+    <Smallsquare color="#004582" href={"/healthcare"} title="Midas Healthcare"/>
+    <Smallsquare color="#002454" href={"/technology"} title="Midas Life Sciences"/>
     {/* <Smallsquare color="#002454" href={"#"} title="Midas Life Science"/>
     <Smallsquare color="#004582" href={"#"} title="Midas Enginerring"/> */}
     </div>

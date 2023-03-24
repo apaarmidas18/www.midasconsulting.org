@@ -19,10 +19,10 @@ const technology = () => {
         <div className="row">
           <div className="col-md-6 color-row">
             <div className="banner-data">
-              <Heading heading="All Tech Transformation" />
+              <Heading heading="All Science Transformation" />
               <Heading heading="Starts with Talent." />
 
-              <Paragraph para="Midas Technology delivers solutions and specialists who power technology innovation, transformation and digitization. From Epic/EHR integrators to software engineers, network technicians and IT support, we build and deploy the teams and top performers who drive business forward." />
+              <Paragraph para="With the help of our devoted, knowledgeable life sciences workforce solutions and recruiting teams, Midas Life Sciences makes sure your teams stay up with the rate of innovation and discovery." />
               <Buttonwhite buttonTitle="Contact Us" />
             </div>
           </div>
@@ -53,19 +53,16 @@ const technology = () => {
       <div className="container-fluid lightcontainer">
         <div className="row" style={{justifyContent:"center"}}>
           <Lightheading light="What We Do" />
-          <div className="col-md-2 span-tag">
-            <Category spantitle="EPIC/EHR CONSULTING" />
+          <div className="col-md-3 span-tag">
+            <Category spantitle="SCIENTIFIC CONSULTING" />
           </div>
-          <div className="col-md-2 span-tag">
-            <Category spantitle="EPIC/EHR STAFFING" />
+          <div className="col-md-3 span-tag">
+            <Category spantitle="CLINICAL RESEARCH STAFFING" />
           </div>
-          <div className="col-md-2 span-tag">
+          <div className="col-md-3 span-tag">
             <Category spantitle="IT RECRUITMENT" />
           </div>
-          <div className="col-md-2 span-tag">
-            <Category spantitle="CONSULTING & SOW" />
-          </div>
-          <div className="col-md-2 span-tag">
+          <div className="col-md-3 span-tag">
             <Category spantitle="DIGITAL TRANSFORMATION" />
           </div>
         </div>
@@ -73,14 +70,16 @@ const technology = () => {
       <div className="container plan-container">
         <div className="row">
           <div className="col-md-6 category-info">
-            <Blackheading head="Epic/EHR Consulting" />
-            <Paragraph para="Achieve maximum EHR/Epic system performance and results with our expert technology consulting, advisory, implementation, optimization and on-demand support." />
+            <Blackheading head="Scientific Consulting" />
+            <Paragraph para="Teams working in science need highly specialised skill sets that are more in demand than ever. Regulations across a wide range of scientific contexts demand an experienced staff, and the talent skills gap is a genuine issue." />
+            <Paragraph para="Midas Life Sciences staffing solutions serve teams in the following areas:"/>
             <ul>
-              <li>Strategically align EHR/Epic transformations with business needs and goals</li>
-              <li>Increase physician and patient satisfaction, engagement and efficiency</li>
-              <li>Outsource EHR/Epic support and maintenance</li>
+              <li>Pharma/Biotech </li>
+              <li>Medical Device </li>
+              <li>Consumer Products</li>
+              <li>Executive Search</li>
             </ul>
-            <h2 className="collapse-replace">Ready to make the most of your EHR/Epic solution?</h2>
+            <h2 className="collapse-replace">Ready to make the most of your Scientific solution?</h2>
             <Navlink
               move={"#"}
               linktitle="Learn More"
@@ -98,13 +97,9 @@ const technology = () => {
             <Picture image="/images/close.jpg" alt="Portrait Doctor" />
           </div>
           <div className="col-md-6 category-info">
-            <Blackheading head="Epic/EHR Staffing" />
-            <Paragraph para="Tap into Midas Technology’s ecosystem of EHR/Epic implementation, upgrade, go-live and maintenance specialists. Our niche expertise goes deeper than your standard technology staffing agency, so we can deliver the talent and teams you need for success." />
-            <ul>
-              <li>Staff your EHR/Epic projects with experienced, skilled specialists</li>
-              <li>Rapidly build a large-scale team of certified EHR/Epic Staffing​ with MidasDirect®</li>
-              <li>Increase your EHR/Epic expertise and performance by adding the right talent</li>
-            </ul>
+            <Blackheading head="Clinical Research Staffing" />
+            <Paragraph para="Your goal is to advance transformative clinical research in order to favourably improve people's lives. Our goal is to have a favourable effect on you. Midas Clinical Research Staffing and Consulting Services guarantee you have the people, resources, and direction required to develop and increase your effect on science with the help of our devoted, knowledgeable teams." />
+           
             <h2 className="collapse-replace">Ready to make the most of your EHR/Epic talent?</h2>
             <Navlink
               move={"#"}
@@ -172,8 +167,8 @@ const technology = () => {
       >
         <div className="row">
           <div className="col-md-6">
-            <Blackheading head="Embrace the Aha! Talent Advantage" />
-            <Paragraph para="Midas’s Aha! is our digital hiring and talent management platform that allows you to rapidly access pre-vetted tech talent on demand." />
+          <Blackheading head="Embrace the Midas! Talent Advantage"/>
+<Paragraph para="Midas Consulting is our digital hiring and talent management platform that allows you to rapidly access pre-vetted tech talent on demand."/>
             <ul>
               <li>Automated job order management</li>
               <li>Advanced soft skill assessments</li>

@@ -8,7 +8,7 @@ const Foursquare = () => {
         <div className="row">
           <div className="col-md-6 text-background">
             <div className="square-information four-heading">
-              <h1>talentoday</h1>
+              <h1>Talentoday</h1>
               <h4 style={{ marginBottom: "10px" }}>
                 Midas staffing solutions are powered by the advanced people analytics of Talentoday.
               </h4>

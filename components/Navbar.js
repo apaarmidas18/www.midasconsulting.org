@@ -26,7 +26,8 @@ function handleClick() {
      <div class="nav-wrapper">
   <div class="grad-bar"></div>
   <nav class={navbar}>
-    <img src="/images/logo.webp" alt="Company Logo" />
+    <Link href="/">
+    <img src="/images/logo.webp" alt="Company Logo" /></Link>
     <div class={`menu-toggle ${isActive ? 'is-active' : ''}`} id="mobile-menu" onClick={handleClick}>
       <span class="bar"></span>
       <span class="bar"></span>
@@ -42,6 +43,7 @@ function handleClick() {
       <div className="area-content">
       <Link href="/career">Career</Link>
       <Link href="/healthcare">Midas Healthcare</Link>
+      <Link href="/technology">Midas Life Sciences</Link>
       {/* <Link href="/technology">Midas Technology</Link> */}
     
       </div>
