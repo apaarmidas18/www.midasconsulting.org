@@ -220,9 +220,7 @@ const healthcare = () => {
 </div>
     </div>
 </div>
-<div className="container-fluid largecontainer"  style={{
-          backgroundImage: `url("/images/green.svg")`,
-        }}>
+<div className="container-fluid largecontainer" style={{background:"linear-gradient(to top left, #891D3D, #C12716)"}}>
 <h2 className="largeheading">You care for the world, we’ll take care of your talent.</h2>
 <Buttonwhite buttonTitle="Contact Us"/>
 </div>

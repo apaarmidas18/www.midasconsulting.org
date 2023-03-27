@@ -182,9 +182,10 @@ const technology = () => {
       </div>
       <div
         className="container-fluid largecontainer"
-        style={{
-          backgroundImage: `url("/images/green.svg")`,
-        }}
+        // style={{
+        //   backgroundImage: `url("/images/green.svg")`,
+        // }}
+        style={{background:"linear-gradient(to top left, #891D3D, #C12716)"}}
       >
         <h2 className="largeheading">
         Power your digital transformations with the strategy and talent of Midas Technology.
