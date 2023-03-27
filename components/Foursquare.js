@@ -6,13 +6,13 @@ const Foursquare = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-6 text-background">
+          <div className="col-md-6 text-background" style={{background:"#ebeae8", color:"#cb1829"}}>
             <div className="square-information four-heading">
               <h1>Talentoday</h1>
               <h4 style={{ marginBottom: "10px" }}>
                 Midas staffing solutions are powered by the advanced people analytics of Talentoday.
               </h4>
-              <Link className="white-link" href="#" >Learn More ›</Link>
+              <Link className="white-link" style={{color:"#cb1829"}}href="#" >Learn More ›</Link>
             </div>
           </div>
           <div className='col-md-6' style={{backgroundSize:"cover",
@@ -23,7 +23,7 @@ const Foursquare = () => {
           backgroundImage: `url("/images/group.jpg")`,
         }}>
     </div>
-    <div className="col-md-6 text-background" style={{background:"rgb(0, 69, 130)"}}>
+    <div className="col-md-6 text-background">
             <div className="square-information four-heading">
               <h1>Join the <br/>Midas Team</h1>
               <h4>
