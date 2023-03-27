@@ -113,10 +113,10 @@ const technology = () => {
         <div className="row">
           <div className="col-md-6 category-info">
             <Blackheading head="IT Recruitment" />
-            <Paragraph para="As a top technology staffing agency, Midas Technology will utilize it’s experienced recruitment experts to find the right talent for your contract, SOW, contract-to-hire, and direct openings." />
+            <Paragraph para="Midas Technology, a leading technology staffing firm, will use its skilled recruitment professionals to find the best candidates for your contract, SOW, contract-to-hire, and direct openings." />
             <ul>
-              <li>Staff hard-to-fill roles with top development, Cloud, BI/analytics, application/software and EMR/EHR talent</li>
-              <li>Embrace digital transformation with specialist skilled to lead and support the efforts across technology disciplines</li>
+              <li>Hire the best development, Cloud, BI/analytics, application/software, and EMR/EHR talent for difficult-to-fill positions.</li>
+              <li>Adopt digital transformation with the help of experts qualified to guide and aid efforts across technology disciplines.</li>
               <li>Close critical skill gaps to keep pace with industry innovation and IT advancement</li>
             </ul>
             <h2 className="collapse-replace">Ready to learn more about the top tech talent we can provide your team?</h2>
@@ -139,12 +139,11 @@ const technology = () => {
           <div className="col-md-6 category-info">
             <Blackheading head="Digital Transformation " />
             <Paragraph para="Midas Technology powers business transformation by providing tech talent to plan, lead, implement and optimize digital solutions." />
-            <Paragraph para="With unmatched recruitment resources and expertise in applications development, cloud and business analytics, Midas Technology builds robust, skillful digital transformation teams." />
+            <Paragraph para="Midas Technology creates strong, competent teams for digital transformation using unrivalled recruitment resources and expertise in cloud, business analytics, and applications development." />
 
             <ul>
               <li>Filling contract, SOW, contract-to-hire and direct hire digital roles</li>
               <li>Dedicated team of digital recruiters with an average of 9 years of experience</li>
-              <li>Advanced soft skills assessment through Talentoday people analytics</li>
             </ul>
             <Navlink
               move={"#"}
@@ -174,7 +173,7 @@ const technology = () => {
               <li>Advanced soft skill assessments</li>
               <li>Real-time recruitment analytics</li>
             </ul>
-            <Navlink move={"#"} linktitle="Explore Aha!" />
+            <Navlink move={"#"} linktitle="Explore!" />
           </div>
           <div className="col-md-6">
             <Picture image="/images/laptop.jpg" alt="Laptop" />

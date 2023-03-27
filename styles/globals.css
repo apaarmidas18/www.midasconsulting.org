@@ -349,6 +349,7 @@ p, li {
     position: fixed!important;
     justify-content: start;
     top: 55px;
+    gap: 30px;
     background-color: #fff;
     width: 100%;
     height: calc(100vh - 55px);
@@ -377,6 +378,7 @@ p, li {
     flex-direction: column;
     position: fixed!important;
     justify-content: start;
+    gap: 30px;
     top: 64px;
     background-color: #fff;
     width: 100%;
@@ -499,17 +501,17 @@ color: #000;
 
 
 .smallsquare {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 30px;
   padding: 50px 10px;
   text-align: center;
 }
 .smallsquare a {
-  color: #fff;
+  color: #cb1829;
   text-decoration: none;
 }
 .smallsquare a:hover{
-color: #fff;
+color: #f30920;
 }
 
 
@@ -550,7 +552,7 @@ color: #fff;
   margin-top: 10px;
 }
 .white-link:hover {
-  color: #fff !important;
+  color: currentColor !important;
 }
 
 .four-heading {
@@ -876,8 +878,10 @@ background: linear-gradient(to top left, #891D3D, #C12716);
 }
 
 .covidlines {
-  background: #002454;
-  color: white;
+  /* background: #002454; */
+  background: #e5ded8;
+  /* color: white; */
+  color: #cb1829;
 }
 .guidelines {
   padding: 10px 25px;
@@ -932,6 +936,9 @@ background: linear-gradient(to top left, #891D3D, #C12716);
   font-weight: 500;
   text-decoration: none;
 }
+.cardlink:hover{
+  color: white;
+}
 
 
 @media only screen and (max-width: 720px) {
@@ -943,6 +950,13 @@ background: linear-gradient(to top left, #891D3D, #C12716);
     text-align: center;}
     
 
+    .dropdown-content {
+      left: 101px;
+      top: -9px;
+    }  
+    .lightheading {
+      padding: 10px 24px;
+  }
 
 
 

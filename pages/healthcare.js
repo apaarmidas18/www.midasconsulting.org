@@ -213,7 +213,7 @@ const healthcare = () => {
     <li>Advanced soft skill assessments</li>
     <li>Real-time recruitment analytics</li>
 </ul>
-<Navlink move={"#"} linktitle="Explore Aha!"/>
+<Navlink move={"#"} linktitle="Explore!"/>
 </div>
 <div className="col-md-6">
 <Picture image="/images/laptop.jpg" alt="Laptop"/>
