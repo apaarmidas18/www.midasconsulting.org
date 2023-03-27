@@ -7,6 +7,7 @@ import Foursquare from "../components/Foursquare";
 import Footer from "../components/Footer";
 import Heading from "../components/Heading";
 import Paragraph from "../components/Paragraph";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -38,7 +39,8 @@ export default function Home() {
             }}
           ></div>
 
-          <div className="col-md-12 covidlines">
+          <div className="container-fluid covidlines">
+            <div className="row">
             <div className="col-md-7 guidelines">
               <h5>
                 Midas COVID-19 staffing support programs are helping hospitals,
@@ -50,6 +52,13 @@ export default function Home() {
                 <li>See Contact Tracing Services</li>
                 <li>See COVID-19 Vaccinator Services</li>
               </ul>
+            </div>
+            <div className="col-md-5 approval-image">
+              <img src="/images/logob.png" style={{width:"180px", marginLeft:"50px"}}alt="logo"/>
+              <Link href="/joint-commission">
+              <img src="/images/approval.png" style={{width:"180px", cursor:"pointer"}}/>
+              </Link>
+            </div>
             </div>
           </div>
         </div>

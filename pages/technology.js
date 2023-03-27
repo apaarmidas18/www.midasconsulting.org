@@ -109,7 +109,7 @@ const technology = () => {
         </div>
       </div>
 
-      <div className="container plan-container">
+      {/* <div className="container plan-container">
         <div className="row">
           <div className="col-md-6 category-info">
             <Blackheading head="IT Recruitment" />
@@ -129,9 +129,9 @@ const technology = () => {
             <Picture image="/images/happy.jpg" alt="Portrait Doctor" />
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="container plan-container">
+      {/* <div className="container plan-container">
         <div className="row">
           <div className="col-md-6">
             <Picture image="/images/working.jpg" alt="Portrait Doctor" />
@@ -151,7 +151,7 @@ const technology = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div
         className="container-fluid"
