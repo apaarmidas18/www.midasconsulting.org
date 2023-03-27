@@ -902,7 +902,7 @@ background: linear-gradient(to top left, #891D3D, #C12716);
   color: #cb1829;
 }
 .guidelines {
-  padding: 10px 25px;
+  padding: 10px 50px;
   margin: 30px 0px;
 }
 
@@ -975,7 +975,11 @@ background: linear-gradient(to top left, #891D3D, #C12716);
     .lightheading {
       padding: 10px 24px;
   }
-
-
+.approval-image{
+  text-align: center;
+}
+.smallsquare a {
+  font-size: 25px;
+}
 
 }
