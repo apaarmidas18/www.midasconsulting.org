@@ -10,7 +10,7 @@ import Navlink from "../components/Navlink";
 import Blackheading from "../components/Blackheading";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
-import { Link } from "react-bootstrap/lib/Navbar";
+import Link from "next/link";
 
 const technology = () => {
   return (
