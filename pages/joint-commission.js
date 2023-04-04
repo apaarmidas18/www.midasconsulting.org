@@ -41,7 +41,7 @@ const commission = () => {
           quality and safety of patient care are encouraged to contact their
           recruiter or the compliance team at midasconsulting.com and a
           corporate representative will work with them to resolve their
-          concerns.{" "}
+          concerns.
         </p>
 
         <p>
@@ -53,13 +53,13 @@ const commission = () => {
 
         <ul>
           <li>
-            <strong>Online:</strong>www.jointcommission.org
+            <strong>Online:</strong> www.jointcommission.org
           </li>
           <li>
-            <strong>Phone:</strong>+91-99999999999
+            <strong>Phone:</strong> (469) 361-2442
           </li>
           <li>
-            <strong>Email:</strong>admin@midasconsulting.org
+            <strong>Email:</strong> admin@midasconsulting.org
           </li>
         </ul>
         <p>
