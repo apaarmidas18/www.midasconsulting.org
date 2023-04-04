@@ -25,7 +25,9 @@ const healthcare = () => {
               <Heading heading="Recruitment and Staffing" />
 
               <Paragraph para="There has never been a clearer need for prompt, accurate hiring of the appropriate healthcare specialists. Fortunately, there has never been a healthcare staffing firm more committed to providing top-notch, high-performing people than Midas Healthcare." />
-              <Buttonwhite buttonTitle="Contact Us" />
+              <Link href="/contact">
+                <Buttonwhite buttonTitle="Contact Us" />
+              </Link>
             </div>
           </div>
           <div
