@@ -12,10 +12,15 @@ import Collapse from "../components/Collapse";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import Head from "next/head";
 
 const healthcare = () => {
   return (
     <>
+      <Head>
+        <title>Midas Consulting</title>
+        <meta name="description" content="Midas Consulting" />
+      </Head>
       <Navbar />
       <div className="container-fluid firstbanner">
         <div className="row">
@@ -53,7 +58,6 @@ const healthcare = () => {
           </div> */}
         </div>
       </div>
-
       <div className="container-fluid lightcontainer">
         <div className="row">
           <Lightheading light="Midas Healthcare’s Areas of Expertise" />
@@ -100,7 +104,6 @@ const healthcare = () => {
           </div>
         </div>
       </div>
-
       <div className="container plan-container">
         <div className="row">
           <div className="col-md-6">
@@ -131,7 +134,6 @@ const healthcare = () => {
           </div>
         </div>
       </div>
-
       <div className="container plan-container">
         <div className="row">
           <div className="col-md-6 category-info">
@@ -166,7 +168,6 @@ const healthcare = () => {
           </div>
         </div>
       </div>
-
       <div className="container plan-container">
         <div className="row">
           <div className="col-md-6">
@@ -201,14 +202,12 @@ const healthcare = () => {
           </div>
         </div>
       </div>
-
       <div
         className="container-fluid"
         style={{ background: "#522e6e", color: "white" }}
       >
         <Testimonial />
       </div>
-
       <div
         className="container plan-container"
         style={{ marginBottom: "60px" }}

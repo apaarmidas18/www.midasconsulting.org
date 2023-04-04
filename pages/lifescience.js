@@ -11,10 +11,15 @@ import Blackheading from "../components/Blackheading";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import Head from "next/head";
 
 const technology = () => {
   return (
     <>
+      <Head>
+        <title>Midas Consulting</title>
+        <meta name="description" content="Midas Consulting" />
+      </Head>
       <Navbar />
       <div className="container-fluid firstbanner">
         <div className="row">

@@ -7,10 +7,15 @@ import Buttonwhite from "../components/Buttonwhite";
 import Blackheading from "../components/Blackheading";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 const diversity = () => {
   return (
     <>
+      <Head>
+        <title>Midas Consulting</title>
+        <meta name="description" content="Midas Consulting" />
+      </Head>
       <Navbar />
       <div className="container-fluid firstbanner">
         <div className="row">
@@ -53,7 +58,6 @@ const diversity = () => {
           <div className="col-md-6 category-info">
             <Blackheading head="Committed to diversity and equity" />
             <Paragraph para="Midas is a company committed to equal opportunity in employment regardless of race, color, national origin, gender, sexual orientation, gender identity and express, age, religion or physical or mental disability." />
-          
           </div>
         </div>
       </div>
@@ -61,17 +65,23 @@ const diversity = () => {
       <div className="container plan-container">
         <div className="row">
           <div className="col-md-6 category-info">
-          <Blackheading head="Our dedication to promoting equality" />
-          <Paragraph para="​Midas strives to build teams of diverse employees across our workplaces. These efforts are built upon three pillars of diversity and equity:" />
+            <Blackheading head="Our dedication to promoting equality" />
+            <Paragraph para="​Midas strives to build teams of diverse employees across our workplaces. These efforts are built upon three pillars of diversity and equity:" />
             <ul>
               <li>
-              Recruitment: Create a diverse workforce that mirrors the communities in which Midas operates through an equitable interview process. 
+                Recruitment: Create a diverse workforce that mirrors the
+                communities in which Midas operates through an equitable
+                interview process.
               </li>
               <li>
-              Leadership Development: Cultivate a culture that allows all employees to have a fair and equal chance at promotions and opportunities for growth. 
+                Leadership Development: Cultivate a culture that allows all
+                employees to have a fair and equal chance at promotions and
+                opportunities for growth.
               </li>
               <li>
-              Retention: Enact meaningful change and foster an inclusive environment, identified through trends in employee hiring, promotion, and turnover reports.
+                Retention: Enact meaningful change and foster an inclusive
+                environment, identified through trends in employee hiring,
+                promotion, and turnover reports.
               </li>
             </ul>
           </div>

@@ -1,10 +1,15 @@
 import Footer from "../components/Footer";
 import React from "react";
 import Navbar from "../components/Navbar";
+import Head from "next/head";
 
 const commission = () => {
   return (
     <>
+      <Head>
+        <title>Midas Consulting</title>
+        <meta name="description" content="Midas Consulting" />
+      </Head>
       <Navbar />
       <div className="container" style={{ padding: "40px 0px" }}>
         <img

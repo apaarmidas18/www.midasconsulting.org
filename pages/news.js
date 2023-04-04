@@ -8,10 +8,15 @@ import Navlink from "../components/Navlink";
 import Footer from "../components/Footer";
 import Buttonwhite from "../components/Buttonwhite";
 import Link from "next/link";
+import Head from "next/head";
 
 const news = () => {
   return (
     <>
+      <Head>
+        <title>Midas Consulting</title>
+        <meta name="description" content="Midas Consulting" />
+      </Head>
       <Navbar />
       <Headingbanner title="News & Events" />
 

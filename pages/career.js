@@ -8,10 +8,15 @@ import Navlink from "../components/Navlink";
 import Infocard from "../components/Infocard";
 import Lightheading from "../components/Lightheading";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 const career = () => {
   return (
     <>
+      <Head>
+        <title>Midas Consulting</title>
+        <meta name="description" content="Midas Consulting" />
+      </Head>
       <Navbar />
       <Headingbanner title="Career Advice" />
       <div className="container">
