@@ -7,6 +7,7 @@ import Newslist from "../components/Newslist";
 import Navlink from "../components/Navlink";
 import Footer from "../components/Footer";
 import Buttonwhite from "../components/Buttonwhite";
+import Link from "next/link";
 
 const news = () => {
   return (
@@ -15,7 +16,7 @@ const news = () => {
       <Headingbanner title="News & Events" />
 
       <div className="container-fluid">
-        <div className="row" style={{marginTop:"40px"}}>
+        <div className="row" style={{ marginTop: "40px" }}>
           <div className="col-md-4">
             <Infocard
               cardimage="/images/animate.jpg"
@@ -93,12 +94,13 @@ const news = () => {
           backgroundImage: `url("/images/green.svg")`,
         }}
       >
-        <h2 className="largeheading">
-         Get in touch.
-        </h2>
-        <h3 style={{color:"white"}}>We want to hear from you. We’d love to see you.
-Let’s get started.</h3>
-        <Buttonwhite buttonTitle="Contact Us" />
+        <h2 className="largeheading">Get in touch.</h2>
+        <h3 style={{ color: "white" }}>
+          We want to hear from you. We’d love to see you. Let’s get started.
+        </h3>
+        <Link href="/contact">
+          <Buttonwhite buttonTitle="Contact Us" />
+        </Link>
       </div>
 
       <Footer />

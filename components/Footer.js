@@ -46,13 +46,19 @@ const Footer = () => {
             <p>Copyright ©2023 All rights reserved || Midas Consulting</p>
           </section>
           <section class="flex-content padding_1x">
-            <a href="#">
+            <a
+              href="https://www.facebook.com/midashealthcarestaffing?mibextid=LQQJ4d"
+              target="_blank"
+            >
               <i class="fa-brands fa-facebook"></i>
             </a>
             <a href="https://twitter.com/MidasConsultin" target="_blank">
               <i class="fa-brands fa-twitter"></i>
             </a>
-            <a href="https://twitter.com/MidasConsultin" target="_blank">
+            <a
+              href="https://www.linkedin.com/company/midasconsulting/"
+              target="_blank"
+            >
               <i class="fa-brands fa-linkedin"></i>
             </a>
           </section>

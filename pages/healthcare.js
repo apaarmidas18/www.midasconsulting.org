@@ -11,6 +11,7 @@ import Blackheading from "../components/Blackheading";
 import Collapse from "../components/Collapse";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 const healthcare = () => {
   return (
@@ -34,7 +35,7 @@ const healthcare = () => {
             }}
           ></div>
 
-          <div className="col-md-12 covidlines">
+          {/* <div className="col-md-12 covidlines">
             <div className="col-md-7 guidelines">
               <h5>
                 Midas COVID-19 staffing support programs are helping hospitals,
@@ -47,7 +48,7 @@ const healthcare = () => {
                 <li>See COVID-19 Vaccinator Services</li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -88,7 +89,7 @@ const healthcare = () => {
               </ul>
             </Collapse>
             <Navlink
-              move={"#"}
+              move={"/joint-commission"}
               linktitle="Learn more about Midas Joint Commission Certification. Click here"
             />
           </div>
@@ -122,7 +123,7 @@ const healthcare = () => {
               </ul>
             </Collapse>
             <Navlink
-              move={"#"}
+              move={"/joint-commission"}
               linktitle="Learn more about Medix’s Joint Commission Certification. Click here"
             />
           </div>
@@ -154,7 +155,7 @@ const healthcare = () => {
               </ul>
             </Collapse>
             <Navlink
-              move={"#"}
+              move={"/joint-commission"}
               linktitle="Learn more about Midas Joint Commission Certification. Click here"
             />
           </div>
@@ -192,39 +193,52 @@ const healthcare = () => {
               </ul>
             </Collapse>
             <Navlink
-              move={"#"}
+              move={"/joint-commission"}
               linktitle="Learn more about Medix’s Joint Commission Certification. Click here"
             />
           </div>
         </div>
       </div>
 
-<div className="container-fluid" style={{background:"#522e6e", color:"white"}}>
-    <Testimonial />
-</div>
+      <div
+        className="container-fluid"
+        style={{ background: "#522e6e", color: "white" }}
+      >
+        <Testimonial />
+      </div>
 
-<div className="container plan-container" style={{marginBottom:"60px"}}>
-    <div className="row">
-<div className="col-md-6">
-<Blackheading head="Embrace the Midas! Talent Advantage"/>
-<Paragraph para="Midas Consulting is our digital hiring and talent management platform that allows you to rapidly access pre-vetted tech talent on demand."/>
-<ul>
-    <li>Automated job order management</li>
-    <li>Advanced soft skill assessments</li>
-    <li>Real-time recruitment analytics</li>
-</ul>
-<Navlink move={"#"} linktitle="Explore!"/>
-</div>
-<div className="col-md-6">
-<Picture image="/images/laptop.jpg" alt="Laptop"/>
-</div>
-    </div>
-</div>
-<div className="container-fluid largecontainer" style={{background:"linear-gradient(to top left, #891D3D, #C12716)"}}>
-<h2 className="largeheading">You care for the world, we’ll take care of your talent.</h2>
-<Buttonwhite buttonTitle="Contact Us"/>
-</div>
-<Footer />
+      <div
+        className="container plan-container"
+        style={{ marginBottom: "60px" }}
+      >
+        <div className="row">
+          <div className="col-md-6">
+            <Blackheading head="Embrace the Midas! Talent Advantage" />
+            <Paragraph para="Midas Consulting is our digital hiring and talent management platform that allows you to rapidly access pre-vetted tech talent on demand." />
+            <ul>
+              <li>Automated job order management</li>
+              <li>Advanced soft skill assessments</li>
+              <li>Real-time recruitment analytics</li>
+            </ul>
+            <Navlink move={"#"} linktitle="Explore!" />
+          </div>
+          <div className="col-md-6">
+            <Picture image="/images/laptop.jpg" alt="Laptop" />
+          </div>
+        </div>
+      </div>
+      <div
+        className="container-fluid largecontainer"
+        style={{ background: "linear-gradient(to top left, #891D3D, #C12716)" }}
+      >
+        <h2 className="largeheading">
+          You care for the world, we’ll take care of your talent.
+        </h2>
+        <Link href="/contact">
+          <Buttonwhite buttonTitle="Contact Us" />
+        </Link>
+      </div>
+      <Footer />
     </>
   );
 };

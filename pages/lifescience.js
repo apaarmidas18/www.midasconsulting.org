@@ -10,6 +10,7 @@ import Navlink from "../components/Navlink";
 import Blackheading from "../components/Blackheading";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
+import { Link } from "react-bootstrap/lib/Navbar";
 
 const technology = () => {
   return (
@@ -23,7 +24,9 @@ const technology = () => {
               <Heading heading="Starts with Talent." />
 
               <Paragraph para="With the help of our devoted, knowledgeable life sciences workforce solutions and recruiting teams, Midas Life Sciences makes sure your teams stay up with the rate of innovation and discovery." />
-              <Buttonwhite buttonTitle="Contact Us" />
+              <Link href="/contact">
+                <Buttonwhite buttonTitle="Contact Us" />
+              </Link>
             </div>
           </div>
           <div
@@ -51,7 +54,7 @@ const technology = () => {
       </div>
 
       <div className="container-fluid lightcontainer">
-        <div className="row" style={{justifyContent:"center"}}>
+        <div className="row" style={{ justifyContent: "center" }}>
           <Lightheading light="What We Do" />
           <div className="col-md-3 span-tag">
             <Category spantitle="SCIENTIFIC CONSULTING" />
@@ -72,18 +75,17 @@ const technology = () => {
           <div className="col-md-6 category-info">
             <Blackheading head="Scientific Consulting" />
             <Paragraph para="Teams working in science need highly specialised skill sets that are more in demand than ever. Regulations across a wide range of scientific contexts demand an experienced staff, and the talent skills gap is a genuine issue." />
-            <Paragraph para="Midas Life Sciences staffing solutions serve teams in the following areas:"/>
+            <Paragraph para="Midas Life Sciences staffing solutions serve teams in the following areas:" />
             <ul>
               <li>Pharma/Biotech </li>
               <li>Medical Device </li>
               <li>Consumer Products</li>
               <li>Executive Search</li>
             </ul>
-            <h2 className="collapse-replace">Ready to make the most of your Scientific solution?</h2>
-            <Navlink
-              move={"#"}
-              linktitle="Learn More"
-            />
+            <h2 className="collapse-replace">
+              Ready to make the most of your Scientific solution?
+            </h2>
+            <Navlink move={"#"} linktitle="Learn More" />
           </div>
           <div className="col-md-6">
             <Picture image="/images/explaining.jpg" alt="Portrait Doctor" />
@@ -99,12 +101,11 @@ const technology = () => {
           <div className="col-md-6 category-info">
             <Blackheading head="Clinical Research Staffing" />
             <Paragraph para="Your goal is to advance transformative clinical research in order to favourably improve people's lives. Our goal is to have a favourable effect on you. Midas Clinical Research Staffing and Consulting Services guarantee you have the people, resources, and direction required to develop and increase your effect on science with the help of our devoted, knowledgeable teams." />
-           
-            <h2 className="collapse-replace">Ready to make the most of your EHR/Epic talent?</h2>
-            <Navlink
-              move={"#"}
-              linktitle="Learn More"
-            />
+
+            <h2 className="collapse-replace">
+              Ready to make the most of your EHR/Epic talent?
+            </h2>
+            <Navlink move={"#"} linktitle="Learn More" />
           </div>
         </div>
       </div>
@@ -166,8 +167,8 @@ const technology = () => {
       >
         <div className="row">
           <div className="col-md-6">
-          <Blackheading head="Embrace the Midas! Talent Advantage"/>
-<Paragraph para="Midas Consulting is our digital hiring and talent management platform that allows you to rapidly access pre-vetted tech talent on demand."/>
+            <Blackheading head="Embrace the Midas! Talent Advantage" />
+            <Paragraph para="Midas Consulting is our digital hiring and talent management platform that allows you to rapidly access pre-vetted tech talent on demand." />
             <ul>
               <li>Automated job order management</li>
               <li>Advanced soft skill assessments</li>
@@ -185,12 +186,15 @@ const technology = () => {
         // style={{
         //   backgroundImage: `url("/images/green.svg")`,
         // }}
-        style={{background:"linear-gradient(to top left, #891D3D, #C12716)"}}
+        style={{ background: "linear-gradient(to top left, #891D3D, #C12716)" }}
       >
         <h2 className="largeheading">
-        Power your digital transformations with the strategy and talent of Midas Technology.
+          Power your digital transformations with the strategy and talent of
+          Midas Technology.
         </h2>
-        <Buttonwhite buttonTitle="Contact Us" />
+        <Link href="/contact">
+          <Buttonwhite buttonTitle="Contact Us" />
+        </Link>
       </div>
       <Footer />
     </>
