@@ -12,6 +12,8 @@ const contact = () => {
       <Head>
         <title>Midas Consulting</title>
         <meta name="description" content="Midas Consulting" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Navbar />
       <div className="container" style={{ textAlign: "center" }}>
