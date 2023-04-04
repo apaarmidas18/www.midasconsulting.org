@@ -35,7 +35,7 @@ const Contactform = () => {
                 </div>
                 <div className="col-md-6">
                   <label for="your-email" className="form-label">
-                    Your Email
+                    Email
                   </label>
                   <input
                     type="email"
@@ -47,7 +47,7 @@ const Contactform = () => {
                 </div>
                 <div className="col-md-6">
                   <label for="your-subject" className="form-label">
-                    Your Subject
+                    Subject
                   </label>
                   <input
                     type="text"
@@ -58,7 +58,7 @@ const Contactform = () => {
                 </div>
                 <div className="col-12">
                   <label for="your-message" className="form-label">
-                    Your Message
+                    Message
                   </label>
                   <textarea
                     className="form-control"
@@ -73,7 +73,7 @@ const Contactform = () => {
                     <div className="col-md-6">
                       <button
                         data-res="<?php echo $sum; ?>"
-                        type="submit"
+                        type="button"
                         className="btn btn-dark w-100 fw-bold"
                       >
                         Send
