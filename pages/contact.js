@@ -18,7 +18,7 @@ const contact = () => {
       <Navbar />
       <div className="container" style={{ textAlign: "center" }}>
         <Lightheading light="Contact Midas" />
-        <Paragraph para="Ready to get to work? Let Medix know how we can help by filling out the form below." />
+        <Paragraph para="Ready to get to work? Let Midas know how we can help by filling out the form below." />
       </div>
       <Contactform />
       <Footer />
