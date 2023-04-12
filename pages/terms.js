@@ -14,7 +14,7 @@ const terms = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Navbar />
-      <Headingbanner title="Terms of Service" />
+      <Headingbanner title="Terms & Conditions" />
       <div className="container">
         <h2 style={{ marginTop: "50px" }}>AGREEMENT BETWEEN USER AND MIDAS</h2>
         <p>

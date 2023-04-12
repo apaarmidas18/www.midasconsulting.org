@@ -18,7 +18,7 @@ const Footer = () => {
             <Link href="/">Home</Link>
 
             <Link href="/career">Career</Link>
-            <Link href="/terms">Terms of Service</Link>
+            <Link href="/terms">Terms & Conditions</Link>
             <Link href="/privacy">Privacy Policy</Link>
           </section>
 
