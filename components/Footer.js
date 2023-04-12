@@ -16,17 +16,17 @@ const Footer = () => {
           <section class="flex-content padding_1x">
             <h3>Quick Links</h3>
             <Link href="/">Home</Link>
-            <Link href="/contact">Contact Us</Link>
+
             <Link href="/career">Career</Link>
-            <Link href="#">Terms of Service</Link>
+            <Link href="/terms">Terms of Service</Link>
+            <Link href="/privacy">Privacy Policy</Link>
           </section>
 
           <section class="flex-content padding_1x">
-            <h3>Resources</h3>
-            <Link href="#">Guides</Link>
-            <Link href="#">Research</Link>
-            <Link href="#">Experts</Link>
-            <Link href="#">Agencies</Link>
+            <h3>Other</h3>
+            <Link href="/diversity">Diversity</Link>
+            <Link href="/news">News</Link>
+            <Link href="/contact">Contact Us</Link>
           </section>
           <section class="flex-content padding_1x">
             <h3>Newsletter</h3>
