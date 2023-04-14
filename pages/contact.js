@@ -19,6 +19,7 @@ const contact = () => {
       <div className="container" style={{ textAlign: "center" }}>
         <Lightheading light="Contact Midas" />
         <Paragraph para="Ready to get to work? Let Midas know how we can help by filling out the form below." />
+        <Paragraph para="Contact Us for any query at  (469) 361-2442" />
       </div>
       <Contactform />
       <Footer />

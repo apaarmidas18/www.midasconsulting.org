@@ -16,7 +16,6 @@ const Footer = () => {
           <section class="flex-content padding_1x">
             <h3>Quick Links</h3>
             <Link href="/">Home</Link>
-
             <Link href="/career">Career</Link>
             <Link href="/terms">Terms & Conditions</Link>
             <Link href="/privacy">Privacy Policy</Link>
@@ -28,6 +27,7 @@ const Footer = () => {
             <Link href="/news">News</Link>
             <Link href="/contact">Contact Us</Link>
           </section>
+
           <section class="flex-content padding_1x">
             <h3>Newsletter</h3>
             <p>You can trust us. we only send promo offers,</p>
@@ -42,6 +42,10 @@ const Footer = () => {
           </section>
         </div>
         <div class="flex">
+          <section class="flex-content padding_1x">
+            <h5>Contact Us for any query on </h5>
+            <h6>(469) 361-2442</h6>
+          </section>
           <section class="flex-content padding_1x">
             <p>Copyright ©2023 All rights reserved || Midas Consulting</p>
           </section>
