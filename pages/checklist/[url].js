@@ -3,9 +3,11 @@ import moment from "moment-timezone";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import swal from "sweetalert";
 
 const Url = ({ props }) => {
   const router = useRouter();
+  const host = "http://192.168.0.22:9000/";
   const { url } = router.query;
   const [data, setData] = useState([]);
   const [active, setActive] = useState(false);
@@ -103,7 +105,6 @@ const Url = ({ props }) => {
   // Example usage
 
   const submitData = (list) => {
-    window.location.reload();
     const th =
       data === undefined || data.length === 0
         ? "Wait"
@@ -288,7 +289,7 @@ const Url = ({ props }) => {
     setHTML(Html);
     const options = {
       method: "POST",
-      url: "https://checklist.midascrm.tech/list/submitCheckList",
+      url: `${host}list/submitCheckList`,
       headers: { "Content-Type": "application/json" },
       data: {
         name: userData.name,
@@ -306,17 +307,28 @@ const Url = ({ props }) => {
     axios
       .request(options)
       .then(function (response) {
-        console.log(response.data);
+        if (response.data.baseResponse.status == 1) {
+          swal({
+            title: "We have gathered all your information",
+            text: "Please proceed to submit request.",
+            icon: "success",
+          }).then((willDelete) => {
+            if (willDelete) {
+              swal("Your Request Has Been Submitted!", "success");
+              window.location.reload();
+            }
+          });
+        }
       })
       .catch(function (error) {
-        console.error(error);
+        alert(error);
       });
   };
 
   const tableData = () => {
     const options = { method: "GET" };
 
-    fetch(`https://checklist.midascrm.tech/list/getCheckList/${url}`, options)
+    fetch(`${host}list/getCheckList/${url}`, options)
       .then((response) => response.json())
       .then((response) => setData(response.response));
   };

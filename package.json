@@ -24,6 +24,7 @@
     "react-html2pdf": "^1.0.1",
     "react-icons": "^4.8.0",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sweetalert": "^2.1.2"
   }
 }
