@@ -7,7 +7,8 @@ import swal from "sweetalert";
 
 const Url = ({ props }) => {
   const router = useRouter();
-  const host = "http://192.168.0.22:9000/";
+  // const host = "http://192.168.0.22:9000/";
+  const host = "https://checklist.midascrm.tech/";
   const { url } = router.query;
   const [data, setData] = useState([]);
   const [active, setActive] = useState(false);
