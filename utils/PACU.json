@@ -1,0 +1,640 @@
+[
+  {
+    "title": "CARDIOVASCULAR",
+    "items": [
+      {
+        "id": 1,
+        "name": "Open Heart Recovery",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "AAA Repair ",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Vascular Surgery ",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Pacemaker-Permanent & Temporary",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Cardioversion",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "AICD Insertion",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Cardiac Arrest ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Cardiac Tamponade ",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "CHF/Pulmonary Edema",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Abnormal Heart Sounds/Murmurs",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Pulses/Circulation Checks",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "MEDICATIONS",
+    "items": [
+      {
+        "id": 1,
+        "name": "Procedural Sedation",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Anesthesia Medications",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Anti-Arrhythmics",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Anticoagulants",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Anti-Hypertensives",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Anti-Seizure Medications",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Benzodiazepines",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Emergency Medications",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Insulin",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Narcotics/Opioid Analgesics",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Nitrates",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Non-Opioid Analgesics",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Reversal Agents",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Steroids",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Automated Medication Dispensing (i.e. Pyxis, Omnicell)",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "PULMONARY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Ventilator Management",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Fresh Tracheostomy",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Thoracotomy/Lobectomy/Pneumonectomy",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Pneumothorax/Hemothorax",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Laryngospasm",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Pulmonary Embolism",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "COPD ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "ABG Interpretation",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "NEUROLOGIC",
+    "items": [
+      {
+        "id": 1,
+        "name": "Post Craniotomy",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Anterior/Posterior Spinal Fusion",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Carotid Endardarectomy",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Spine Surgery",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "CVA",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Stroke Scale",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Glascow Coma Scale ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Spinal Precautions",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Hypothermia Protocol",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Hypo/Hyperthermia Blanket",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Sedation Scales/Levels",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "GASTROINTESTINAL",
+    "items": [
+      {
+        "id": 1,
+        "name": "Pancreas/Liver Transplant",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Colon Surgery",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Colostomy/Ileostomy",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "ERCP",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "G Tube/J Tube Management",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "T Tube Management",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "RENAL/GENITOURINARY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Renal Surgery",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "TURP",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Arteriovenous Fistula/Shunt",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Nephrostomy Tubes",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "ENDOCRINE METABOLIC",
+    "items": [
+      {
+        "id": 1,
+        "name": "Diabetes - Hypo/Hyperglycemic Crisis",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "IV Insulin Protocols",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "ORTHOPEDIC",
+    "items": [
+      {
+        "id": 1,
+        "name": "Laminectomy",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Total Joint Replacement",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Amputation",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Open Reduction/Internal Fixation",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "General Orthopedic Surgeries",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "CPM/Traction",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Circulation Checks",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "WOUND MANAGEMENT",
+    "items": [
+      {
+        "id": 1,
+        "name": "Surgical Drains",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Wound Vac",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Surgical Wound Assessment",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Skin Assessment for Breakdown",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Staging Decubitus Ulcers",
+        "value": ""
+      }
+    ]
+  },
+
+  {
+    "title": "IV THERAPY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Starting Ivs",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Central Line Blood Draws",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Central Line/Implanted Line Care",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Blood Product Administration",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "CARDIAC MONITORING & EMERG. RESPONSE",
+    "items": [
+      {
+        "id": 1,
+        "name": "Malignant Hyperthermia",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Dysrhythmia Interpretation",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Dysrhythmia Management",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "12 Lead EKG",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "PROFESSIONAL KNOWLEDGE AND SKILLS",
+    "items": [
+      {
+        "id": 1,
+        "name": "National Patient Safety Goals/Core Measures",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Fall Risk Assessment/Prevention",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Pressure Ulcer Risk Assessment/Prevention",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Age Specific/Population-Based Care",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Pain Assessment & Management",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Charge Experience",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Interpretation and Communication of Lab Values",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Specialty Beds",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "EMR",
+    "items": [
+      {
+        "id": 1,
+        "name": "Epic",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Cerner",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Eclipsys",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "McKesson",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Meditech",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Other Computerized System",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Computerized Physician Order Entry",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Bar Coding for Medication Administration",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "PULMONARY",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "CERTIFICATIONS",
+    "items": [
+      {
+        "id": 1,
+        "name": "BLS",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "ACLS",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "PALS",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Certification: CAPA or CPAN",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Age Specific Competencies",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Neonatal/Newborn (up to 30 days)",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Infant (30 days to 1 year)",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Toddler (1 to 3 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Preschooler (3 to 5 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "School age (5 to 12 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Adolescents (12 to 18 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Young Adults (18 to 39 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Middle Adults (40 to 64 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 9,
+
+        "name": "Older Adults (65 & up)",
+
+        "value": ""
+      }
+    ]
+  }
+]

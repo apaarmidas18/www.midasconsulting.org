@@ -1,0 +1,314 @@
+[
+  {
+    "title": "Core Skills",
+    "items": [
+      {
+        "id": 1,
+        "name": "Written Communication Skills",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Verbal Communication Skills",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Basic Negotiation Skills",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Job Related Computer Skills",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Ability to Prioritize",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Knowledge of Community Health Care and Vocational Services",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Ability to Properly Maintain Records",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Knowledge of Medical Billing Procedures",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Ability to Work Effectively in All Situations",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Ability to Assess, Plan, Implement and Evaluate Individual Patient Care Programs and Treatment Plans",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Ability to Gather Data, Compile Information and Prepare Reports",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Ensure Outcomes are Met within an Appropriate Length of Stay",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Document All Client Encounters",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Complete and Submit Billing Documentation as Appropriate",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Ability to Develop and Implement Action Plans for Health Centers to Improve Performance",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Experience With",
+    "items": [
+      {
+        "id": 1,
+        "name": "Disability Review",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Long Term/Short Term Disability Case Management",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Workers Compensation Case Management",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Telephonic Case Management",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Pre Certification/Pre-Admission Certification",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Catastrophic Case Management",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Continued Stay Review",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "MCM-Medical Case Management",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Discharge Planning",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Criteria for Hospital Admissions",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Intensity of Service- Diagnosis & Therapeutic Services",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Discharge Screens- Specific Indicators of Patients Ability",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Appropriateness of Care- Patients Ability",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Diagnosis Related Grouping",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "ICD- 9-CM",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "CPT",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "SIMS- Interqual- Criteria for SSO Waiver",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Milliman and Robertson Criteria",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "PPR- Prospective Procedure Review",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "PA- Physician Advisor",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Prior Authorization",
+        "value": ""
+      },
+      {
+        "id": 22,
+        "name": "Utilization Review",
+        "value": ""
+      },
+      {
+        "id": 23,
+        "name": "Utilization Management",
+        "value": ""
+      },
+      {
+        "id": 24,
+        "name": "Ability to Gather Data, Compile Information and Prepare Reports",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Work Settings",
+    "items": [
+      {
+        "id": 1,
+        "name": "Acute Care/Hospital",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Managed Care",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "SNF/ Long Term Care",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Home Health",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Outpatient",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Age Specific Competencies",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Neonatal/Newborn (up to 30 days)",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Infant (30 days to 1 year)",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Toddler (1 to 3 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Preschooler (3 to 5 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "School age (5 to 12 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Adolescents (12 to 18 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Young Adults (18 to 39 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Middle Adults (40 to 64 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 9,
+
+        "name": "Older Adults (65 & up)",
+
+        "value": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,797 @@
+[
+  {
+    "title": "WORK SETTINGS",
+    "items": [
+      {
+        "id": 1,
+        "name": "PICU",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Pediatric CVICU",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Pediatric Step Down",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Pediatric PACU",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "RENAL/GENITOURINARY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Nephrotic Syndrome",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Renal Transplant",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Renal Replacement Therapy",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Peritoneal Dialysis",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "PROFESSIONAL KNOWLEDGE AND SKILLS",
+    "items": [
+      {
+        "id": 1,
+        "name": "National Patient Safety Goals/Core Measures",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Recognize/Report Signs of Abuse",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "EMTALA",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Fall Risk Assessment/Prevention",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Pressure Ulcer Risk Assessment/Prevention",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Restraints/Use of Least Restrictive Device",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Normal Growth and Development",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Age Specific/Population Based Care",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Patient Family Teaching",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Isolation Precautions",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Infection Prevention",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Reporting Communicable Diseases",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Pain Assessment & Management",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Charge Experience",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Interpretation and Communication of Lab Values",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "MEDICATIONS",
+    "items": [
+      {
+        "id": 1,
+        "name": "Pediatric Dosage Calculations",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Anti-Arrhythmics",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Anticoagulants (IV, Oral & Injection)",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Anti-Hypertensives",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Anti-Seizure Medications",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Benzodiazepines",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Continuous IV Paralytics",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Continuous IV Sedation",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Procedural Sedation - Administration",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Diuretics",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Emergency Medication",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Inhaled Medications",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Insulin",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "IV Vasopressors",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Narcotics/Opioid Analgesics (IV, Oral & Injection)",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Non-Opioid Analgesics (IV, Oral & Injection)",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "Reversal Agents",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Steroids (IV, Oral, Inhaled)",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Automated Medication Dispensing (i.e. Pyxis, Omnicell)",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "CARDIOVASCULAR",
+    "items": [
+      {
+        "id": 1,
+        "name": "Congenital Heart Disease/Repair",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Post Cardiac Surgery (Directly from OR)",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Post Cardiac Surgery (NOT Directly from OR)",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Post Diagnostic/Interventional Cardiac Cath",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Heart Failure/Cardiogenic Shock",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Cardiac Transplant",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Hemodynamic Monitoring ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Arrhythmia Interpretation",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Pacemaker - Temporary/Permanent",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "SVO2 Monitoring",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Intra-Aortic Balloon Pump",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Ventricular Assist Device",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "ECMO",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "PULMONARY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Respiratory Distress Syndrome/Resp. Failure",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Reactive Airway Disease",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "ENT Surgery",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Epiglottis",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Cystic Fibrosis",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Tuberculosis",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Intubation/Extubation",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Endotracheal Tube Management",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Tracheostomy Management",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Modes of Ventilation: AC/PC/SIMV/CPAP",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Modes of Ventilation: Jet/Oscillator",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Nitric Oxide",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Hemo/Pneumothorax",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "NEUROLOGIC/ORTHOPEDIC",
+    "items": [
+      {
+        "id": 1,
+        "name": "Brain Injury",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Craniotomy",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Spinal Cord Injury",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Seizure Disorders",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "G Tube/J Tube Management",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "ICP Monitoring",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "VP Shunt",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Meningitis",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Neuromuscular Disease",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Post Vertebral Surgery",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Traction - General",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Traction - Halo",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "GASTROINTESTINAL",
+    "items": [
+      {
+        "id": 1,
+        "name": "Acute Surgical Abdomen",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "GI Bleeding",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Pancreatitis",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Hepatic Failure",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Ostomy Management",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Management of Gastric Tubes",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Breast Milk Handling/Storage",
+        "value": ""
+      }
+    ]
+  },
+
+  {
+    "title": "ENDOCRINE/METABOLIC",
+    "items": [
+      {
+        "id": 1,
+        "name": "Diabetes - Hypo/Hyperglycemic Crisis",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Diabetic Ketoacidosis",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "IV Insulin Pumps",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Indwelling Insulin Pumps",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "TRAUMA/OTHER",
+    "items": [
+      {
+        "id": 1,
+        "name": "Blunt/Penetrating Trauma",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Burns",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Craniofacial Reconstruction",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Near Drowning",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Poison Ingestion/Overdose",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Bites-Animal/Snake/Human",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Suicide Precautions",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Wound Management/VAC",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Specialty Beds",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "ONCOLOGY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Bone Marrow Transplant",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Immunosuppressive Disorder",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Hemophilia Crisis",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Sickle Cell Crisis",
+        "value": ""
+      }
+    ]
+  },
+
+  {
+    "title": "IV THERAPY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Starting Ivs",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Central Line Blood Draws",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Central Line/Implanted Line Care",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Blood Product Administration",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "TPN/Lipids",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Administration of Chemotherapy",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "CARDIAC MONITORING & EMERG. RESPONSE",
+    "items": [
+      {
+        "id": 1,
+        "name": "Dysrhythmia Interpretation",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Dysrhythmia Management",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Management of Cardiac Arrest",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Shock Management",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Malignant Hyperthermia",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Multisystem Organ Failure",
+        "value": ""
+      }
+    ]
+  },
+
+  {
+    "title": "EMR",
+    "items": [
+      {
+        "id": 1,
+        "name": "Epic",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Cerner",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Eclipsys",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "McKesson",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Meditech",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Other Computerized System",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Computerized Physician Order Entry",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Bar Coding for Medication Administration",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "CERTIFICATIONS",
+    "items": [
+      {
+        "id": 1,
+        "name": "BLS",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "ACLS",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "PALS",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Certification: CAPA or CPAN",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Age Specific Competencies",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Neonatal/Newborn (up to 30 days)",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Infant (30 days to 1 year)",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Toddler (1 to 3 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Preschooler (3 to 5 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "School age (5 to 12 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Adolescents (12 to 18 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Young Adults (18 to 39 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Middle Adults (40 to 64 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 9,
+
+        "name": "Older Adults (65 & up)",
+
+        "value": ""
+      }
+    ]
+  }
+]

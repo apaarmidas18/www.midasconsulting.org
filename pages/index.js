@@ -77,9 +77,9 @@ export default function Home() {
             provided by Midas, a staffing firm. You're all set to begin.
           </h5>
         </div>
-        <a className="info-link" href="https://www.midashealthcare.com/">
+        <Link className="info-link" href="/healthcare">
           More About Midas ›
-        </a>
+        </Link>
       </div>
       <Bannersquare />
       <Testimonial />

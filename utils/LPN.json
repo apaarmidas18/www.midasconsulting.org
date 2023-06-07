@@ -1,0 +1,485 @@
+[
+  {
+    "title": "Skills",
+    "items": [
+      {
+        "id": 1,
+        "name": "Activities of daily living",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Admission of patient",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Administration of medication",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Ambulation",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Application of heat and cold ",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Aseptic Technique ",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Assist with medical examination",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Bathing: Sitz, tub, bed, shower",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Bandaging ",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Binders",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Body Alignment",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Body Systems Review (Head to Toe data collection)",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Cast care ",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Catheterization / Foley catheter care",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Charting ",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Colostomy Care and irrigation",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "CPR",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Crutch walking",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Decubitus Care ",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Diabetic tests and preparation forms ",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Diabetic blood glucose testing ",
+        "value": ""
+      },
+      {
+        "id": 22,
+        "name": "Discharge patients",
+        "value": ""
+      },
+      {
+        "id": 23,
+        "name": "Dosage computation ",
+        "value": ""
+      },
+      {
+        "id": 24,
+        "name": "Draping",
+        "value": ""
+      },
+      {
+        "id": 25,
+        "name": "Dressing (sterile) ",
+        "value": ""
+      },
+      {
+        "id": 26,
+        "name": "Ear drops",
+        "value": ""
+      },
+      {
+        "id": 27,
+        "name": "Elimination needs",
+        "value": ""
+      },
+      {
+        "id": 28,
+        "name": "Enemas, cleansing, retention, Harris flush ",
+        "value": ""
+      },
+      {
+        "id": 29,
+        "name": "Restraints",
+        "value": ""
+      },
+      {
+        "id": 30,
+        "name": "Infection Control: Standard Universal Precautions",
+        "value": ""
+      },
+      {
+        "id": 31,
+        "name": "Infection Control: Reverse Isolation",
+        "value": ""
+      },
+      {
+        "id": 32,
+        "name": "Infection Control: TB/ Airborne Precautions",
+        "value": ""
+      },
+      {
+        "id": 33,
+        "name": "Infections Control: MRSA/ VRE Precautions",
+        "value": ""
+      },
+      {
+        "id": 34,
+        "name": "Isolation procedure for specimen collection",
+        "value": ""
+      },
+      {
+        "id": 35,
+        "name": "IVs: Monitor rate and infusion site",
+        "value": ""
+      },
+      {
+        "id": 36,
+        "name": "Medications: Oral, IM, SQ",
+        "value": ""
+      },
+      {
+        "id": 37,
+        "name": "Mouth care",
+        "value": ""
+      },
+      {
+        "id": 38,
+        "name": "Nail Care",
+        "value": ""
+      },
+
+      {
+        "id": 39,
+        "name": "Neurological Check",
+        "value": ""
+      },
+      {
+        "id": 40,
+        "name": "Nutritional check",
+        "value": ""
+      },
+      {
+        "id": 41,
+        "name": "Observations: Response to treatments/ meds",
+        "value": ""
+      },
+      {
+        "id": 42,
+        "name": "Observations: Signs of significant body system changes",
+        "value": ""
+      },
+      {
+        "id": 43,
+        "name": "Observations: Signs of shock",
+        "value": ""
+      },
+      {
+        "id": 44,
+        "name": "Observations: Signs of pain",
+        "value": ""
+      },
+      {
+        "id": 45,
+        "name": "Observes safety procedures",
+        "value": ""
+      },
+      {
+        "id": 46,
+        "name": "O2 administration ",
+        "value": ""
+      },
+      {
+        "id": 47,
+        "name": "Pain assessment",
+        "value": ""
+      },
+      {
+        "id": 48,
+        "name": "Patient care plans (revise and update)",
+        "value": ""
+      },
+      {
+        "id": 49,
+        "name": "Patient safety standards/ precautions",
+        "value": ""
+      },
+      {
+        "id": 50,
+        "name": "Positioning patient ",
+        "value": ""
+      },
+      {
+        "id": 51,
+        "name": "Postural drainage",
+        "value": ""
+      },
+      {
+        "id": 52,
+        "name": "Pre-op and post-op care",
+        "value": ""
+      },
+      {
+        "id": 53,
+        "name": "Provide comfort, safety and privacy",
+        "value": ""
+      },
+      {
+        "id": 54,
+        "name": "Pulse oxymetry",
+        "value": ""
+      },
+      {
+        "id": 55,
+        "name": "Range of motion",
+        "value": ""
+      },
+      {
+        "id": 56,
+        "name": "Report observations/ changes",
+        "value": ""
+      },
+      {
+        "id": 57,
+        "name": "Hand hygiene",
+        "value": ""
+      },
+      {
+        "id": 58,
+        "name": "Skin care",
+        "value": ""
+      },
+      {
+        "id": 59,
+        "name": "Specimen collection: routine urine",
+        "value": ""
+      },
+      {
+        "id": 60,
+        "name": "Specimen collection: clean catch ",
+        "value": ""
+      },
+      {
+        "id": 61,
+        "name": "Specimen collection: 12 & 24 hour specimen ",
+        "value": ""
+      },
+      {
+        "id": 62,
+        "name": "Specimen collection: stool ",
+        "value": ""
+      },
+      {
+        "id": 63,
+        "name": "Specimen collection: culture",
+        "value": ""
+      },
+      {
+        "id": 64,
+        "name": "Specimen collection: sputum ",
+        "value": ""
+      },
+      {
+        "id": 65,
+        "name": "Specimen collection: from foley catheter",
+        "value": ""
+      },
+      {
+        "id": 66,
+        "name": "Suppositories",
+        "value": ""
+      },
+      {
+        "id": 67,
+        "name": "Suction-oral",
+        "value": ""
+      },
+      {
+        "id": 68,
+        "name": "Surgical Preps",
+        "value": ""
+      },
+      {
+        "id": 69,
+        "name": "Computerized charting ",
+        "value": ""
+      },
+      {
+        "id": 70,
+        "name": "Trach care/suctioning",
+        "value": ""
+      },
+      {
+        "id": 71,
+        "name": "Telephone manners",
+        "value": ""
+      },
+      {
+        "id": 72,
+        "name": "Topical Medication Application",
+        "value": ""
+      },
+      {
+        "id": 73,
+        "name": "Traction",
+        "value": ""
+      },
+      {
+        "id": 74,
+        "name": "Transfer/ transport patients: wheelchair",
+        "value": ""
+      },
+      {
+        "id": 75,
+        "name": "Transfer/ transport patients: gurney",
+        "value": ""
+      },
+      {
+        "id": 76,
+        "name": "Transfer/ transport patients: to chair",
+        "value": ""
+      },
+      {
+        "id": 77,
+        "name": "Urine test for glucose/ acetone",
+        "value": ""
+      },
+      {
+        "id": 78,
+        "name": "Vital Signs",
+        "value": ""
+      },
+      {
+        "id": 79,
+        "name": "Weight: Bed scales and standing scales",
+        "value": ""
+      },
+      {
+        "id": 80,
+        "name": "IV therapy certified",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Age Specific Competencies",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Neonatal/Newborn (up to 30 days)",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Infant (30 days to 1 year)",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Toddler (1 to 3 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Preschooler (3 to 5 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "School age (5 to 12 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Adolescents (12 to 18 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Young Adults (18 to 39 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Middle Adults (40 to 64 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 9,
+
+        "name": "Older Adults (65 & up)",
+
+        "value": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,612 @@
+[
+  {
+    "title": "CARDIOVASCULAR Care of Patient with",
+    "items": [
+      {
+        "id": 1,
+        "name": "Acute MI",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "CHF",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Angina Hypertension",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Cardiomyopathy Cardiopulmonary Arrest",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Abdominal Aortic Aneurysm",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Carotid Endarterectomy",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Femoral Popliteal Bypass",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Pre & Post Cardiac Surgery",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Pre & Post Cardiac Cath",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Pre & Post PTCA",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Permanent Pacemaker Temporary PacemakerExternal Pacemaker",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Cardiac Lab Interpretation",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Cardiac Patient/Family Teaching",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "RESPIRATORY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Respiratory assessment",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Chest percussion",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Assess Lung sounds",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Establish/Protect Airway",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Chest tubes/Pleurevac",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Oxygen therapy",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Drawing ABGs",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Interpretation of ABGs",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Incentive Spirometry",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Suctioning: oral nasotracheal endotracheal tube tracheostomy tube",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Oxygen Equipment Set Up and Maintenance: nasal canula non-rebreather mask venti-mask ET",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Inturbation/extubationambu bag pulse oximetry",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Care of patient with: COPD tracheostomy pulmonary edema ARDS ventilator (A/C, IMV, PEEP) pre/post-op thoracis surgery pneumonia chest tubes asthma emphysema",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "NEUROLOGY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Neurological assessment",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Seizure precautions",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Assessment and Management of Seizure Activity",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Assisting with lumbar puncture",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Signs/Symptoms of increasing ICP",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Glascow Coma Scale",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Crutchfield tongs",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Circo-electric bed Halo traction",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Stryker frame",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Care of patient with: seizures CNS infection overdose DTs spinal cord injury acute head injury CVA/TIA neuromuscular disease pre/post neuro surgery",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "GASTROINTESTINAL",
+    "items": [
+      {
+        "id": 1,
+        "name": "G.I. assessment",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Bowel sounds",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Inserting N-G tubes",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Colostomy care",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Measurement of I & O",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Administration of tube feedings",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Care of patients with: GI bleed NG tube G-tube J-tube abdominal wounds/surgeries inflammatory bowel disease bowel obstruction",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "RENAL/GENITOURINARY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Insertion and care of: straight cath Indwelling urinary cath: male female 3-way",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Care of Patient with: Bladder Irrigation Suprapubic Tube Nephrostomy Tube Renal Transplant Nephrectomy Renal Transplant BPH Pre/post Turp",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "ORTHOPEDIC",
+    "items": [
+      {
+        "id": 1,
+        "name": "Total Knee Replacement",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Bucks Extension",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Cast Care",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Crutch Walking",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "K-Wires",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Spica Casts",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Balanced Suspension Traction",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Circulation Checks",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Care of Patient with: Amputation Rheumatic/Arthritic Disease Multiple Trauma Paraplegia External Fixation Post Arthroplasty",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "GENERAL",
+    "items": [
+      {
+        "id": 1,
+        "name": "Blood Glucose Monitoring",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Dressing Changes",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Universal Precautions",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Isolation",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Discharge Planning",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Care of Patient with: Diabetes Pressure Sores Sickle Cell Anemia Cancer Alzheimer's Disease HIV/AIDS",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "MEDICATIONS",
+    "items": [
+      {
+        "id": 1,
+        "name": "Unit Dose",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Dosage Calculation",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Pouring from stock medication",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Administration of Code Cart Emergency Drugs",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Aminophylline",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Ativan",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Atropine",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Chemotherapy Agents",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Corticosteroids",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Decadron",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Digoxin",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Dilantin",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Dobutamine",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Dopamine",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Heparin Inhalers",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Lidocaine",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "Lopressor",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Magenesium Sulfate",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Nipride Nitroglycerin",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Phenobarbital",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Thrombolytic Agents",
+        "value": ""
+      },
+      {
+        "id": 22,
+        "name": "Valium",
+        "value": ""
+      },
+      {
+        "id": 23,
+        "name": "Verapamil",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "IV THERAPY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Inserting IVs Mixing IV solutions",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Heparin locks",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "TPN/Hyperalimentation",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "IV push IV drip Infusion pumps Syringe pumps",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Continuous Subcutaneous Infusion Pumps",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "PCA Pumps",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Ultrasonic Doppler",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "CVP lines/measurement of CVP",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Central line dressing change",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Blood/Blood products administration ordering/obtaining from blood bank identification/intercession for adverse reaction",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Multi-lumen central venous catheters Implanted CVC (port-a-cath)",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Assessment of IV insertion site",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Assist with insertion of central line",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "X-ray/assessment after insertion",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Care of patient with Central Line",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Charge Nurse Experience?",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "CPR certified?",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "BCLS certified?",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "ACLS certified?",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Knowledge of normal values?",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Have you had a dysrhythmia course?",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Age Specific Competencies",
+    "items": [
+      {
+        "id": 1,
+        "name": "Infant (Birth - 1 year)",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Preschooler (ages 2-5 years)",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Childhood (ages 6-12 years)",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Adolescents (ages 13-21 years)",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Young Adults (ages 22-39 years)",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Adults (ages 40-64 years)",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Older Adults (ages 65-79 years)",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Elderly (ages 80+ years)",
+        "value": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,787 @@
+[
+  {
+    "title": "Cardiac",
+    "items": [
+      {
+        "id": 1,
+        "name": "Defibrillation/Cardioversion",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Assisting with Insertion of Central Lines ",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Pacemakers‐External ",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Permanent or Temporary Pacemaker ",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Cardiac Arrest/CPR",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "A‐Line (Transducer setup‐D/C)",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Swan Ganz (Transducer setup‐D/C) ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Balloon Pump (IABP) ",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "SVO2 Monitoring",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Automatic Internal Cardioverter Defib",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Care of patient with",
+    "items": [
+      {
+        "id": 1,
+        "name": "Aneurysm",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Acute MI/Unstable Angina",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Cardiogenic/Hypovolemic Shock",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Pre/Post Cardiac Surgery ",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Heart Transplant",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "PTCA",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "COPD ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "ARDS",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Pulmonary Embolism",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Pulmonary Edema",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Pneumonia",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Inhalation Injuries",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "CVA",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Seizure Disorder",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Overdose",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Neuro Injury/Trauma",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "Pre/Post Neuro Surgery",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Cranial Hemorrhage",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Aphasia",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Multiple Sclerosis",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Pancreatitis",
+        "value": ""
+      },
+      {
+        "id": 22,
+        "name": "GI Bleed",
+        "value": ""
+      },
+      {
+        "id": 23,
+        "name": "Esophageal Bleeding",
+        "value": ""
+      },
+      {
+        "id": 24,
+        "name": "Bowel Obstruction",
+        "value": ""
+      },
+      {
+        "id": 25,
+        "name": "Liver Transplant",
+        "value": ""
+      },
+      {
+        "id": 26,
+        "name": "Paralitic Ileus",
+        "value": ""
+      },
+      {
+        "id": 27,
+        "name": "TURP",
+        "value": ""
+      },
+      {
+        "id": 28,
+        "name": "Shunts and Fistulas",
+        "value": ""
+      },
+      {
+        "id": 29,
+        "name": "Nephrectomy",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Renal Transplant",
+        "value": ""
+      },
+      {
+        "id": 31,
+        "name": "Renal Trauma",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Use and Administration of the following",
+    "items": [
+      {
+        "id": 1,
+        "name": "Atropine",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Bretylol",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Bumex",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Digoxin",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Dopamine",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Dobutrex",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Inderal ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Inocor",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Isuprel",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Lidocaine",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Neosynephrine/Nipride",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "NTG",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Pronestyl",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Titrate Morphine",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Verapamil",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Thrombolitic Agents",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "Prep/Titration of Emergency Drugs",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Aminophylline",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Corticosteroids",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Bronkosol",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Ventolin",
+        "value": ""
+      },
+      {
+        "id": 22,
+        "name": "Alupent",
+        "value": ""
+      },
+      {
+        "id": 23,
+        "name": "Decadron",
+        "value": ""
+      },
+      {
+        "id": 24,
+        "name": "Dilantin",
+        "value": ""
+      },
+      {
+        "id": 25,
+        "name": "Magnesium Sulfate",
+        "value": ""
+      },
+      {
+        "id": 26,
+        "name": "Phenobarbital",
+        "value": ""
+      },
+      {
+        "id": 27,
+        "name": "Steroids",
+        "value": ""
+      },
+      {
+        "id": 28,
+        "name": "Valium",
+        "value": ""
+      },
+      {
+        "id": 29,
+        "name": "Versed",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Respiratory",
+    "items": [
+      {
+        "id": 1,
+        "name": "Lung Transplant",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Establishing an Airway ",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Pulse Oximetry ",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Interpretation of ABG",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Drawing ABG Blood Sample from A‐Line",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Incentive Spirometer",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Neurology",
+    "items": [
+      {
+        "id": 1,
+        "name": "Assessment of Neuro Signs",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Use of Glascow Coma Scale",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Seizure Precautions",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Assist with Lumbar Puncture",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "ICP Monitoring",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Crutchfield Tongs",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Halo Traction",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Stryker Frame",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Assessment of Sensory‐Motor Function",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Cervical Traction",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Cranial Nerve Assessment",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "LOC Assessment",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Pre/Post Neuro Surgical Care",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Visual Acuity Measurement",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Vascular",
+    "items": [
+      {
+        "id": 1,
+        "name": "Peripheral Pulses",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Fluid Overload",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Starting IV's",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Subcutaneous Central Line",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Hickman/Broviac/Groshong Catheters",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Mainenance of Heparin Lock",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "TPN/Hyperalimentation",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Air Occlusive Dressing",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Infusion Pump",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Peritoneal Dialysis",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Hemodialysis",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Heparin Drip ‐ Precautions and Maintenance",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Gastrointestinal",
+    "items": [
+      {
+        "id": 1,
+        "name": "NG Tube Insertion",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Gastronomy Tube",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Jejunoostomy Tube",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Enterostomal Care",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Genito Urinary/Renal",
+    "items": [
+      {
+        "id": 1,
+        "name": "Foley Catheter Insertion",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "GU Irrigations",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Nephrostomy Tube",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Suprapubic Tube",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Electrolyte Imbalance/Replacement",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Other",
+    "items": [
+      {
+        "id": 1,
+        "name": "Oncology",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Chemotherapy",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Isolation Techniques",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Hyperbaric Oxygenation",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Fingerstick Blood Glucose monitoring",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Equipment",
+    "items": [
+      {
+        "id": 1,
+        "name": "Bear I",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Bear II",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Bear V",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Bennett 7200",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "CPAP",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Emerson",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "EMV ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "MA‐I",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "MA‐II",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Monihan",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Ohio 560",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "PEEP",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Pressure Pre‐Set",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Servo 900b",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Servo 900c",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Servo 900e",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "Siemens",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Hewlett‐Packard",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Spacelab",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Marquette",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Mennen",
+        "value": ""
+      },
+      {
+        "id": 22,
+        "name": "Lifecare",
+        "value": ""
+      },
+      {
+        "id": 23,
+        "name": "Nihon‐Koder",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Age Specific Competencies",
+    "items": [
+      {
+        "id": 1,
+        "name": "Infant (Birth - 1 year)",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Preschooler (ages 2-5 years)",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Childhood (ages 6-12 years)",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Adolescents (ages 13-21 years)",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Young Adults (ages 22-39 years)",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Older Adults (ages 65-79 years)",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Elderly (ages 80+ years)",
+        "value": ""
+      }
+    ]
+  }
+]

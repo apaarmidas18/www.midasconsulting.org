@@ -1,0 +1,453 @@
+[
+  {
+    "title": "PATIENT RIGHTS",
+    "items": [
+      {
+        "id": 1,
+        "name": "Communicates and obtains information while respecting the rights and privacy and confidentiality of information",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Involves the patient and family and respects their role in determining the nature of care to be provided, including Advanced Directives",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Complies with nursing staff responsibility include in the hospital policy related to Organ Donation",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Meets patient and families needs regarding communication, including interpreter services",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Provides accurate information to patient and families in a timely manner",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "LABOR AND DELIVERY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Assess cervical dilation",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Assess labor status",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Speculum examination",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Obtaining vaginal/cervical cultures",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Application of external ECG/TOCO EFM",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Application of internal ECG",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Interpretation of external/internal ECG ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Assisting with insertion of IUPC",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Conducting NST/BSST",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "IV insertion",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Pitocin Titration for induction/augmentation",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Assist with epidural",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Assist/monitor amnioinfusion",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Assist with scalp pH test",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Assist with vacuum delivery",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Assist with forceps delivery",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "Assist with vaginal delivery",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Circulate for cesarean section delivery",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Emergency cesarean section set up",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Assist with twin deliveries",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Assist with breech",
+        "value": ""
+      },
+      {
+        "id": 22,
+        "name": "Management of D&C",
+        "value": ""
+      },
+      {
+        "id": 23,
+        "name": "Management of fetal demise/stillborn",
+        "value": ""
+      },
+      {
+        "id": 24,
+        "name": "Adoption procedures",
+        "value": ""
+      },
+      {
+        "id": 25,
+        "name": "Management of diabetic mother",
+        "value": ""
+      },
+      {
+        "id": 26,
+        "name": "Procedures for the following:   Diabetic mother",
+        "value": ""
+      },
+      {
+        "id": 27,
+        "name": "Pre-eclamptic",
+        "value": ""
+      },
+      {
+        "id": 28,
+        "name": "Preterm labor",
+        "value": ""
+      },
+      {
+        "id": 29,
+        "name": "Prolapsed cord",
+        "value": ""
+      },
+      {
+        "id": 30,
+        "name": "Abruption",
+        "value": ""
+      },
+      {
+        "id": 31,
+        "name": "Placenta previa",
+        "value": ""
+      },
+      {
+        "id": 32,
+        "name": "Retained placenta",
+        "value": ""
+      },
+      {
+        "id": 33,
+        "name": "Herpes",
+        "value": ""
+      },
+      {
+        "id": 34,
+        "name": "Uterine prolapse",
+        "value": ""
+      },
+      {
+        "id": 35,
+        "name": "Hemorrhage",
+        "value": ""
+      },
+      {
+        "id": 36,
+        "name": "Shoulder dystocia",
+        "value": ""
+      },
+      {
+        "id": 37,
+        "name": "Accretia",
+        "value": ""
+      },
+      {
+        "id": 38,
+        "name": "DIC",
+        "value": ""
+      },
+      {
+        "id": 39,
+        "name": "Accretia",
+        "value": ""
+      },
+      {
+        "id": 40,
+        "name": "Episiotomy",
+        "value": ""
+      },
+      {
+        "id": 41,
+        "name": "Delivery table set-up",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "MEDICATIONS",
+    "items": [
+      {
+        "id": 1,
+        "name": "Magnesium",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Pitocin",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Terbutaline",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Antibiotics",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Narcotics",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Hemabate",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Methergine ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Narcan",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Insulin",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Heparin",
+        "value": ""
+      }
+    ]
+  },
+
+  {
+    "title": "MATERNITY",
+    "items": [
+      {
+        "id": 1,
+        "name": "Oobtain cord blood gas",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Postpartum care",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Nipple care",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Episiotomy care",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "PIH",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Pre-eclamptic",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Postpartum hemorrhage",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Care of newborn",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Breastfeeding",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Bottle feeding",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Infant formulas",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "D10W",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "PKU Testing",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Stabilize/admit to nursery",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Care of newborn with anomaly",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Heel sticks/dorsal sticks",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "Blood glucose monitoring",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Phototherapy",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Set up/care of newborn receiving phototherapy",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Set up/assist with circumcision",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Discharge of mother/baby",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Age Specific Competencies",
+    "items": [
+      {
+        "id": 1,
+        "name": "Infant (Birth - 1 year)",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Preschooler (ages 2-5 years)",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Childhood (ages 6-12 years)",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Adolescents (ages 13-21 years)",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Young Adults (ages 22-39 years)",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Adults (ages 40-64 years)",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Older Adults (ages 65-79 years)",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Elderly (ages 80+ years)",
+        "value": ""
+      }
+    ]
+  }
+]
