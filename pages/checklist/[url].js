@@ -147,7 +147,8 @@ const Url = ({ props }) => {
 
   // Example usage
 
-  const submitData = (list) => {
+  const submitData = (e) => {
+    e.preventDefault();
     const th =
       data === undefined || data.length === 0
         ? "Wait"
@@ -353,25 +354,25 @@ const Url = ({ props }) => {
       },
     };
 
-    // axios
-    //   .request(options)
-    //   .then(function (response) {
-    //     if (response.data.baseResponse.status == 1) {
-    //       swal({
-    //         title: "We have gathered all your information",
-    //         text: "Please proceed to submit request.",
-    //         icon: "success",
-    //       }).then((willDelete) => {
-    //         if (willDelete) {
-    //           swal("Your Request Has Been Submitted!", "success");
-    //           window.location.reload();
-    //         }
-    //       });
-    //     }
-    //   })
-    //   .catch(function (error) {
-    //     alert(error);
-    //   });
+    axios
+      .request(options)
+      .then(function (response) {
+        if (response.data.baseResponse.status == 1) {
+          swal({
+            title: "We have gathered all your information",
+            text: "Please proceed to submit request.",
+            icon: "success",
+          }).then((willDelete) => {
+            if (willDelete) {
+              swal("Your Request Has Been Submitted!", "success");
+              window.location.reload();
+            }
+          });
+        }
+      })
+      .catch(function (error) {
+        alert(error);
+      });
   };
 
   const tableData = () => {
