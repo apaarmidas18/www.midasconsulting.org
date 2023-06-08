@@ -8,10 +8,15 @@ const InputField = ({
   onChange,
   id,
   name,
+  onClick,
+  disabled,
+  style,
 }) => {
   return (
     <div className="col-md-3">
-      <label className="m-2 text-dark">{label}</label>
+      <label className="m-2 text-dark" style={style}>
+        {label}
+      </label>
       <input
         type={type}
         class="form-control"
@@ -21,6 +26,9 @@ const InputField = ({
         onChange={onChange}
         name={name}
         required
+        onClick={onClick}
+        disabled={disabled}
+        style={style}
       />
     </div>
   );

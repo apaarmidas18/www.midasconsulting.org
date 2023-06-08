@@ -2,12 +2,15 @@ import InputField from "@/components/InputField";
 import moment from "moment-timezone";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import swal from "sweetalert";
-
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
+import { addDays } from "date-fns";
+import { DateRange, DateRangePicker } from "react-date-range";
+import { Button, Modal } from "react-bootstrap";
 const Url = ({ props }) => {
   const router = useRouter();
-  // const host = "http://192.168.0.22:9000/";
   const host = "https://checklist.midascrm.tech/";
   const { url } = router.query;
   const [data, setData] = useState([]);
@@ -23,6 +26,45 @@ const Url = ({ props }) => {
     dob: newDate,
     ssn: "",
   });
+  const [showDate, setShowDate] = useState(false);
+  const [state, setState] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+  //Validation*************************************************
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      phoneno: "",
+      email: "",
+      dob: newDate,
+      ssn: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required("Required"),
+      phoneno: Yup.string().required("Required"),
+      ssn: Yup.string()
+        .required("Social Security Number is required")
+        .min(4, "Social Security Number Must be 4 Digits long")
+        .max(4, "Social Security Number Must be 5 Digits long"),
+      email: Yup.string().email("Invalid email address").required("Required"),
+      dob: Yup.string()
+        .required("Contact-Number is required")
+        .min(10, "Contact Number should not be long less than 10 digits")
+        .max(10, "Contact Number should not be long more than 10 digits"),
+    }),
+    onSubmit: (values) => {
+      CreateEmployee(values, navigate);
+      alert(JSON.stringify(values, null, 2));
+      // setFormState(values);
+    },
+  });
+
+  //Validation*************************************************
 
   const [references, setReferenes] = useState([
     {
@@ -174,7 +216,7 @@ const Url = ({ props }) => {
     </style>
 </head>
 <body>
-<span>Candidate's Details</span>
+<span><strong>Candidate's Details</strong></span>
 <div>
 
           <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
@@ -193,13 +235,18 @@ const Url = ({ props }) => {
       userData.dob
     }></div>
           </div>
-          <div class="col-md-3"><input disabled type="number" class="form-control" id="name"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="ssn" required="" value=${
+          <div class="col-md-3">
+          <input disabled type="number" class="form-control" id="name"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="ssn" required="" value=${
             userData.ssn
-          }></div></div>
+          }></div>
+          </div>
+          <div class="col-md-3">
+          <input disabled type="number" class="form-control" id="name"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="ssn" required="" value=${`${from} - ${to}`}></div>
+          </div>
           
           
 
-              <span>Candidate References's details </span>
+              <span><strong>Candidate References's details </strong></span>
 
 
           <div>
@@ -230,7 +277,7 @@ const Url = ({ props }) => {
         
           <input disabled type="number" class="form-control" id="phoneno"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="phoneno" required="" value=${references[1].phoneno}></div>
           <div class="col-md-3"><input disabled type="email" class="form-control" id="email"  name="email" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${references[1].email}></div>`
-              : null
+              : ""
           }
         
        
@@ -302,28 +349,29 @@ const Url = ({ props }) => {
         list: data.list,
         htmlData: Html,
         listName: data.Listname,
+        requestTimeOffDate: { startDate: from, endDate: to },
       },
     };
 
-    axios
-      .request(options)
-      .then(function (response) {
-        if (response.data.baseResponse.status == 1) {
-          swal({
-            title: "We have gathered all your information",
-            text: "Please proceed to submit request.",
-            icon: "success",
-          }).then((willDelete) => {
-            if (willDelete) {
-              swal("Your Request Has Been Submitted!", "success");
-              window.location.reload();
-            }
-          });
-        }
-      })
-      .catch(function (error) {
-        alert(error);
-      });
+    // axios
+    //   .request(options)
+    //   .then(function (response) {
+    //     if (response.data.baseResponse.status == 1) {
+    //       swal({
+    //         title: "We have gathered all your information",
+    //         text: "Please proceed to submit request.",
+    //         icon: "success",
+    //       }).then((willDelete) => {
+    //         if (willDelete) {
+    //           swal("Your Request Has Been Submitted!", "success");
+    //           window.location.reload();
+    //         }
+    //       });
+    //     }
+    //   })
+    //   .catch(function (error) {
+    //     alert(error);
+    //   });
   };
 
   const tableData = () => {
@@ -379,7 +427,8 @@ const Url = ({ props }) => {
 
   const word = url;
   const capitalized = url.charAt(0).toUpperCase() + url.slice(1);
-
+  const from = moment(state[0].startDate).format("MM/DD/YYYY");
+  const to = moment(state[0].endDate).format("MM/DD/YYYY");
   return (
     <>
       <div className="container checklist-head">
@@ -390,156 +439,199 @@ const Url = ({ props }) => {
         {url == undefined ? "wait" : <h2>{capitalized} Skills Checklist</h2>}
 
         <div className="col-md-12 p-5">
-          <form>
-            <div className="row">
-              <div class="form-group row mb-3 d-flex align-items-center bg-light border rounded p-2">
-                <div className="form-group row mb-3 d-flex align-items-center">
-                  <InputField
-                    label={"Enter Your Name"}
-                    value={userData.name}
-                    type={"text"}
-                    placeholder={"Full Name"}
-                    onChange={(e) => handledetailsChange(e, "name")}
-                    id={"name"}
-                    name={"name"}
-                  />
-                  <InputField
-                    label={"Enter Phone number"}
-                    value={userData.phoneno}
-                    type={"number"}
-                    placeholder={"Enter Phone number"}
-                    onChange={(e) => handledetailsChange(e, "phoneno")}
-                    id={"phoneno"}
-                    name={"phoneno"}
-                  />
-                  <InputField
-                    label={"Enter E-mail"}
-                    value={userData.email}
-                    type={"email"}
-                    placeholder={"Enter E-mail"}
-                    onChange={(e) => handledetailsChange(e, "email")}
-                    id={"email"}
-                    name={"email"}
-                  />
-                  {console.log(userData.dob)}
-                  {dob === true ? (
+          <div className="row">
+            <div class="form-group row mb-3 d-flex align-items-center bg-light border rounded p-2">
+              <div className="form-group row mb-3 d-flex align-items-center">
+                <InputField
+                  label={"Enter Your Name"}
+                  value={userData.name}
+                  type={"text"}
+                  placeholder={"Full Name"}
+                  onChange={(e) => handledetailsChange(e, "name")}
+                  id={"name"}
+                  name={"name"}
+                />
+                <InputField
+                  label={"Enter Phone number"}
+                  value={userData.phoneno}
+                  type={"number"}
+                  placeholder={"Enter Phone number"}
+                  onChange={(e) => handledetailsChange(e, "phoneno")}
+                  id={"phoneno"}
+                  name={"phoneno"}
+                />
+                <InputField
+                  label={"Enter E-mail"}
+                  value={userData.email}
+                  type={"email"}
+                  placeholder={"Enter E-mail"}
+                  onChange={(e) => handledetailsChange(e, "email")}
+                  id={"email"}
+                  name={"email"}
+                />
+                {dob === true ? (
+                  <div className="btn col-md-3" onClick={() => setDob(false)}>
                     <InputField
                       label={"Date Of Birth"}
                       value={userData.dob}
-                      type={"text"}
-                      onClick={() => setDob(false)}
+                      type={"button"}
                       id={"dob"}
                       name={"dob"}
                       disabled={true}
+                      style={{ width: "180px" }}
                     />
-                  ) : (
-                    <>
-                      <InputField
-                        label={"Date Of Birth"}
-                        value={userData.dob}
-                        type={"date"}
-                        onChange={(e) => handledetailsChange(e, "dob")}
-                        id={"dob"}
-                        name={"dob"}
-                      />
-                    </>
-                  )}
-
-                  {console.log(userData.dob)}
-                  <InputField
-                    label={"Last four SSN digit"}
-                    value={userData.ssn}
-                    type={"number"}
-                    placeholder={"Last four SSN digit"}
-                    onChange={(e) => handledetailsChange(e, "ssn")}
-                    id={"name"}
-                    name={"ssn"}
-                  />
-                </div>
-
-                <div class="form-group row mt-3 ">
-                  <div className="col-md-11">
-                    <span
-                      className="btn  btn-danger"
-                      onChange={() => setActive(!active)}
-                    >
-                      2 professional References. (One must be supervisor)
-                    </span>
                   </div>
-                  <div className="col-md-11"></div>
-                </div>
-                {active === false ? (
+                ) : (
                   <>
-                    <div className="form-group row mb-3 d-flex align-items-center">
-                      {references.map((item, index) => (
-                        <>
-                          <InputField
-                            label={"Enter Referre's Name"}
-                            value={item.name}
-                            type={"text"}
-                            placeholder={"Full Name"}
-                            onChange={(e) => handleReferences(e, index)}
-                            id={"name"}
-                            name={"name"}
-                          />
-                          <InputField
-                            label={"Enter Referre's Phone"}
-                            value={item.phoneno}
-                            type={"number"}
-                            placeholder={"Enter Phone number"}
-                            onChange={(e) => handleReferences(e, index)}
-                            id={"phoneno"}
-                            name={"phoneno"}
-                          />
-                          <InputField
-                            label={"Enter E-mail"}
-                            value={item.email}
-                            type={"email"}
-                            placeholder={"Enter Referre's E-mail"}
-                            onChange={(e) => handleReferences(e, index)}
-                            id={"email"}
-                            name={"email"}
-                          />
-                          {references.length === 2 ? (
-                            <button
-                              className="btn btn-danger col-md-3 mt-5 mb-2"
-                              disabled={true}
-                            >
-                              Add References
-                            </button>
-                          ) : (
-                            <button
-                              className="btn btn-danger col-md-3 mt-5  mb-2"
-                              onClick={(e) => handleAddReference(e)}
-                            >
-                              Add References
-                            </button>
-                          )}
-                        </>
-                      ))}
-                    </div>
+                    <InputField
+                      label={"Date Of Birth"}
+                      value={userData.dob}
+                      type={"date"}
+                      onChange={(e) => handledetailsChange(e, "dob")}
+                      id={"dob"}
+                      name={"dob"}
+                    />
                   </>
-                ) : null}
+                )}
+                <InputField
+                  label={"Last four SSN digit"}
+                  value={userData.ssn}
+                  type={"number"}
+                  placeholder={"Last four SSN digit"}
+                  onChange={(e) => handledetailsChange(e, "ssn")}
+                  id={"name"}
+                  name={"ssn"}
+                />
 
-                <div class="form-group row mt-3 ">
-                  <div className="col-md-11">
-                    <p>
-                      <strong style={{ color: "#cb1829" }}>
-                        Instructions:
-                      </strong>{" "}
-                      <span className="text-muted text-sm declare-para">
-                        This checklist is meant to serve as a general guideline
-                        for our client facilities as to the level of your skills
-                        within your nursing specialty. Please use the scale
-                        below to describe your experience/expertise in each area
-                        listed below.
-                      </span>
-                    </p>
+                <InputField
+                  label={"Request Time Off"}
+                  value={`${from} -  ${to}`}
+                  disabled={true}
+                />
+
+                <div className="col-md-3" style={{ marginTop: "40px" }}>
+                  <span
+                    className="btn  bg-light border rounded"
+                    onClick={() => setShowDate(true)}
+                  >
+                    Select Request time off
+                  </span>
+                </div>
+                {/* ------------------------------------------------------------------------- */}
+                {showDate === true ? (
+                  <div
+                    className={`modal ${showDate}`}
+                    style={{ display: "block", position: "initial" }}
+                  >
+                    <Modal.Dialog>
+                      <Modal.Header>
+                        <Modal.Title>Modal title</Modal.Title>
+                      </Modal.Header>
+
+                      <Modal.Body>
+                        <DateRange
+                          onChange={(item) => setState([item.selection])}
+                          ranges={state}
+                        />
+                      </Modal.Body>
+
+                      <Modal.Footer>
+                        <Button
+                          variant="secondary"
+                          onClick={() => setShowDate(false)}
+                        >
+                          Close
+                        </Button>
+                      </Modal.Footer>
+                    </Modal.Dialog>
                   </div>
+                ) : (
+                  ""
+                )}
+              </div>
+
+              {/* ------------------------------------------------------------------------- */}
+              <div class="form-group row mt-3 ">
+                <div className="col-md-11">
+                  <span
+                    className="btn  btn-danger"
+                    onChange={() => setActive(!active)}
+                  >
+                    2 professional References. (One must be supervisor)
+                  </span>
+                </div>
+                <div className="col-md-11"></div>
+              </div>
+              {active === false ? (
+                <>
+                  <div className="form-group row mb-3 d-flex align-items-center">
+                    {references.map((item, index) => (
+                      <>
+                        <InputField
+                          label={"Enter Referre's Name"}
+                          value={item.name}
+                          type={"text"}
+                          placeholder={"Full Name"}
+                          onChange={(e) => handleReferences(e, index)}
+                          id={"name"}
+                          name={"name"}
+                        />
+                        <InputField
+                          label={"Enter Referre's Phone"}
+                          value={item.phoneno}
+                          type={"number"}
+                          placeholder={"Enter Phone number"}
+                          onChange={(e) => handleReferences(e, index)}
+                          id={"phoneno"}
+                          name={"phoneno"}
+                        />
+                        <InputField
+                          label={"Enter E-mail"}
+                          value={item.email}
+                          type={"email"}
+                          placeholder={"Enter Referre's E-mail"}
+                          onChange={(e) => handleReferences(e, index)}
+                          id={"email"}
+                          name={"email"}
+                        />
+                        {references.length === 2 ? (
+                          <button
+                            className="btn btn-danger col-md-3 mt-5 mb-2"
+                            disabled={true}
+                          >
+                            Add References
+                          </button>
+                        ) : (
+                          <button
+                            className="btn btn-danger col-md-3 mt-5  mb-2"
+                            onClick={(e) => handleAddReference(e)}
+                          >
+                            Add References
+                          </button>
+                        )}
+                      </>
+                    ))}
+                  </div>
+                </>
+              ) : null}
+
+              <div class="form-group row mt-3 ">
+                <div className="col-md-11">
+                  <p>
+                    <strong style={{ color: "#cb1829" }}>Instructions:</strong>{" "}
+                    <span className="text-muted text-sm declare-para">
+                      This checklist is meant to serve as a general guideline
+                      for our client facilities as to the level of your skills
+                      within your nursing specialty. Please use the scale below
+                      to describe your experience/expertise in each area listed
+                      below.
+                    </span>
+                  </p>
                 </div>
               </div>
             </div>
-          </form>
+          </div>
+
           <div className="form-group row mb-3">
             <div className="col-md-3">
               <p>
@@ -561,18 +653,225 @@ const Url = ({ props }) => {
       {data?.list === undefined ? (
         <>Wait</>
       ) : (
-        <div className="container">
-          <div className="row">
-            {data.list.map((list, index) => {
-              const ItemsVariable =
-                list.title === "CERTIFICATIONS" ? list.items.pop() : list.items;
+        <form onSubmit={() => submitData(data.list)}>
+          <div className="container">
+            <div className="row">
+              {data.list.map((list, index) => {
+                const ItemsVariable =
+                  list.title === "CERTIFICATIONS"
+                    ? list.items.pop()
+                    : list.items;
 
-              return (
-                <>
-                  {list.title == "CERTIFICATIONS" ? (
-                    <>
+                return (
+                  <>
+                    {list.title == "CERTIFICATIONS" ? (
+                      <>
+                        <div
+                          className="col-md-4"
+                          style={{ display: "inherit" }}
+                          key={index}
+                        >
+                          <table className="table table-bordered">
+                            <thead className="health-table">
+                              <tr>
+                                <th className="health-row" colspan="4">
+                                  {list.title}
+                                </th>
+                                <th
+                                  className="health-row small"
+                                  style={{
+                                    width: "20px",
+                                    textAlign: "center",
+                                  }}
+                                  scope="col"
+                                >
+                                  1
+                                </th>
+                                <th
+                                  className="health-row small"
+                                  style={{ width: "20px", textAlign: "center" }}
+                                  scope="col"
+                                >
+                                  2
+                                </th>
+                                <th
+                                  className="health-row small"
+                                  style={{ width: "20px", textAlign: "center" }}
+                                  scope="col"
+                                >
+                                  3
+                                </th>
+                                <th
+                                  className="health-row small"
+                                  style={{ width: "20px", textAlign: "center" }}
+                                  scope="col"
+                                >
+                                  4
+                                </th>
+                              </tr>
+                            </thead>
+
+                            <tbody key={index}>
+                              <tr>
+                                <th
+                                  className="table-data"
+                                  colspan="4"
+                                  scope="row"
+                                >
+                                  {ItemsVariable.name}
+                                </th>
+                                <td class="table-data">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    value={"checked"}
+                                    onChange={(e) =>
+                                      (ItemsVariable.value1 = e.target.value)
+                                    }
+                                    name={ItemsVariable.name}
+                                    required={truue}
+                                    id="flexRadioDefault"
+                                  />
+                                </td>
+                                <td class="table-data">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    value={"checked"}
+                                    onChange={(e) =>
+                                      (ItemsVariable.value2 = e.target.value)
+                                    }
+                                    name={ItemsVariable.name}
+                                    required
+                                    id="flexRadioDefault"
+                                  />
+                                </td>
+                                <td class="table-data">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    value={"checked"}
+                                    onChange={(e) =>
+                                      (ItemsVariable.value3 = e.target.value)
+                                    }
+                                    name={ItemsVariable.name}
+                                    required
+                                    id="flexRadioDefault"
+                                  />
+                                </td>
+
+                                <td class="table-data">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    value={"checked"}
+                                    onChange={(e) =>
+                                      (ItemsVariable.value4 = e.target.value)
+                                    }
+                                    name={ItemsVariable.name}
+                                    required
+                                    id="flexRadioDefault"
+                                  />
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div
+                          className="col-md-6"
+                          style={{ display: "inherit" }}
+                          key={index}
+                        >
+                          <table className="table table-bordered">
+                            <thead className="health-table">
+                              <tr>
+                                <th className="health-row" colspan="4">
+                                  {list.title}
+                                </th>
+
+                                <th>
+                                  <span>Expiry Date</span>
+                                </th>
+                              </tr>
+                            </thead>
+                            {list.items.map((item, index) => (
+                              <tbody key={index}>
+                                <tr>
+                                  <th
+                                    className="table-data"
+                                    colspan="3"
+                                    scope="row"
+                                  >
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      value=""
+                                      id="certification"
+                                      style={{ marginRight: "10px" }}
+                                      required
+                                    />
+                                  </th>
+                                  <th>{item.name}</th>
+                                  <th>
+                                    <td>
+                                      <input
+                                        type="date"
+                                        class="form-control"
+                                        id="date"
+                                        aria-describedby="date"
+                                        placeholder="Select date"
+                                      />
+                                    </td>
+                                  </th>
+                                </tr>
+                              </tbody>
+                            ))}
+
+                            <tbody>
+                              <tr>
+                                <th colSpan={4}>
+                                  Other:Specify
+                                  <textarea
+                                    class="form-control"
+                                    id="floatingTextarea2"
+                                  ></textarea>
+                                </th>
+                                <th>
+                                  <input
+                                    type="date"
+                                    class="form-control"
+                                    id="date"
+                                    aria-describedby="date"
+                                    placeholder="Select date"
+                                  />
+                                </th>
+                              </tr>
+                              <tr>
+                                <th colSpan={4}>
+                                  Other : Specify
+                                  <textarea
+                                    class="form-control"
+                                    id="floatingTextarea2"
+                                  ></textarea>
+                                </th>
+                                <th>
+                                  <input
+                                    type="date"
+                                    class="form-control"
+                                    id="date"
+                                    aria-describedby="date"
+                                    placeholder="Select date"
+                                  />
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </>
+                    ) : (
                       <div
-                        className="col-md-4"
+                        className="col-md-6"
                         style={{ display: "inherit" }}
                         key={index}
                       >
@@ -584,10 +883,7 @@ const Url = ({ props }) => {
                               </th>
                               <th
                                 className="health-row small"
-                                style={{
-                                  width: "20px",
-                                  textAlign: "center",
-                                }}
+                                style={{ width: "20px", textAlign: "center" }}
                                 scope="col"
                               >
                                 1
@@ -615,338 +911,138 @@ const Url = ({ props }) => {
                               </th>
                             </tr>
                           </thead>
-
-                          <tbody key={index}>
-                            <tr>
-                              <th
-                                className="table-data"
-                                colspan="4"
-                                scope="row"
-                              >
-                                {ItemsVariable.name}
-                              </th>
-                              <td class="table-data">
-                                <input
-                                  class="form-check-input"
-                                  type="radio"
-                                  value={"checked"}
-                                  onChange={(e) =>
-                                    (ItemsVariable.value1 = e.target.value)
-                                  }
-                                  name={ItemsVariable.name}
-                                  required
-                                  id="flexRadioDefault"
-                                />
-                              </td>
-                              <td class="table-data">
-                                <input
-                                  class="form-check-input"
-                                  type="radio"
-                                  value={"checked"}
-                                  onChange={(e) =>
-                                    (ItemsVariable.value2 = e.target.value)
-                                  }
-                                  name={ItemsVariable.name}
-                                  required
-                                  id="flexRadioDefault"
-                                />
-                              </td>
-                              <td class="table-data">
-                                <input
-                                  class="form-check-input"
-                                  type="radio"
-                                  value={"checked"}
-                                  onChange={(e) =>
-                                    (ItemsVariable.value3 = e.target.value)
-                                  }
-                                  name={ItemsVariable.name}
-                                  required
-                                  id="flexRadioDefault"
-                                />
-                              </td>
-
-                              <td class="table-data">
-                                <input
-                                  class="form-check-input"
-                                  type="radio"
-                                  value={"checked"}
-                                  onChange={(e) =>
-                                    (ItemsVariable.value4 = e.target.value)
-                                  }
-                                  name={ItemsVariable.name}
-                                  required
-                                  id="flexRadioDefault"
-                                />
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                      <div
-                        className="col-md-6"
-                        style={{ display: "inherit" }}
-                        key={index}
-                      >
-                        <table className="table table-bordered">
-                          <thead className="health-table">
-                            <tr>
-                              <th className="health-row" colspan="4">
-                                {list.title}
-                              </th>
-
-                              <th>
-                                <span>Expiry Date</span>
-                              </th>
-                            </tr>
-                          </thead>
                           {list.items.map((item, index) => (
                             <tbody key={index}>
                               <tr>
                                 <th
                                   className="table-data"
-                                  colspan="3"
+                                  colspan="4"
                                   scope="row"
                                 >
+                                  {item.name}
+                                </th>
+                                <td class="table-data">
                                   <input
                                     class="form-check-input"
-                                    type="checkbox"
-                                    value=""
-                                    id="certification"
-                                    style={{ marginRight: "10px" }}
+                                    type="radio"
+                                    value={"checked"}
+                                    onChange={(e) =>
+                                      (item.value1 = e.target.value)
+                                    }
+                                    name={item.name}
                                     required
+                                    id="flexRadioDefault"
                                   />
-                                </th>
-                                <th>{item.name}</th>
-                                <th>
-                                  <td>
-                                    <input
-                                      type="date"
-                                      class="form-control"
-                                      id="date"
-                                      aria-describedby="date"
-                                      placeholder="Select date"
-                                    />
-                                  </td>
-                                </th>
+                                </td>
+                                <td class="table-data">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    value={"checked"}
+                                    onChange={(e) =>
+                                      (item.value2 = e.target.value)
+                                    }
+                                    name={item.name}
+                                    required
+                                    id="flexRadioDefault"
+                                  />
+                                </td>
+                                <td class="table-data">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    value={"checked"}
+                                    onChange={(e) =>
+                                      (item.value3 = e.target.value)
+                                    }
+                                    name={item.name}
+                                    required
+                                    id="flexRadioDefault"
+                                  />
+                                </td>
+
+                                <td class="table-data">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    value={"checked"}
+                                    onChange={(e) =>
+                                      (item.value4 = e.target.value)
+                                    }
+                                    name={item.name}
+                                    required
+                                    id="flexRadioDefault"
+                                  />
+                                </td>
                               </tr>
                             </tbody>
                           ))}
-
-                          <tbody>
-                            <tr>
-                              <th colSpan={4}>
-                                Other:Specify
-                                <textarea
-                                  class="form-control"
-                                  id="floatingTextarea2"
-                                ></textarea>
-                              </th>
-                              <th>
-                                <input
-                                  type="date"
-                                  class="form-control"
-                                  id="date"
-                                  aria-describedby="date"
-                                  placeholder="Select date"
-                                />
-                              </th>
-                            </tr>
-                            <tr>
-                              <th colSpan={4}>
-                                Other : Specify
-                                <textarea
-                                  class="form-control"
-                                  id="floatingTextarea2"
-                                ></textarea>
-                              </th>
-                              <th>
-                                <input
-                                  type="date"
-                                  class="form-control"
-                                  id="date"
-                                  aria-describedby="date"
-                                  placeholder="Select date"
-                                />
-                              </th>
-                            </tr>
-                          </tbody>
                         </table>
                       </div>
-                    </>
-                  ) : (
-                    <div
-                      className="col-md-6"
-                      style={{ display: "inherit" }}
-                      key={index}
-                    >
-                      <table className="table table-bordered">
-                        <thead className="health-table">
-                          <tr>
-                            <th className="health-row" colspan="4">
-                              {list.title}
-                            </th>
-                            <th
-                              className="health-row small"
-                              style={{ width: "20px", textAlign: "center" }}
-                              scope="col"
-                            >
-                              1
-                            </th>
-                            <th
-                              className="health-row small"
-                              style={{ width: "20px", textAlign: "center" }}
-                              scope="col"
-                            >
-                              2
-                            </th>
-                            <th
-                              className="health-row small"
-                              style={{ width: "20px", textAlign: "center" }}
-                              scope="col"
-                            >
-                              3
-                            </th>
-                            <th
-                              className="health-row small"
-                              style={{ width: "20px", textAlign: "center" }}
-                              scope="col"
-                            >
-                              4
-                            </th>
-                          </tr>
-                        </thead>
-                        {list.items.map((item, index) => (
-                          <tbody key={index}>
-                            <tr>
-                              <th
-                                className="table-data"
-                                colspan="4"
-                                scope="row"
-                              >
-                                {item.name}
-                              </th>
-                              <td class="table-data">
-                                <input
-                                  class="form-check-input"
-                                  type="radio"
-                                  value={"checked"}
-                                  onChange={(e) =>
-                                    (item.value1 = e.target.value)
-                                  }
-                                  name={item.name}
-                                  required
-                                  id="flexRadioDefault"
-                                />
-                              </td>
-                              <td class="table-data">
-                                <input
-                                  class="form-check-input"
-                                  type="radio"
-                                  value={"checked"}
-                                  onChange={(e) =>
-                                    (item.value2 = e.target.value)
-                                  }
-                                  name={item.name}
-                                  required
-                                  id="flexRadioDefault"
-                                />
-                              </td>
-                              <td class="table-data">
-                                <input
-                                  class="form-check-input"
-                                  type="radio"
-                                  value={"checked"}
-                                  onChange={(e) =>
-                                    (item.value3 = e.target.value)
-                                  }
-                                  name={item.name}
-                                  required
-                                  id="flexRadioDefault"
-                                />
-                              </td>
-
-                              <td class="table-data">
-                                <input
-                                  class="form-check-input"
-                                  type="radio"
-                                  value={"checked"}
-                                  onChange={(e) =>
-                                    (item.value4 = e.target.value)
-                                  }
-                                  name={item.name}
-                                  required
-                                  id="flexRadioDefault"
-                                />
-                              </td>
-                            </tr>
-                          </tbody>
-                        ))}
-                      </table>
-                    </div>
-                  )}
-                </>
-              );
-            })}
-          </div>
-
-          <div>
-            <div class="form-group row mt-3 d-flex ">
-              <div className="col-md-1">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="declare"
-                  required
-                />
-              </div>
-              <div className="col-md-11">
-                <p className="declare-para">
-                  I hereby certify that ALL information I have provided on this
-                  skills checklist and all other documentation, is true and
-                  accurate. I understand and acknowledge that any
-                  misrepresentation or omission may result in disqualification
-                  from employment and/or immediate termination.
-                </p>
-              </div>
+                    )}
+                  </>
+                );
+              })}
             </div>
-            <div
-              className="container declare-box"
-              style={{ marginTop: "10px" }}
-            >
-              <div className="date-box">
-                <p>Date signed-:</p>
-                <strong>
-                  <span>{newDate}</span>
-                </strong>
-              </div>
-              <div className="sign-box">
-                <strong>
-                  <span>Signature</span>
-                </strong>
-                <input
-                  style={{ marginTop: "10px" }}
-                  type="text"
-                  className="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Your Signature"
-                  onChange={(e) => setSign(e.target.value)}
-                  value={sign}
-                />
-              </div>
-            </div>
+
             <div>
-              <button
-                style={{ marginTop: "20px", marginBottom: "20px" }}
-                className="btn btn-primary"
-                onClick={() => submitData(data.list)}
+              <div class="form-group row mt-3 d-flex ">
+                <div className="col-md-1">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="declare"
+                    required
+                  />
+                </div>
+                <div className="col-md-11">
+                  <p className="declare-para">
+                    I hereby certify that ALL information I have provided on
+                    this skills checklist and all other documentation, is true
+                    and accurate. I understand and acknowledge that any
+                    misrepresentation or omission may result in disqualification
+                    from employment and/or immediate termination.
+                  </p>
+                </div>
+              </div>
+              <div
+                className="container declare-box"
+                style={{ marginTop: "10px" }}
               >
-                Submit
-              </button>
+                <div className="date-box">
+                  <p>Date signed-:</p>
+                  <strong>
+                    <span>{newDate}</span>
+                  </strong>
+                </div>
+                <div className="sign-box">
+                  <strong>
+                    <span>Signature</span>
+                  </strong>
+                  <input
+                    style={{ marginTop: "10px" }}
+                    type="text"
+                    className="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Your Signature"
+                    onChange={(e) => setSign(e.target.value)}
+                    value={sign}
+                  />
+                </div>
+              </div>
+              <div>
+                <button
+                  style={{ marginTop: "20px", marginBottom: "20px" }}
+                  className="btn btn-primary"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       )}
     </>
   );
