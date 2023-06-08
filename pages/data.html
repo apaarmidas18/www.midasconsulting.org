@@ -56,261 +56,414 @@
 
 
 <body>
-<table>
-    <thead>
-        <tr></tr>
+<span><strong>Candidate's Details</strong></span>
+<div>
+    <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
+        <div class="col-md-3"> <input disabled type="text" class="form-control" id="name"
+                style=" padding : 10px; margin :10px;width: 180px; text-align: center;" name="name" required="" value=>
+        </div>
+        <div class="col-md-3"> <input disabled type="number" class="form-control" id="phoneno"
+                style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="phoneno" required=""
+                value=></div>
+        <div class="col-md-3"><input disabled type="email" class="form-control" id="email" name="email"
+                style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=></div>
+        <div class="col-md-3"><input disabled type="date" class="form-control" id="dob" name="dob"
+                style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=2023-06-08>
+        </div>
+    </div>
+    <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
+        <div class="col-md-3"> <input disabled type="number" class="form-control" id="name"
+                style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="ssn" required="" value=>
+        </div>
+    </div>
+    <div class="col-md-3"> <input disabled type="number" class="form-control" id="name"
+            style=" padding : 10px; width: 180px; text-align: center; margin :10px;"  required=""
+            value="06/09/2023 - 06/16/2023"></div>
+</div>
+</div> <span><strong>Candidate References's details </strong></span>
+<div>
+    <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
+        <div class="col-md-3"> <input disabled type="text" class="form-control" id="name"
+                style=" padding : 10px; margin :10px;width: 180px; text-align: center;" name="name" required="" value=>
+        </div>
+        <div class="col-md-3"> <input disabled type="number" class="form-control" id="phoneno"
+                style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="phoneno" required=""
+                value=></div>
+        <div class="col-md-3"><input disabled type="email" class="form-control" id="email" name="email"
+                style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=></div>
+    </div>
+</div>
+</div>
+<table class="table table-bordered" style="width: 400px; text-align: center;">
+    <thead class="health-table">
+        <tr>
+            <th class="health-row" colspan="4">Skills</th>
+            <th class="health-row small" scope="col" style="width: 30px; text-align: center;">1</th>
+            <th class="health-row small" scope="col" style="width: 30px; text-align: center;">2</th>
+            <th class="health-row small" scope="col" style="width: 30px; text-align: center;">3</th>
+            <th class="health-row small" scope="col" style="width: 30px; text-align: center;">4</th>
+        </tr>
     </thead>
     <tbody>
         <tr>
-            <td>1</td>
-            <td>Coronary Artery By-pass</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Vital Sign - PULSE</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - PULSE required
+                    id="flexRadioDefault" value=checked checked> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - PULSE required
+                    id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - PULSE required
+                    id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - PULSE required
+                    id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>2</td>
-            <td>Mitral Valve Repair / Replacement</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Vital Sign - RESPIRATION</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - RESPIRATION required
+                    id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - RESPIRATION required
+                    id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - RESPIRATION required
+                    id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - RESPIRATION required
+                    id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>3</td>
-            <td>Aortic Valve Replacement</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Vital Sign - LUNG SOUNDS</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - LUNG SOUNDS required
+                    id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - LUNG SOUNDS required
+                    id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - LUNG SOUNDS required
+                    id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - LUNG SOUNDS required
+                    id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>4</td>
-            <td>Multiple Valve Transposition</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Vital Sign - BLOOD PRESSURE</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - BLOOD PRESSURE
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - BLOOD PRESSURE
+                    required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - BLOOD PRESSURE
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - BLOOD PRESSURE
+                    required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>5</td>
-            <td>Septal Defects</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Vital Sign - PULSE OXIMETRY</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - PULSE OXIMETRY
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - PULSE OXIMETRY
+                    required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - PULSE OXIMETRY
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Vital Sign - PULSE OXIMETRY
+                    required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>6</td>
-            <td>Ventricular Aneurysm Repair</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Basic Airway - OROPHARYNGEAL AIRWAY (OPA)</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - OROPHARYNGEAL AIRWAY
+                    (OPA) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - OROPHARYNGEAL AIRWAY
+                    (OPA) required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - OROPHARYNGEAL AIRWAY
+                    (OPA) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - OROPHARYNGEAL AIRWAY
+                    (OPA) required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>7</td>
-            <td>Bring Back Heart</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Basic Airway - NASOPHARYNGEAL AIRWAY (NPA)</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - NASOPHARYNGEAL
+                    AIRWAY (NPA) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - NASOPHARYNGEAL
+                    AIRWAY (NPA) required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - NASOPHARYNGEAL
+                    AIRWAY (NPA) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - NASOPHARYNGEAL
+                    AIRWAY (NPA) required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>8</td>
-            <td>Pericardial Window</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Basic Airway - ORAL SUCTIONING</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - ORAL SUCTIONING
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - ORAL SUCTIONING
+                    required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - ORAL SUCTIONING
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - ORAL SUCTIONING
+                    required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>9</td>
-            <td>Intra-Aortic Balloon Insertion</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Basic Airway - BAG VALVE MASK</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - BAG VALVE MASK
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - BAG VALVE MASK
+                    required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - BAG VALVE MASK
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - BAG VALVE MASK
+                    required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>10</td>
-            <td>Heartport or Similar CABG</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Basic Airway - OXYGEN ADMINISTRATION</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - OXYGEN
+                    ADMINISTRATION required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - OXYGEN
+                    ADMINISTRATION required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - OXYGEN
+                    ADMINISTRATION required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Basic Airway - OXYGEN
+                    ADMINISTRATION required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>11</td>
-            <td>Thoraco Approach Mid-Cab</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Advanced Airway - MULTI-LUMEN AIRWAY (COMBI-TUBE)</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Advanced Airway - MULTI-LUMEN
+                    AIRWAY (COMBI-TUBE) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Advanced Airway - MULTI-LUMEN
+                    AIRWAY (COMBI-TUBE) required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Advanced Airway - MULTI-LUMEN
+                    AIRWAY (COMBI-TUBE) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Advanced Airway - MULTI-LUMEN
+                    AIRWAY (COMBI-TUBE) required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>12</td>
-            <td>Aortic Arch Replacement</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Patient Assessment - TRAUMA</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Patient Assessment - TRAUMA
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Patient Assessment - TRAUMA
+                    required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Patient Assessment - TRAUMA
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Patient Assessment - TRAUMA
+                    required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>13</td>
-            <td>Aortic Valve Conduit</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Patient Assessment - MEDICAL</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Patient Assessment - MEDICAL
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Patient Assessment - MEDICAL
+                    required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Patient Assessment - MEDICAL
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Patient Assessment - MEDICAL
+                    required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>14</td>
-            <td>Pediatric Hearts</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Bleeding Control/Shock Management</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Bleeding Control/Shock Management
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Bleeding Control/Shock Management
+                    required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Bleeding Control/Shock Management
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Bleeding Control/Shock Management
+                    required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>15</td>
-            <td>Tetrology of Fallot</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">PNEUMATIC ANTI SHOCK GARMENT (MAST)</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=PNEUMATIC ANTI SHOCK GARMENT (MAST)
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=PNEUMATIC ANTI SHOCK GARMENT (MAST)
+                    required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=PNEUMATIC ANTI SHOCK GARMENT (MAST)
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=PNEUMATIC ANTI SHOCK GARMENT (MAST)
+                    required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>16</td>
-            <td>Chamberlin Procedure</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Spinal Immobilization - B/B (SUPINE PT.)</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Spinal Immobilization - B/B (SUPINE
+                    PT.) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Spinal Immobilization - B/B (SUPINE
+                    PT.) required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Spinal Immobilization - B/B (SUPINE
+                    PT.) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Spinal Immobilization - B/B (SUPINE
+                    PT.) required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>17</td>
-            <td>AICD Insertion</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Spinal Immobilization - KED (SEATED PT.)</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Spinal Immobilization - KED (SEATED
+                    PT.) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Spinal Immobilization - KED (SEATED
+                    PT.) required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Spinal Immobilization - KED (SEATED
+                    PT.) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Spinal Immobilization - KED (SEATED
+                    PT.) required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>18</td>
-            <td>Saphenous Vein Harvest</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Helmet Removal - FOOTBALL</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Helmet Removal - FOOTBALL required
+                    id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Helmet Removal - FOOTBALL required
+                    id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Helmet Removal - FOOTBALL required
+                    id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Helmet Removal - FOOTBALL required
+                    id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>19</td>
-            <td>Endoscopic Vein Harvest</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Helmet Removal - MOTORCYCLE</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Helmet Removal - MOTORCYCLE
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Helmet Removal - MOTORCYCLE
+                    required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Helmet Removal - MOTORCYCLE
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Helmet Removal - MOTORCYCLE
+                    required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>20</td>
-            <td>Gastric Artery Harvest</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Splinting - LONG BONE</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Splinting - LONG BONE required
+                    id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Splinting - LONG BONE required
+                    id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Splinting - LONG BONE required
+                    id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Splinting - LONG BONE required
+                    id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>21</td>
-            <td>Radial Vein Harvest</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Splinting - BIPOLAR TRACTION (HARE)</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Splinting - BIPOLAR TRACTION (HARE)
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Splinting - BIPOLAR TRACTION (HARE)
+                    required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Splinting - BIPOLAR TRACTION (HARE)
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Splinting - BIPOLAR TRACTION (HARE)
+                    required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>22</td>
-            <td>Insertion Vena Cava Filter</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Splinting - UNIPOLAR TRACTION (SAGER)</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Splinting - UNIPOLAR TRACTION
+                    (SAGER) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Splinting - UNIPOLAR TRACTION
+                    (SAGER) required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Splinting - UNIPOLAR TRACTION
+                    (SAGER) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Splinting - UNIPOLAR TRACTION
+                    (SAGER) required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>23</td>
-            <td>Thoracotomy</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">Scoop Stretcher</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Scoop Stretcher required
+                    id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Scoop Stretcher required
+                    id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Scoop Stretcher required
+                    id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=Scoop Stretcher required
+                    id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>24</td>
-            <td>Thoracotomy</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">BLS/ALS - Cardiac Arrest Management (AED)</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=BLS/ALS - Cardiac Arrest Management
+                    (AED) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=BLS/ALS - Cardiac Arrest Management
+                    (AED) required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=BLS/ALS - Cardiac Arrest Management
+                    (AED) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=BLS/ALS - Cardiac Arrest Management
+                    (AED) required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>25</td>
-            <td>Insertion Chest Tube</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">BLS/ALS - Nitroglycerin Administration (NTG)</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=BLS/ALS - Nitroglycerin
+                    Administration (NTG) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=BLS/ALS - Nitroglycerin
+                    Administration (NTG) required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=BLS/ALS - Nitroglycerin
+                    Administration (NTG) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=BLS/ALS - Nitroglycerin
+                    Administration (NTG) required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>26</td>
-            <td>Esophageal Repair</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">BLS/ALS - Epinephrine Administration (EPI)</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=BLS/ALS - Epinephrine
+                    Administration (EPI) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=BLS/ALS - Epinephrine
+                    Administration (EPI) required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=BLS/ALS - Epinephrine
+                    Administration (EPI) required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=BLS/ALS - Epinephrine
+                    Administration (EPI) required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>27</td>
-            <td>Pneurnonectomy / Lobectomy</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">CPR - ADULT / CHILD / INFANT</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=CPR - ADULT / CHILD / INFANT
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=CPR - ADULT / CHILD / INFANT
+                    required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=CPR - ADULT / CHILD / INFANT
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=CPR - ADULT / CHILD / INFANT
+                    required id="flexRadioDefault" disabled> </td>
+    </tbody>
+    <tbody>
         <tr>
-            <td>28</td>
-            <td>Mediastinodcopy</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>29</td>
-            <td>Desendind Aortic Repair</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>30</td>
-            <td>Arterial Stenting</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>31</td>
-            <td>Intra-Operative Angioplasty</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <th class="table-data" colspan="4" scope="row">FBAO - ADULT / CHILD / INFANT</th>
+            <td class="table-data"><input class="form-check-input" type="radio" name=FBAO - ADULT / CHILD / INFANT
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=FBAO - ADULT / CHILD / INFANT
+                    required id="flexRadioDefault" value=checked checked disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=FBAO - ADULT / CHILD / INFANT
+                    required id="flexRadioDefault" disabled> </td>
+            <td class="table-data"><input class="form-check-input" type="radio" name=FBAO - ADULT / CHILD / INFANT
+                    required id="flexRadioDefault" disabled> </td>
     </tbody>
 </table>
-    </body>
+</form>
+</div>
+</div>
+</div>
+<div>
+    <div class="form-group row mt-3 d-flex ">
+        <div className="col-md-11">
+            <p className="declare-para"> I hereby certify that ALL information I have provided on this skills checklist
+                and all other documentation, is true and accurate. I understand and acknowledge that any
+                misrepresentation or omission may result in disqualification from employment and/or immediate
+                termination. </p>
+        </div>
+    </div>
+    <div style="margin-top: 10px; justify-content: space-between; display: flex; flex-direction:row;">
+        <div className="date-box">
+            <p>Date signed-:</p> <strong> <span>2023-06-08</span> </strong>
+        </div>
+        <div className="sign-box" style="display: flex; flex-direction:column;"> <strong> <span>Signature</span>
+            </strong> <input style=" padding : 5px; width: 180px; text-align: center; margin-top :10px;"" type=" text"
+                className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Your Signature" value=disabled /> </div>
+    </div>
+</div>
+</body>
 
 </html>
