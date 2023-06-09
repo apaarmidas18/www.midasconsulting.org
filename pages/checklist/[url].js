@@ -676,7 +676,9 @@ const Url = ({ props }) => {
       ) : (
         // <form onSubmit={(e) => submitData(e)}>
         <div className="container">
+          
           <div className="row">
+          <form>
             {data.list.map((list, index) => {
               const ItemsVariable =
                 list.title === "CERTIFICATIONS" ? list.items.pop() : list.items;
@@ -1003,6 +1005,7 @@ const Url = ({ props }) => {
               );
             })}
           </div>
+          </form>
 
           <div>
             <div class="form-group row mt-3 d-flex ">
@@ -1063,8 +1066,7 @@ const Url = ({ props }) => {
         </div>
         // </form>
       )}
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-      {html}
+     
     </>
   );
 };
