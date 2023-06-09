@@ -11,10 +11,13 @@ import { DateRange, DateRangePicker } from "react-date-range";
 import { Button, Modal } from "react-bootstrap";
 import axios from "axios";
 import swal from "sweetalert";
+import "react-datepicker/dist/react-datepicker.css";
+import ReactDatePicker from "react-datepicker";
 
 const Url = ({ props }) => {
   const router = useRouter();
-  const host = "https://checklist.midascrm.tech/";
+  // const host = "https://checklist.midascrm.tech/";
+  const host = "http://192.168.0.22:9000/";
   const { url } = router.query;
   const [data, setData] = useState([]);
   const [active, setActive] = useState(false);
@@ -22,11 +25,12 @@ const Url = ({ props }) => {
   const [html, setHTML] = useState("");
   const [dob, setDob] = useState(false);
   const [sign, setSign] = useState("");
+  const [dateofBirth, setDateOfBirth] = useState(new Date());
   const [userData, setUserData] = useState({
     name: "",
     phoneno: "",
     email: "",
-    dob: newDate,
+    dob: dateofBirth,
     ssn: "",
   });
   const [showDate, setShowDate] = useState(false);
@@ -44,7 +48,7 @@ const Url = ({ props }) => {
       name: "",
       phoneno: "",
       email: "",
-      dob: newDate,
+      dob: "",
       ssn: "",
     },
     validationSchema: Yup.object({
@@ -76,6 +80,8 @@ const Url = ({ props }) => {
       email: "",
     },
   ]);
+  const from = moment(state[0].startDate).format("MM/DD/YYYY");
+  const to = moment(state[0].endDate).format("MM/DD/YYYY");
 
   function renderTable(datas, title) {
     // Start building the table markup
@@ -106,28 +112,28 @@ const Url = ({ props }) => {
       tableHTML += `<th class="table-data" colspan="4" scope="row">${ite.name}</th>`;
 
       tableHTML += `<td class="table-data">${
-        ite.value1 !== ""
+        ite.value1 === "checked"
           ? `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" value=${ite.value1} checked disabled>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled > `
       } </td>`;
       tableHTML += `<td class="table-data">${
-        ite.value2 !== ""
+        ite.value2 === "checked"
           ? `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" value=${ite.value2} checked disabled>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled > `
       } </td>`;
       tableHTML += `<td class="table-data">${
-        ite.value3 !== ""
+        ite.value3 === "checked"
           ? `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" value=${ite.value3} checked disabled>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
-        ite.value4 !== ""
+        ite.value4 === "checked"
           ? `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" value=${ite.value4} checked disabled>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
@@ -150,8 +156,9 @@ const Url = ({ props }) => {
     return tableHTML;
   }
 
-  // Example usage
-
+  const date = `${from}-${to}`;
+  const StringDate = JSON.stringify(date);
+  const inputDate = JSON.stringify(userData.dob);
   const submitData = (e) => {
     e.preventDefault();
     const th =
@@ -237,9 +244,7 @@ const Url = ({ props }) => {
             userData.phoneno
           }></div><div class="col-md-3"><input disabled type="email" class="form-control" id="email"  name="email" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${
       userData.email
-    }></div><div class="col-md-3"><input disabled type="date" class="form-control" id="dob"  name="dob" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${
-      userData.dob
-    }></div>
+    }></div><div class="col-md-3"><input disabled type="text" class="form-control" id="dob"  name="dob" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${moment(inputDate).format("DD/MM/YYYY")} /></div>
           </div>
           <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;"> 
           <div class="col-md-3">
@@ -248,7 +253,8 @@ const Url = ({ props }) => {
           }></div>
       
           <div class="col-md-3">
-          <input disabled type="number" class="form-control" id="name"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="ssn" required="" value=${`${from} - ${to}`}></div>
+          <input type="text" class="form-control" id="name"  style=" padding : 10px; width:200px; text-align: center; margin :10px;" name="ssn" required="" value=${StringDate === "Invalid Date-Invalid Date" ?  ""  : StringDate  } 
+          disabled /></div>
           </div>
           </div>
           
@@ -360,25 +366,25 @@ const Url = ({ props }) => {
       },
     };
 
-    axios
-      .request(options)
-      .then(function (response) {
-        if (response.data.baseResponse.status == 1) {
-          swal({
-            title: "We have gathered all your information",
-            text: "Please proceed to submit request.",
-            icon: "success",
-          }).then((willDelete) => {
-            if (willDelete) {
-              swal("Your Request Has Been Submitted!", "success");
-              window.location.reload();
-            }
-          });
-        }
-      })
-      .catch(function (error) {
-        alert(error);
-      });
+    // axios
+    //   .request(options)
+    //   .then(function (response) {
+    //     if (response.data.baseResponse.status == 1) {
+    //       swal({
+    //         title: "We have gathered all your information",
+    //         text: "Please proceed to submit request.",
+    //         icon: "success",
+    //       }).then((willDelete) => {
+    //         if (willDelete) {
+    //           swal("Your Request Has Been Submitted!", "success");
+    //           window.location.reload();
+    //         }
+    //       });
+    //     }
+    //   })
+    //   .catch(function (error) {
+    //     alert(error);
+    //   });
   };
 
   const tableData = () => {
@@ -397,11 +403,10 @@ const Url = ({ props }) => {
     if (name === "phoneno" || name === "ssn") {
       setUserData({ ...userData, [name]: parseInt(e.target.value) });
     } else if (name === "dob") {
-      console.log(e.target.value);
       setDob(true);
       setUserData({
         ...userData,
-        [name]: moment(e.target.value).format("MM/DD/YYYY"),
+        [name]: moment(e).format("MM/DD/YYYY"),
       });
     } else {
       setUserData({ ...userData, [name]: e.target.value });
@@ -434,8 +439,6 @@ const Url = ({ props }) => {
 
   const word = url;
   const capitalized = url.charAt(0).toUpperCase() + url.slice(1);
-  const from = moment(state[0].startDate).format("MM/DD/YYYY");
-  const to = moment(state[0].endDate).format("MM/DD/YYYY");
   return (
     <>
       <div className="container checklist-head">
@@ -489,16 +492,22 @@ const Url = ({ props }) => {
                     />
                   </div>
                 ) : (
-                  <>
-                    <InputField
-                      label={"Date Of Birth"}
-                      value={userData.dob}
-                      type={"date"}
-                      onChange={(e) => handledetailsChange(e, "dob")}
-                      id={"dob"}
-                      name={"dob"}
+                  <div className="col-md-3">
+                    <label className="m-2 text-dark" style={{ width: "180px" }}>
+                      Enter DOB
+                    </label>
+                    <ReactDatePicker
+                      selected={dateofBirth}
+                      name="dob"
+                      onChange={(date) => handledetailsChange(date, "dob")}
+                      className="form-control calender"
+                      placeholderText="Select Date Of Birth"
+                      peekNextMonth
+                      showMonthDropdown
+                      showYearDropdown
+                      dropdownMode="select"
                     />
-                  </>
+                  </div>
                 )}
                 <InputField
                   label={"Last four SSN digit"}
@@ -1054,6 +1063,8 @@ const Url = ({ props }) => {
         </div>
         // </form>
       )}
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+      {html}
     </>
   );
 };
