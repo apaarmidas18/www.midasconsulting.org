@@ -755,7 +755,7 @@ const Url = ({ props }) => {
                                       (ItemsVariable.value1 = e.target.value)
                                     }
                                     name={ItemsVariable.name}
-                                    required={truue}
+                                    required={true}
                                     id="flexRadioDefault"
                                   />
                                 </td>
