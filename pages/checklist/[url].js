@@ -16,8 +16,8 @@ import ReactDatePicker from "react-datepicker";
 
 const Url = ({ props }) => {
   const router = useRouter();
-  // const host = "https://checklist.midascrm.tech/";
-  const host = "http://192.168.0.22:9000/";
+  const host = "https://checklist.midascrm.tech/";
+  // const host = "http://192.168.0.22:9000/";
   const { url } = router.query;
   const [data, setData] = useState([]);
   const [active, setActive] = useState(false);
@@ -366,25 +366,25 @@ const Url = ({ props }) => {
       },
     };
 
-    // axios
-    //   .request(options)
-    //   .then(function (response) {
-    //     if (response.data.baseResponse.status == 1) {
-    //       swal({
-    //         title: "We have gathered all your information",
-    //         text: "Please proceed to submit request.",
-    //         icon: "success",
-    //       }).then((willDelete) => {
-    //         if (willDelete) {
-    //           swal("Your Request Has Been Submitted!", "success");
-    //           window.location.reload();
-    //         }
-    //       });
-    //     }
-    //   })
-    //   .catch(function (error) {
-    //     alert(error);
-    //   });
+    axios
+      .request(options)
+      .then(function (response) {
+        if (response.data.baseResponse.status == 1) {
+          swal({
+            title: "We have gathered all your information",
+            text: "Please proceed to submit request.",
+            icon: "success",
+          }).then((willDelete) => {
+            if (willDelete) {
+              swal("Your Request Has Been Submitted!", "success");
+              window.location.reload();
+            }
+          });
+        }
+      })
+      .catch(function (error) {
+        alert(error);
+      });
   };
 
   const tableData = () => {
