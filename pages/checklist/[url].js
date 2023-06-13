@@ -26,7 +26,8 @@ const Url = ({ url }) => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const [userData, setUserData] = useState({
-    name: "",
+    firstname: "",
+    lastname: "",
     phoneno: "",
     email: "",
     dob: dateofBirth,
@@ -236,9 +237,20 @@ const Url = ({ url }) => {
           <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
           <div class="col-md-3">
 
-          <input disabled type="text" class="form-control" id="name" 
+          <input disabled type="text" class="form-control" id="firstname" 
           style=" padding : 10px;  margin :10px;width: 180px; text-align: center;"
-          name="name" required="" value=${userData.name}></div>
+          name="firstname" required="" value=${userData.firstname}>
+          
+          
+          </div>
+           <div class="col-md-3">
+
+          <input disabled type="text" class="form-control" id="lastname" 
+          style=" padding : 10px;  margin :10px;width: 180px; text-align: center;"
+          name="lastname" required="" value=${userData.lastname}>
+          
+          
+          </div>
           <div class="col-md-3">
         
           <input disabled type="number" class="form-control" id="phoneno"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="phoneno" required="" value=${
@@ -459,13 +471,22 @@ const Url = ({ url }) => {
             <div class="form-group row mb-3 d-flex align-items-center bg-light border rounded p-2">
               <div className="form-group row mb-3 d-flex align-items-center">
                 <InputField
-                  label={"Enter Full Name"}
-                  value={userData.name}
+                  label={"Enter First Name"}
+                  value={userData.firstname}
                   type={"text"}
-                  placeholder={"Full Name"}
-                  onChange={(e) => handledetailsChange(e, "name")}
-                  id={"name"}
-                  name={"name"}
+                  placeholder={"First Name"}
+                  onChange={(e) => handledetailsChange(e, "firstname")}
+                  id={"firstname"}
+                  name={"firstname"}
+                />
+                <InputField
+                  label={"Enter Last Name"}
+                  value={userData.lastname}
+                  type={"text"}
+                  placeholder={"Last Name"}
+                  onChange={(e) => handledetailsChange(e, "lastname")}
+                  id={"lastname"}
+                  name={"lastname"}
                 />
                 <InputField
                   label={"Enter Phone number"}
