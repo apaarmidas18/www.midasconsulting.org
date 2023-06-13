@@ -1,4 +1,4 @@
-import InputField from "@/components/InputField";
+import InputField from "../../components/InputField";
 import moment from "moment-timezone";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -16,10 +16,7 @@ import ReactDatePicker from "react-datepicker";
 import { host } from "../../static";
 // const host = "http://192.168.0.22:9000/";
 
-const Url = ({ data }) => {
-  const router = useRouter();
-
-  const { url } = router.query;
+const Url = ({ url }) => {
   const [active, setActive] = useState(false);
   const newDate = moment().tz("US/Central").format("YYYY-MM-DD");
   const [html, setHTML] = useState("");
@@ -27,6 +24,7 @@ const Url = ({ data }) => {
   const [sign, setSign] = useState("");
   const [dateofBirth, setDateOfBirth] = useState(new Date());
   const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
   const [userData, setUserData] = useState({
     name: "",
     phoneno: "",
@@ -160,6 +158,7 @@ const Url = ({ data }) => {
   const date = `${from}-${to}`;
   const StringDate = JSON.stringify(date);
   const inputDate = JSON.stringify(userData.dob);
+
   const submitData = (e) => {
     e.preventDefault();
     const th =
@@ -430,11 +429,17 @@ const Url = ({ data }) => {
       },
     ]);
   };
+  const tableData = () => {
+    const options = { method: "GET" };
 
+    fetch(`${host}list/getCheckList/${url}`, options)
+      .then((response) => response.json())
+      .then((response) => setData(response.response));
+  };
   const word = url;
 
   const capitalized = url.charAt(0).toUpperCase() + url.slice(1);
-
+  useEffect(() => tableData(), []);
   return (
     <>
       <div className="container checklist-head">
@@ -1083,10 +1088,7 @@ export default Url;
 export async function getServerSideProps(context) {
   const { url } = context.query;
 
-  const options = { method: "GET" };
-  const fetchApi = await fetch(`${host}list/getCheckList/${url}`, options);
-  const response = await fetchApi.json();
   return {
-    props: { data: response.response },
+    props: { url: url },
   };
 }
