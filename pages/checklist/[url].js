@@ -26,6 +26,7 @@ const Url = ({ props }) => {
   const [dob, setDob] = useState(false);
   const [sign, setSign] = useState("");
   const [dateofBirth, setDateOfBirth] = useState(new Date());
+  const [loading, setLoading] = useState(true);
   const [userData, setUserData] = useState({
     name: "",
     phoneno: "",
@@ -396,7 +397,10 @@ const Url = ({ props }) => {
 
     fetch(`${host}list/getCheckList/${url}`, options)
       .then((response) => response.json())
-      .then((response) => setData(response.response));
+      .then((response) => {
+        setData(response.response);
+        setLoading(false);
+      });
   };
 
   useEffect(() => {
@@ -429,6 +433,7 @@ const Url = ({ props }) => {
       setReferenes(list);
     }
   };
+
   const handleAddReference = (e) => {
     e.preventDefault();
     setReferenes([
@@ -442,7 +447,9 @@ const Url = ({ props }) => {
   };
 
   const word = url;
+
   const capitalized = url.charAt(0).toUpperCase() + url.slice(1);
+
   return (
     <>
       <div className="container checklist-head">
@@ -450,7 +457,11 @@ const Url = ({ props }) => {
           <img src="/images/logo.webp" />
         </div>
 
-        {url == undefined ? "wait" : <h2>{capitalized} Skills Checklist</h2>}
+        {url == undefined ? (
+          <h2>Wait While we fetch data for you</h2>
+        ) : (
+          <h2>{capitalized} Skills Checklist</h2>
+        )}
 
         <div className="col-md-12 p-5">
           <div className="row">
@@ -715,21 +726,30 @@ const Url = ({ props }) => {
                                 </th>
                                 <th
                                   className="health-row small"
-                                  style={{ width: "20px", textAlign: "center" }}
+                                  style={{
+                                    width: "20px",
+                                    textAlign: "center",
+                                  }}
                                   scope="col"
                                 >
                                   2
                                 </th>
                                 <th
                                   className="health-row small"
-                                  style={{ width: "20px", textAlign: "center" }}
+                                  style={{
+                                    width: "20px",
+                                    textAlign: "center",
+                                  }}
                                   scope="col"
                                 >
                                   3
                                 </th>
                                 <th
                                   className="health-row small"
-                                  style={{ width: "20px", textAlign: "center" }}
+                                  style={{
+                                    width: "20px",
+                                    textAlign: "center",
+                                  }}
                                   scope="col"
                                 >
                                   4

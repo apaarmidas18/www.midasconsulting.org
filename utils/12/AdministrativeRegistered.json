@@ -1,0 +1,284 @@
+[
+  {
+    "title": "Administrative Duties",
+    "items": [
+      {
+        "id": 1,
+        "name": "Data Entry",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Medical Records - Entry",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Medical Records - Maintenance ",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Electronic Medical Records - Entry",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Electronic Medical Records - Maintenance",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Gathers data and runs reports",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Patient Files - Set up, report and record ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Completion and filing/distribution of reports",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Schedules appointments/tests",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Takes, distributes and prioritizes messages",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Assists physicians with procedures",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Assists nursing staff",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Prepares patients for appointments and exams",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Gathers patient history and VS",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Gives injections as directed",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Performs phlebotomy skills",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "Collects lab. Specimens",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Administer EKGs",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Completes specimen testing, i.e. glucose, strep, mono, flu",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Prepares and maintains supplies and equipment",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Knows utilization of patient care equipment/instruments",
+        "value": ""
+      },
+      {
+        "id": 22,
+        "name": "Develops patient, physician and peer relationships",
+        "value": ""
+      },
+      {
+        "id": 23,
+        "name": "Maintains/protects patient confidentiality",
+        "value": ""
+      },
+      {
+        "id": 24,
+        "name": "Adheres to facility policies and procedures",
+        "value": ""
+      },
+      {
+        "id": 25,
+        "name": "Adheres to OSHA, HIPPA, legal and ethical guidelines",
+        "value": ""
+      },
+      {
+        "id": 26,
+        "name": "Adheres to quality protocol and standards",
+        "value": ""
+      },
+      {
+        "id": 27,
+        "name": "Attends and participates in required meetings",
+        "value": ""
+      },
+      {
+        "id": 28,
+        "name": "Schedules appointments, tests and treatments",
+        "value": ""
+      },
+      {
+        "id": 29,
+        "name": "Responds to emergencies in a calm organized manner",
+        "value": ""
+      },
+      {
+        "id": 30,
+        "name": "Understands/follows the reporting process acording to the chain of command",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Computer Skills:",
+    "items": [
+      {
+        "id": 1,
+        "name": "Medic, Medic Soft",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Centricity",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Medical Manager",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "HIS ",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Word, Word Perfect",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Soft",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Windows ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "IDX",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Meditech",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Age Specific Competencies",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Neonatal/Newborn (up to 30 days)",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Infant (30 days to 1 year)",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Toddler (1 to 3 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Preschooler (3 to 5 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "School age (5 to 12 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Adolescents (12 to 18 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Young Adults (18 to 39 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Middle Adults (40 to 64 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 9,
+
+        "name": "Older Adults (65 & up)",
+
+        "value": ""
+      }
+    ]
+  }
+]

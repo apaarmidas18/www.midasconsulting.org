@@ -1,0 +1,835 @@
+[
+  {
+    "title": "General Patient Care",
+    "items": [
+      {
+        "id": 1,
+        "name": "Admit and Assess Patients",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Advance Directives",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Collect Appropriate Data ",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Discharge Teaching",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Preoperative Teaching",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Patient Prep",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Computerized Documentation ",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Cardiovascular",
+    "items": [
+      {
+        "id": 1,
+        "name": "Assess Heart Tones",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Bedside Tele Monitoring",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Interpretation of Coagulation Studies",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Perform Pulses/Circulation Checks ",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Pre/Post Op Care Pacemaker",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Pulmonary",
+    "items": [
+      {
+        "id": 1,
+        "name": "Assess Breath Sounds",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Apply Oxygen",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Interpret ABGs",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Thoracentesis",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Oximetry",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Neurology",
+    "items": [
+      {
+        "id": 1,
+        "name": "Assess Neurological Signs",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Epidurals",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Selective Nerve Root Blocks ",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Level of Consciousness",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "GI",
+    "items": [
+      {
+        "id": 1,
+        "name": "Insertion/Monitoring NG Tubes",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Assessment/Patient Care Continued",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Flexible Sigmoidoscopy",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Hemorrhoid Banding",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Liver Biopsy",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Paracentesis",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Lap Band Surgery",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "GU",
+    "items": [
+      {
+        "id": 1,
+        "name": "Bladder Biopsy",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Cystoscopy",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Urethral Dilation",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Nephrostomy",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Kidney Biopsy",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Suprapubic Catheter",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Prostate Biopsy",
+        "value": ""
+      }
+    ]
+  },
+
+  {
+    "title": "ENT and Mouth",
+    "items": [
+      {
+        "id": 1,
+        "name": "Prosthondontics – Restorative Dentistry",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Mouth Biopsy",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Myringotomy",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Maxillofacial Prosthetics",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Nose Biopsy",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Thyroid Aspirate Biopsy",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Fiberoptic Laryngoscopy ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Tonsilectomy",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Rhinoplasty",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Wounds/Integument",
+    "items": [
+      {
+        "id": 1,
+        "name": "Application of Burn Dressings",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Application of Dressing",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Debridement of Wound",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Wound Care",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Endocrine",
+    "items": [
+      {
+        "id": 1,
+        "name": "Care of Diabetic Patient",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Diabetic Teaching",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "OB/GYN",
+    "items": [
+      {
+        "id": 1,
+        "name": "Electrodesiccation and Curettage (ED&C)",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Nipple Reconstruction",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Musculoskeletal",
+    "items": [
+      {
+        "id": 1,
+        "name": "Arthrocentesis",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "External Hardware and Pin Care",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Arthroscopy",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Open Reduction and Internal Fixation",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Closed Reduction and Internal Fixation",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Trigger Point Injections",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Plastics",
+    "items": [
+      {
+        "id": 1,
+        "name": "Liposuction",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Plastic Surgery",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Cosmetic",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "General Medications/Therapeutic Interventions",
+    "items": [
+      {
+        "id": 1,
+        "name": "Administer IM and SQ Meds",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Administer Inhalation Medications",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Administer PO Medications",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Bladder Irrigation and Instillation",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Needleless Systems",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Chemotherapy",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "IV Therapy",
+    "items": [
+      {
+        "id": 1,
+        "name": "Infusion Pumps",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Peipheral IV Insertion",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Syringe Pumps",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Vascular Access Devices Care/Maintenance",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Administer IV Medications",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Oxygen Administration",
+    "items": [
+      {
+        "id": 1,
+        "name": "Ambu-Bug",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Nasal Cannula",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Non-ReBreather Mask",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Pulse Oximetry",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Venti Mask",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Face Mask",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Nutritional Therapy",
+    "items": [
+      {
+        "id": 1,
+        "name": "Lipids",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "TPN",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Procalamine",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Enteral Administration",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Pain Management/Anesthesia",
+    "items": [
+      {
+        "id": 1,
+        "name": "Inplantable Narcotic Pump Re ll",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Moderate Sedation",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Epidural",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Spinal",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Local",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "General",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Axillary Block",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Bier Block",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Blood",
+    "items": [
+      {
+        "id": 1,
+        "name": "Blood and Blood Products",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Albumin",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "General Procedures/Equipment",
+    "items": [
+      {
+        "id": 1,
+        "name": "Apply Immobilizers (clavicle, knee, etc.)",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Assist with Code Resuscitation",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Assist with Lumbar Puncture",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Laser",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Dermabrasion",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Drain Removal",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Incision and Drainage",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "NGT Insertion",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Patch Test",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Punch Biopsy",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Procedure Set Up",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Procedures/Equipment Continued",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Remove External Fixators With Pin",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Scissor Biopsy",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Scrub",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Screw-Hardware Removal",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "Set-up Assist Suturingy",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Staple Removal",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Straight/Foley Cath Female",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Straight/Foley Cath Male",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Suture Removal",
+        "value": ""
+      },
+      {
+        "id": 22,
+        "name": "TENS (Transcutaneous Elec. Nerve Stimulator)",
+        "value": ""
+      },
+      {
+        "id": 23,
+        "name": "Use of Doppler",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Specimen Collections",
+    "items": [
+      {
+        "id": 1,
+        "name": "Venipuncture",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Clean Catch Urine",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Sterile Urine Collection",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Stool",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Sputum",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Butter y Stick",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Central Line Draw",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Clinical Settings",
+    "items": [
+      {
+        "id": 1,
+        "name": "Surgi-Center",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Out Patient Clinic",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Age Group Experience Continued",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Physician O ce",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Ambulatory Surgery Clinic",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Joint Commission",
+    "items": [
+      {
+        "id": 1,
+        "name": "National Safety Goals",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "“Do Not Use” Abbreviations and Terms",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Age Specific Competencies",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Neonatal/Newborn (up to 30 days)",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Infant (30 days to 1 year)",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Toddler (1 to 3 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Preschooler (3 to 5 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "School age (5 to 12 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Adolescents (12 to 18 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Young Adults (18 to 39 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Middle Adults (40 to 64 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 9,
+
+        "name": "Older Adults (65 & up)",
+
+        "value": ""
+      }
+    ]
+  }
+]

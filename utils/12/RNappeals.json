@@ -1,0 +1,190 @@
+[
+  {
+    "title": "KNOWLEDGE, SKILLS, ABILITIES",
+    "items": [
+      {
+        "id": 1,
+        "name": "Review, analysis and extraction of clinical information from patient records",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Drafting of effective narratives for Medicare and Medicaid appeals documentation",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Drafted briefs in support of denied cases under appeal at all levels of the government appeals process ",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Maintained current knowledge base of medical coding",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Knowledge of federal and state hopsital Utilization Review (UR) regulations",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Knowledge of of Medicare guidelines regarding medical necessity",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Knowledge of of Medicare guidelines regarding inpatient and outpatient observation ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Research and preparation for beneficiary hearings",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Experience testifying as expert witness in hearings",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Collaborated with internal and external legal sources",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Chart review skills",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Ability to quickly research and extract relevant data from a medical record",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Develop and Draft clear narratives for a solid case in support of medical claims for appeals",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Experience with electronic medical record",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Knowledge and experience with acute hospital utilization review using InterQual and/or Milliman",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Working knowledge of medical coding",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "Knowledge and experience with case management",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Knowledge and experience with government and contacted payers",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Attention to details, timeliness and accuracy",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Ability to work independently while working efficiently",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Ability to work comfortably within a high production team",
+        "value": ""
+      }
+    ]
+  },
+
+  {
+    "title": "Age Specific Competencies",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Neonatal/Newborn (up to 30 days)",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Infant (30 days to 1 year)",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Toddler (1 to 3 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Preschooler (3 to 5 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "School age (5 to 12 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Adolescents (12 to 18 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Young Adults (18 to 39 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Middle Adults (40 to 64 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 9,
+
+        "name": "Older Adults (65 & up)",
+
+        "value": ""
+      }
+    ]
+  }
+]

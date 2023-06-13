@@ -1,0 +1,986 @@
+[
+  {
+    "title": "WORK SETTING",
+    "items": [
+      {
+        "id": 1,
+        "name": "Procedural Cath Lab",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "lnterventional Cath Lab",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "EP Lab",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Interventional Radiology ",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Pre/Post Procedural Setting",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Charge Experience",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Other Setting (List) ",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "EQUIPMENT",
+    "items": [
+      {
+        "id": 1,
+        "name": "Automatic Implantable Cardiac Defibrillator",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Cardioversion",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Cardioversion",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Intra Aortic Balloon Pump (IABP) ",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "SV02 Recording",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Ventilator Management",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "CARDIAC CATH LAB PROCEDURES",
+    "items": [
+      {
+        "id": 1,
+        "name": "AICD Placement",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Aortography",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Cardiac Biopsy ",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Cardiac Implant Closure Device",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Cardiac Stent Placement",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Diagnostic Cardiac Catheterization Adult",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Diagnostic Cardiac Catheterization-Pediatric/Neonatal ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Directional Coronary Atherectomy",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "IABP Placement/Removal",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Internal Mammary Angiography",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Laser Assisted Procedures",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Percutaneous Transluminal Coronary Angioplasty",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Pericardiocentesis",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Permanent Pacemaker Placement",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Pulmonary Angiography",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Rotational Coronary Atherectomy",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "Saphenous Vein Graft Angiography",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Transluminal Extraction Catheter",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Valvuloplasty",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Ventricular Assist Device Insertion",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Computer Skills:",
+    "items": [
+      {
+        "id": 1,
+        "name": "Medic, Medic Soft",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Centricity",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Medical Manager",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "HIS ",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Word, Word Perfect",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Soft",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Windows ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "IDX",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Meditech",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "ELECTROPHYSIOLOGY PROCEDURES",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Electrophysiology Evaluation",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Baseline Measurements",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Cardiac Ablation",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Cardiac Mapping",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "Cardioversion",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Conduction Study",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Internal Cardioverter Defibrillator Implant",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Tilt Table Study",
+
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "IR-GASTROINTESTINAL STUDIES",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Angioplasty",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Chemoembolization",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Cholecystostomy",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Embolization",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "ERCP",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Esophageal Stent Placement",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Gastrojejunostomy",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Gastrostomy Tube Placement",
+
+        "value": ""
+      },
+      {
+        "id": 9,
+
+        "name": "Liver Ablation",
+
+        "value": ""
+      },
+
+      {
+        "id": 10,
+
+        "name": "Pericentesis",
+
+        "value": ""
+      },
+
+      {
+        "id": 11,
+
+        "name": "Percutaneous Hepatic Angiography",
+
+        "value": ""
+      },
+
+      {
+        "id": 12,
+
+        "name": "TIPS",
+
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "IR-GENITOURINARY STUDIES",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Adrenal Angiography",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Angiography of Female GU System",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Angiography of Male GU System",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Cystostomy",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "Embolization",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Nephrostomy",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Percutaneous Stone Extraction",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Renal Angiography",
+
+        "value": ""
+      },
+      {
+        "id": 9,
+
+        "name": "Renal Artery Angioplasty",
+
+        "value": ""
+      },
+
+      {
+        "id": 10,
+
+        "name": "Renal Artery Stent Placement",
+
+        "value": ""
+      },
+
+      {
+        "id": 11,
+
+        "name": "Ureteral Stent",
+
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "IR-NEUROLOGIC STUDIES",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Cerebral Angiography",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Carotid Angiography",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Neurologic Angioplasty",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Neurologic Thrombolysis",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "Vertebroplasty",
+
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "IR-PERIPHERAL VASCULAR STUDIES",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "IR-PERIPHERAL VASCULAR STUDIES",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Angioplasty",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Central Venous Access/Port Placement",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Dialysis Graft Creation/Revision",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "Dialysis Graft lnterventional",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Peripheral Vascular Embolization",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Stent Graft Placement",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "SVC/IVC Venograph",
+
+        "value": ""
+      },
+      {
+        "id": 9,
+
+        "name": "Thoracic Aortography",
+
+        "value": ""
+      },
+
+      {
+        "id": 10,
+
+        "name": "Upper and Lower Extremity Angiography",
+
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "IR-PULMONARY PROCEDURES",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Chest Tube Placement",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Pulmonary Embolization",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Pulmonary Angiography",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Thoracentesis",
+
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "PROFESSIONAL KNOWLEDGE AND SKILLS",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Conscious/Procedural Sedation",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Assist w/Central Line/Venous Line Insertion",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Venous Sampling",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Topical Hemostasis (D-Stat, Chito-Seal, Syvek Patch, etc.)",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "Vascular Closure Systems (Perclose, StarClose, etc.)",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "External Compression Devices (C-Clamp, Sandbags,etc.)",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Physiologic Monitoring/Recording",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Sheath Removal and Monitoring",
+
+        "value": ""
+      },
+      {
+        "id": 9,
+
+        "name": "National Patient Safety Goals/Core Measures",
+
+        "value": ""
+      },
+
+      {
+        "id": 10,
+
+        "name": "Universal Protocol Procedures",
+
+        "value": ""
+      },
+      {
+        "id": 11,
+
+        "name": "Isolation Precautions",
+
+        "value": ""
+      },
+      {
+        "id": 12,
+
+        "name": "Infection Prevention",
+
+        "value": ""
+      },
+
+      {
+        "id": 13,
+
+        "name": "Age Specific/Population-Based Care",
+
+        "value": ""
+      },
+      {
+        "id": 14,
+
+        "name": "Fall Risk Assessment/Prevention",
+
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "EMR",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Cerner",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Eclipsys",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Epic",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "GE",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "McKesson",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Meditech",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Other Computerized System",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Computerized Physician Order Entry",
+
+        "value": ""
+      },
+      {
+        "id": 9,
+
+        "name": "Medication Administration using Bar Coding Technology",
+
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "CERTIFICATIONS",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "BLS",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "ACLS",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "PALS",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "CCRN",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "Telemetry Certificate",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Arrhythmia Course",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Other: Specify",
+
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Age Specific Competencies",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Neonatal/Newborn (up to 30 days)",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Infant (30 days to 1 year)",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Toddler (1 to 3 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Preschooler (3 to 5 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "School age (5 to 12 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Adolescents (12 to 18 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Young Adults (18 to 39 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Middle Adults (40 to 64 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 9,
+
+        "name": "Older Adults (65 & up)",
+
+        "value": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,446 @@
+[
+  {
+    "title": "Procedures",
+    "items": [
+      {
+        "id": 1,
+        "name": "Assist with EGD’s",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Assist with endoscopic ultrasound",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Assist with active GI bleed ",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Cautery devices",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Assist with manometry studies",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Assist with variceal banding",
+        "value": ""
+      },
+      {
+        "id": 7,
+        "name": "Assist with esophageal dilatations ",
+        "value": ""
+      },
+      {
+        "id": 8,
+        "name": "Assist with esophageal ballooning",
+        "value": ""
+      },
+      {
+        "id": 9,
+        "name": "Assist with scelrotherapy",
+        "value": ""
+      },
+      {
+        "id": 10,
+        "name": "Assist with TEE",
+        "value": ""
+      },
+      {
+        "id": 11,
+        "name": "Assist with bronchoscopy",
+        "value": ""
+      },
+      {
+        "id": 12,
+        "name": "Assist with colonoscopy",
+        "value": ""
+      },
+      {
+        "id": 13,
+        "name": "Assist with polypectomy",
+        "value": ""
+      },
+      {
+        "id": 14,
+        "name": "Assist with ERCP’s",
+        "value": ""
+      },
+      {
+        "id": 15,
+        "name": "Assist with PEG placements",
+        "value": ""
+      },
+      {
+        "id": 16,
+        "name": "Assist with liver BX",
+        "value": ""
+      },
+      {
+        "id": 17,
+        "name": "Assist with collection of hot & cold BX’s",
+        "value": ""
+      },
+      {
+        "id": 18,
+        "name": "Specimen collection & labeling",
+        "value": ""
+      },
+      {
+        "id": 19,
+        "name": "Set up of scopes & video equipment",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Apply external abdominal pressure to assist with scope movement",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Scope cleaning",
+        "value": ""
+      },
+      {
+        "id": 22,
+        "name": "Assist with mobile cases, ICU, ER, etc.",
+        "value": ""
+      },
+      {
+        "id": 23,
+        "name": "Radiation safety",
+        "value": ""
+      },
+      {
+        "id": 24,
+        "name": "Automated Medication Dispensing System, Pyxis, Omnicell, or other",
+        "value": ""
+      },
+      {
+        "id": 25,
+        "name": "Takes call for emergency cases",
+        "value": ""
+      },
+      {
+        "id": 26,
+        "name": "National Patient Safety Goals",
+        "value": ""
+      },
+      {
+        "id": 27,
+        "name": "Awareness of HCAHPS",
+        "value": ""
+      },
+      {
+        "id": 28,
+        "name": "Accurate patient identification",
+        "value": ""
+      },
+      {
+        "id": 29,
+        "name": "Effective communication",
+        "value": ""
+      },
+      {
+        "id": 30,
+        "name": "Interpretation & communication of lab values",
+        "value": ""
+      },
+      {
+        "id": 20,
+        "name": "Medication administration",
+        "value": ""
+      },
+      {
+        "id": 21,
+        "name": "Anticoagulation therapy",
+        "value": ""
+      },
+      {
+        "id": 22,
+        "name": "Monitoring conscious sedation",
+        "value": ""
+      },
+      {
+        "id": 23,
+        "name": "Pain assessment & management",
+        "value": ""
+      },
+      {
+        "id": 24,
+        "name": "Infection control",
+        "value": ""
+      },
+      {
+        "id": 25,
+        "name": "Universal precautions",
+        "value": ""
+      },
+      {
+        "id": 26,
+        "name": "Isolation",
+        "value": ""
+      },
+      {
+        "id": 27,
+        "name": "Minimize risk for falls",
+        "value": ""
+      },
+      {
+        "id": 28,
+        "name": "Prevention of pressure ulcers",
+        "value": ""
+      },
+      {
+        "id": 29,
+        "name": "Use of rapid response teams",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Administer Conscious Sedation",
+    "items": [
+      {
+        "id": 1,
+        "name": "Fentanyl",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "name": "Propofol",
+        "value": ""
+      },
+      {
+        "id": 3,
+        "name": "Demerol",
+        "value": ""
+      },
+      {
+        "id": 4,
+        "name": "Presedex ",
+        "value": ""
+      },
+      {
+        "id": 5,
+        "name": "Versed",
+        "value": ""
+      },
+      {
+        "id": 6,
+        "name": "Reversal agents",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Pre Procedure",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Pre procedure phone calls",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Electronic documentation",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Patient assessment",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Colon prep or re-prep",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "Pre procedure checklist/consent",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "IV start, med admin",
+
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Post Procedure",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Assess for air movement post colonoscopy",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Assess for pain",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Assess for bowel sounds",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Assess for gag reflex post EGD",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "Assess for gag reflex post bronchoscopy",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Recover from MAC",
+
+        "value": ""
+      },
+      {
+        "id": 6,
+
+        "name": "Recover from (moderate) conscious sedation",
+
+        "value": ""
+      },
+      {
+        "id": 6,
+
+        "name": "Discharge outpatients to home",
+
+        "value": ""
+      },
+      {
+        "id": 6,
+
+        "name": "Post procedure phone calls",
+
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "Age Specific Competencies",
+
+    "items": [
+      {
+        "id": 1,
+
+        "name": "Neonatal/Newborn (up to 30 days)",
+
+        "value": ""
+      },
+
+      {
+        "id": 2,
+
+        "name": "Infant (30 days to 1 year)",
+
+        "value": ""
+      },
+
+      {
+        "id": 3,
+
+        "name": "Toddler (1 to 3 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 4,
+
+        "name": "Preschooler (3 to 5 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 5,
+
+        "name": "School age (5 to 12 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 6,
+
+        "name": "Adolescents (12 to 18 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 7,
+
+        "name": "Young Adults (18 to 39 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 8,
+
+        "name": "Middle Adults (40 to 64 years)",
+
+        "value": ""
+      },
+
+      {
+        "id": 9,
+
+        "name": "Older Adults (65 & up)",
+
+        "value": ""
+      }
+    ]
+  }
+]
