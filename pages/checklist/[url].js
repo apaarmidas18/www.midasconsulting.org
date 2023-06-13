@@ -459,7 +459,7 @@ const Url = ({ url }) => {
             <div class="form-group row mb-3 d-flex align-items-center bg-light border rounded p-2">
               <div className="form-group row mb-3 d-flex align-items-center">
                 <InputField
-                  label={"Enter Your Name"}
+                  label={"Enter Full Name"}
                   value={userData.name}
                   type={"text"}
                   placeholder={"Full Name"}
