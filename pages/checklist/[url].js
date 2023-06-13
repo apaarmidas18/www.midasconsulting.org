@@ -157,7 +157,8 @@ const Url = ({ url }) => {
 
   const date = `${from}-${to}`;
   const StringDate = JSON.stringify(date);
-  const inputDate = JSON.stringify(userData.dob);
+  const dateofbith = moment().format("DD/MM/YYYY");
+  const inputDate = JSON.stringify(dateofbith);
 
   const submitData = (e) => {
     e.preventDefault();
@@ -589,7 +590,7 @@ const Url = ({ url }) => {
                 <div className="col-md-11"></div>
               </div>
               {active === false ? (
-                <>
+                <form>
                   <div className="form-group row mb-3 d-flex align-items-center">
                     {references.map((item, index) => (
                       <>
@@ -638,7 +639,7 @@ const Url = ({ url }) => {
                       </>
                     ))}
                   </div>
-                </>
+                </form>
               ) : null}
 
               <div class="form-group row mt-3 ">
