@@ -13,13 +13,13 @@ import axios from "axios";
 import swal from "sweetalert";
 import "react-datepicker/dist/react-datepicker.css";
 import ReactDatePicker from "react-datepicker";
+// const host = "http://192.168.0.22:9000/";
+const host = "https://checklist.midascrm.tech/";
 
-const Url = ({ props }) => {
+const Url = ({ data }) => {
   const router = useRouter();
-  const host = "https://checklist.midascrm.tech/";
-  // const host = "http://192.168.0.22:9000/";
+
   const { url } = router.query;
-  const [data, setData] = useState([]);
   const [active, setActive] = useState(false);
   const newDate = moment().tz("US/Central").format("YYYY-MM-DD");
   const [html, setHTML] = useState("");
@@ -391,21 +391,6 @@ const Url = ({ props }) => {
         alert(error);
       });
   };
-
-  const tableData = () => {
-    const options = { method: "GET" };
-
-    fetch(`${host}list/getCheckList/${url}`, options)
-      .then((response) => response.json())
-      .then((response) => {
-        setData(response.response);
-        setLoading(false);
-      });
-  };
-
-  useEffect(() => {
-    tableData();
-  }, []);
 
   const handledetailsChange = (e, name) => {
     if (name === "phoneno" || name === "ssn") {
@@ -1095,8 +1080,13 @@ const Url = ({ props }) => {
 
 export default Url;
 
-Url.getInitialProps = async ({ query }) => {
-  const { uri } = query;
+export async function getServerSideProps(context) {
+  const { url } = context.query;
 
-  return { path: uri };
-};
+  const options = { method: "GET" };
+  const fetchApi = await fetch(`${host}list/getCheckList/${url}`, options);
+  const response = await fetchApi.json();
+  return {
+    props: { data: response.response },
+  };
+}
