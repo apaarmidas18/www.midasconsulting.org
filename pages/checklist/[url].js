@@ -13,8 +13,8 @@ import axios from "axios";
 import swal from "sweetalert";
 import "react-datepicker/dist/react-datepicker.css";
 import ReactDatePicker from "react-datepicker";
+import { host } from "../../static";
 // const host = "http://192.168.0.22:9000/";
-const host = "https://checklist.midascrm.tech/";
 
 const Url = ({ data }) => {
   const router = useRouter();
