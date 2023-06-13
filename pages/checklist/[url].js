@@ -164,7 +164,7 @@ const Url = ({ props }) => {
     e.preventDefault();
     const th =
       data === undefined || data.length === 0
-        ? "Wait"
+        ? "WAIT"
         : data.list.map((item, index) => {
             const { items, title } = item;
             return { items, title };
