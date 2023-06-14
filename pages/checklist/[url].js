@@ -157,8 +157,11 @@ const Url = ({ url }) => {
   }
 
   const date = `${from}-${to}`;
+
   const StringDate = JSON.stringify(date);
-  const dateofbith = moment().format("DD/MM/YYYY");
+
+  const dateofbith = moment(userData.dob).format("DD/MM/YYYY");
+
   const inputDate = JSON.stringify(dateofbith);
 
   const submitData = (e) => {
@@ -172,147 +175,333 @@ const Url = ({ url }) => {
           });
 
     const Html = `<!DOCTYPE html>
+
 <html>
 
+
+
+
 <head>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+
         crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+
+        crossorigin="anonymous"></script>
+
+
+
+
     <style>
+
         .table-bordered {
+
+
+
 
             border: 0.5px solid gray !important;
 
+
+
+
         }
+
+
+
 
 
 
 
         .health-row {
 
+
+
+
             padding: 0px 5px !important;
+
+
+
 
             background-color: yellow !important;
 
+
+
+
         }
+
+
+
 
 
 
 
         .health-row .small {
 
+
+
+
             padding: 0 !important;
 
+
+
+
         }
+
+
+
 
 
 
 
         .table-data {
 
+
+
+
             font-weight: 400;
+
+
+
 
 
 
 
             font-size: 12px;
 
+
+
+
         }
+
+
+
 
         #text{
+
           diplay : none;
+
         }
+
     </style>
+
 </head>
+
 <body>
+
 <span><strong>Candidate's Details</strong></span>
+
 <div>
 
+
+
+
           <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
+
           <div class="col-md-3">
 
-          <input disabled type="text" class="form-control" id="firstname" 
+<label className="m-2 text-dark" style={{ width: "180px" }}>
+
+              Firstname:-
+
+            </label>
+
+          <input disabled type="text" class="form-control" id="firstname"
+
           style=" padding : 10px;  margin :10px;width: 180px; text-align: center;"
+
           name="firstname" required="" value=${userData.firstname}>
-          
-          
+
+         
+
+         
+
           </div>
+
            <div class="col-md-3">
 
-          <input disabled type="text" class="form-control" id="lastname" 
+<label className="m-2 text-dark" style={{ width: "180px" }}>
+
+              Lastname:-
+
+            </label>
+
+          <input disabled type="text" class="form-control" id="lastname"
+
           style=" padding : 10px;  margin :10px;width: 180px; text-align: center;"
+
           name="lastname" required="" value=${userData.lastname}>
-          
-          
+
+         
+
+         
+
           </div>
+
           <div class="col-md-3">
-        
+
+         <label className="m-2 text-dark" style={{ width: "180px" }}>
+
+              Phone-no:-
+
+            </label>
+
           <input disabled type="number" class="form-control" id="phoneno"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="phoneno" required="" value=${
             userData.phoneno
-          }></div><div class="col-md-3"><input disabled type="email" class="form-control" id="email"  name="email" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${
-      userData.email
-    }></div><div class="col-md-3"><input disabled type="text" class="form-control" id="dob"  name="dob" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${moment(
-      inputDate
-    ).format("DD/MM/YYYY")} /></div>
+          }></div><div class="col-md-3">
+
+         
+
+
+
+
+            <label className="m-2 text-dark" style={{ width: "180px" }}>
+
+              Contact-Email:-
+
+            </label>
+
+
+
+
+          <input disabled type="email" class="form-control" id="email"  name="email" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${
+            userData.email
+          }></div><div class="col-md-3"><input disabled type="text" class="form-control" id="dob"  name="dob" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${inputDate} /></div>
+
           </div>
-          <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;"> 
+
+          <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
+
           <div class="col-md-3">
+
+
+
+
+            <label className="m-2 text-dark" style={{ width: "180px" }}>
+
+              SSN:-
+
+            </label>
+
+
+
+
           <input disabled type="number" class="form-control" id="name"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="ssn" required="" value=${
             userData.ssn
           }></div>
-      
+
+     
+
           <div class="col-md-3">
+
+           <label className="m-2 text-dark" style={{ width: "180px" }}>
+
+              Date Of Birth:-
+
+            </label>
+
           <input type="text" class="form-control" id="name"  style=" padding : 10px; width:200px; text-align: center; margin :10px;" name="ssn" required="" value=${
-            StringDate === "Invalid Date-Invalid Date" ? "" : StringDate
-          } 
+            StringDate === "Invalid date-Invalid date" ? "" : StringDate
+          }
+
           disabled /></div>
+
           </div>
+
           </div>
-          
+
+         
+
+
+
 
               <span><strong>Candidate References's details </strong></span>
 
 
+
+
+
           <div>
+
           <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
+
       <div class="col-md-3">
-          
-          <input disabled type="text" class="form-control" id="name" 
+
+               <label className="m-2 text-dark" style={{ width: "180px" }}>
+
+              Full Name:-
+
+            </label>
+
+          <input disabled type="text" class="form-control" id="name"
+
           style=" padding : 10px;  margin :10px;width: 180px; text-align: center;"
+
           name="name" required="" value=${references[0].name}></div>
+
           <div class="col-md-3">
-        
+
+             <label className="m-2 text-dark" style={{ width: "180px" }}>
+
+              Phone Number:-
+
+            </label>
+
           <input disabled type="number" class="form-control" id="phoneno"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="phoneno" required="" value=${
             references[0].phoneno
           }></div>
-          <div class="col-md-3"><input disabled type="email" class="form-control" id="email"  name="email" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${
-            references[0].email
-          }></div>
+
+          <div class="col-md-3">     <label className="m-2 text-dark" style={{ width: "180px" }}>
+
+              E-mail-Address:-
+
+            </label><input disabled type="email" class="form-control" id="email"  name="email" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${
+              references[0].email
+            }></div>
+
           </div>
+
           ${
             references[1]
               ? `  <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
+
           <div class="col-md-3">
-          
-          <input disabled type="text" class="form-control" id="name" 
+
+         
+
+          <input disabled type="text" class="form-control" id="name"
+
           style=" padding : 10px;  margin :10px;width: 180px; text-align: center;"
+
           name="name" required="" value=${references[1].name}></div>
+
           <div class="col-md-3">
-        
+
+       
+
           <input disabled type="number" class="form-control" id="phoneno"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="phoneno" required="" value=${references[1].phoneno}></div>
+
           <div class="col-md-3"><input disabled type="email" class="form-control" id="email"  name="email" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${references[1].email}></div>`
               : ""
           }
-        
+
        
+
+       
+
           </div>
+
 </div>
+
     ${
       th === undefined || th === "Wait"
         ? ""
@@ -322,47 +511,90 @@ const Url = ({ url }) => {
             return tab;
           })
     }
+
     <div>
+
             <div class="form-group row mt-3 d-flex ">
+
               <div className="col-md-11">
+
                 <p className="declare-para">
+
                   I hereby certify that ALL information I have provided on this
+
                   skills checklist and all other documentation, is true and
+
                   accurate. I understand and acknowledge that any
+
                   misrepresentation or omission may result in disqualification
+
                   from employment and/or immediate termination.
+
                 </p>
+
               </div>
+
             </div>
+
             <div
 
-              style="margin-top: 10px;  justify-content: space-between;  display: flex; flex-direction:row;" 
+
+
+
+              style="margin-top: 10px;  justify-content: space-between;  display: flex; flex-direction:row;"
+
             >
+
               <div className="date-box">
+
                 <p>Date signed-:</p>
+
                 <strong>
+
                   <span>${newDate}</span>
+
                 </strong>
+
               </div>
+
               <div className="sign-box" style= "display: flex; flex-direction:column;">
+
                 <strong>
+
                   <span>Signature</span>
+
                 </strong>
+
                 <input
-                 style=" padding : 5px; width: 180px; text-align: center; margin-top :10px;"" 
+
+                 style=" padding : 5px; width: 180px; text-align: center; margin-top :10px;""
+
                   type="text"
+
                   className="form-control"
+
                   id="exampleInputEmail1"
+
                   aria-describedby="emailHelp"
+
                   placeholder="Your Signature"
+
                   value=${sign}
+
                   disabled
+
                     />
+
               </div>
+
             </div>
-            
+
+           
+
           </div>
-    
+
+   
+
     </body></html>`;
     setHTML(Html);
     const options = {
