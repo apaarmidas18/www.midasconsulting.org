@@ -14,6 +14,7 @@ import swal from "sweetalert";
 import "react-datepicker/dist/react-datepicker.css";
 import ReactDatePicker from "react-datepicker";
 import { host } from "../../static";
+
 // const host = "http://192.168.0.22:9000/";
 
 const Url = ({ url }) => {
@@ -41,6 +42,8 @@ const Url = ({ url }) => {
       key: "selection",
     },
   ]);
+
+  const router = useRouter();
   //Validation*************************************************
 
   const formik = useFormik({
@@ -459,7 +462,13 @@ const Url = ({ url }) => {
 
     fetch(`${host}list/getCheckList/${url}`, options)
       .then((response) => response.json())
-      .then((response) => setData(response.response));
+      .then((response) => {
+        if (response.baseResponse.status === 1) {
+          setData(response.response);
+        } else {
+          router.push("/404");
+        }
+      });
   };
   const word = url;
 
@@ -711,6 +720,7 @@ const Url = ({ url }) => {
           </div>
         </div>
       </div>
+      {console.log(data)}
       {/* <form> */}
       {data?.list === undefined ? (
         <>Wait</>
