@@ -91,7 +91,6 @@ const Url = ({ url }) => {
     state[0].endDate === ""
       ? ""
       : moment(state[0].endDate).format("MM/DD/YYYY");
-  console.log(from);
   function renderTable(datas, title) {
     // Start building the table markup
 
@@ -257,8 +256,8 @@ const Url = ({ url }) => {
                <input disabled type="text" class="form-control" id="dob"  name="dob" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${inputDate} />
             </div>
          </div>
-         <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
-            <div class="col-md-3">
+         <div style="width: 180px;display: flex;flex-direction: row;gap: 30px;">
+            <div class="mb-3 d-flex" style="display:flex; flex-direction:column;">
                <label className="m-2 text-dark" style={{ width: "180px" }} >
                SSN:-
                </label>
@@ -266,7 +265,7 @@ const Url = ({ url }) => {
                  userData.ssn
                }>
             </div>
-            <div class="col-md-3">
+            <div class="mb-3 d-flex " style="display:flex; flex-direction:column;">
                <label className="m-2 text-dark" style={{ width: "180px" }} >
                Request time off:-
                </label>
@@ -279,7 +278,7 @@ const Url = ({ url }) => {
       </div>
       <span><strong>Candidate References's details </strong></span>
       <div>
-         <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
+         <div style="width: 180px;display: flex;flex-direction: row;gap: 30px;">
             <div class="col-md-3">
                <label className="m-2 text-dark" style={{ width: "180px" }}>
                Full Name:-
@@ -296,9 +295,11 @@ const Url = ({ url }) => {
                  references[0].phoneno
                }>
             </div>
-            <div class="col-md-3">     <label className="m-2 text-dark" style={{ width: "180px" }}>
+            <div class="col-md-3">    
+             <label className="m-2 text-dark" style={{ width: "180px" }}>
                E-mail-Address:-
-               </label><input disabled type="email" class="form-control" id="email"  name="email" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${
+               </label>
+               <input disabled type="email" class="form-control" id="email"  name="email" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${
                  references[0].email
                }>
             </div>
@@ -306,7 +307,7 @@ const Url = ({ url }) => {
          ${
            references[1]
              ? `  
-         <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
+         <div style="width: 180px;display: flex;flex-direction: row;gap: 30px;">
             <div class="col-md-3">
              <label className="m-2 text-dark" style={{ width: "180px" }}>
                Full Name:-
@@ -322,7 +323,7 @@ const Url = ({ url }) => {
                <input disabled type="number" class="form-control" id="phoneno"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="phoneno" required="" value=${references[1].phoneno}>
             </div>
             <div class="col-md-3">
-            label className="m-2 text-dark" style={{ width: "180px" }}>
+            <label className="m-2 text-dark" style={{ width: "180px" }}>
                E-mail-Address:-
                </label>
                <input disabled type="email" class="form-control" id="email"  name="email" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${references[1].email}></div>
@@ -474,7 +475,6 @@ const Url = ({ url }) => {
 
   const capitalized = url.charAt(0).toUpperCase() + url.slice(1);
   useEffect(() => tableData(), []);
-  console.log("userData.dob", userData.dob);
   return (
     <>
       <div className="container checklist-head">
@@ -720,7 +720,6 @@ const Url = ({ url }) => {
           </div>
         </div>
       </div>
-      {console.log(data)}
       {/* <form> */}
       {data?.list === undefined ? (
         <>Wait</>
@@ -1107,7 +1106,8 @@ const Url = ({ url }) => {
                 <button
                   style={{ marginTop: "20px", marginBottom: "20px" }}
                   className="btn btn-primary"
-                  type="submit"
+                  // type="submit"
+                  // onClick={(e) => submitData(e)}
                 >
                   Submit
                 </button>
