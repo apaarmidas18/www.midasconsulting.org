@@ -259,7 +259,7 @@ const Url = ({ url }) => {
          </div>
          <div class="form-group row mb-3 d-flex align-items-center" style="display:flex; flex-direction:row;">
             <div class="col-md-3">
-               <label className="m-2 text-dark" >
+               <label className="m-2 text-dark" style={{ width: "180px" }} >
                SSN:-
                </label>
                <input disabled type="number" class="form-control" id="name"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="ssn" required="" value=${
@@ -267,7 +267,7 @@ const Url = ({ url }) => {
                }>
             </div>
             <div class="col-md-3">
-               <label className="m-2 text-dark" >
+               <label className="m-2 text-dark" style={{ width: "180px" }} >
                Request time off:-
                </label>
                <input type="text" class="form-control" id="name"  style=" padding : 10px; width:200px; text-align: center; margin :10px;" name="ssn" required="" value=${
