@@ -1054,3 +1054,8 @@ input::-webkit-inner-spin-button {
 .logo-404 img {
   width: 300px;
 }
+
+.content-404 {
+  text-align: center;
+  margin-top: 20px;
+}
