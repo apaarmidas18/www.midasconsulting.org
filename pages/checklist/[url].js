@@ -119,25 +119,25 @@ const Url = ({ url }) => {
 
       tableHTML += `<td class="table-data">${
         ite.value1 === "checked"
-          ? `<img src="/images/check.png"/>>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 12px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required disabled > `
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value2 === "checked"
-          ? `<img src="/images/check.png"/>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 12px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value3 === "checked"
-          ? `<img src="/images/check.png"/>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 12px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value4 === "checked"
-          ? `<img src="/images/check.png"/>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 12px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
@@ -162,7 +162,7 @@ const Url = ({ url }) => {
 
   const StringDate = JSON.stringify(date);
 
-  const dateofbith = moment(userData.dob).format("DD/MM/YYYY");
+  const dateofbith = moment(userData.dob).format("MM/DD/YYYY");
 
   const inputDate = JSON.stringify(dateofbith);
 
@@ -476,6 +476,7 @@ const Url = ({ url }) => {
         <div className="midas-logo">
           <img src="/images/logo.webp" />
         </div>
+        <div className="circle-box"></div>
 
         {url == undefined ? (
           <h2>Wait While we fetch data for you</h2>
@@ -1087,8 +1088,7 @@ const Url = ({ url }) => {
                 <button
                   style={{ marginTop: "20px", marginBottom: "20px" }}
                   className="btn btn-primary"
-                  // type="submit"
-                  // onClick={(e) => submitData(e)}
+                  type="submit"
                 >
                   Submit
                 </button>
