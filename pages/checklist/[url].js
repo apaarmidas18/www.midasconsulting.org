@@ -15,8 +15,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import ReactDatePicker from "react-datepicker";
 import { host } from "../../static";
 
-// const host = "http://192.168.0.22:9000/";
-
 const Url = ({ url }) => {
   const [active, setActive] = useState(false);
   const newDate = moment().tz("US/Central").format("YYYY-MM-DD");
@@ -121,29 +119,25 @@ const Url = ({ url }) => {
 
       tableHTML += `<td class="table-data">${
         ite.value1 === "checked"
-          ? `<input class="form-check-input" type="radio" name=${ite.name}
-                        required value=${ite.value1} checked disabled>`
+          ? `<i class="fa-solid fa-check" aria-hidden="true"></i>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required disabled > `
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value2 === "checked"
-          ? `<input class="form-check-input" type="radio" name=${ite.name}
-                        required id="flexRadioDefault" value=${ite.value2} checked disabled>`
+          ? `<i class="fa-solid fa-check" aria-hidden="true"></i>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
-                        required id="flexRadioDefault" disabled > `
+                        required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value3 === "checked"
-          ? `<input class="form-check-input" type="radio" name=${ite.name}
-                        required id="flexRadioDefault" value=${ite.value3} checked disabled>`
+          ? `<i class="fa-solid fa-check" aria-hidden="true"></i>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value4 === "checked"
-          ? `<input class="form-check-input" type="radio" name=${ite.name}
-                        required id="flexRadioDefault" value=${ite.value4} checked disabled>`
+          ? `<i class="fa-solid fa-check" aria-hidden="true"></i>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
@@ -187,6 +181,7 @@ const Url = ({ url }) => {
    <head>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
          integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
          crossorigin="anonymous"></script>
@@ -802,7 +797,6 @@ const Url = ({ url }) => {
                                 </th>
                                 <td class="table-data">
                                   <input
-                                    class="form-check-input"
                                     type="radio"
                                     value={"checked"}
                                     onChange={(e) =>
@@ -814,7 +808,6 @@ const Url = ({ url }) => {
                                 </td>
                                 <td class="table-data">
                                   <input
-                                    class="form-check-input"
                                     type="radio"
                                     value={"checked"}
                                     onChange={(e) =>
@@ -826,7 +819,6 @@ const Url = ({ url }) => {
                                 </td>
                                 <td class="table-data">
                                   <input
-                                    class="form-check-input"
                                     type="radio"
                                     value={"checked"}
                                     onChange={(e) =>
@@ -839,7 +831,6 @@ const Url = ({ url }) => {
 
                                 <td class="table-data">
                                   <input
-                                    class="form-check-input"
                                     type="radio"
                                     value={"checked"}
                                     onChange={(e) =>
@@ -880,7 +871,6 @@ const Url = ({ url }) => {
                                     scope="row"
                                   >
                                     <input
-                                      class="form-check-input"
                                       type="checkbox"
                                       value=""
                                       id="certification"
@@ -999,7 +989,6 @@ const Url = ({ url }) => {
                                 </th>
                                 <td class="table-data">
                                   <input
-                                    class="form-check-input"
                                     type="radio"
                                     value={"checked"}
                                     onChange={(e) =>
@@ -1011,7 +1000,6 @@ const Url = ({ url }) => {
                                 </td>
                                 <td class="table-data">
                                   <input
-                                    class="form-check-input"
                                     type="radio"
                                     value={"checked"}
                                     onChange={(e) =>
@@ -1023,7 +1011,6 @@ const Url = ({ url }) => {
                                 </td>
                                 <td class="table-data">
                                   <input
-                                    class="form-check-input"
                                     type="radio"
                                     value={"checked"}
                                     onChange={(e) =>
@@ -1036,7 +1023,6 @@ const Url = ({ url }) => {
 
                                 <td class="table-data">
                                   <input
-                                    class="form-check-input"
                                     type="radio"
                                     value={"checked"}
                                     onChange={(e) =>
@@ -1059,12 +1045,7 @@ const Url = ({ url }) => {
             <div>
               <div class="form-group row mt-3 d-flex ">
                 <div className="col-md-1">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="declare"
-                    required
-                  />
+                  <input type="checkbox" id="declare" required />
                 </div>
                 <div className="col-md-11">
                   <p className="declare-para">
@@ -1116,7 +1097,6 @@ const Url = ({ url }) => {
           </div>
         </form>
       )}
-      {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
     </>
   );
 };
