@@ -119,25 +119,25 @@ const Url = ({ url }) => {
 
       tableHTML += `<td class="table-data">${
         ite.value1 === "checked"
-          ? `<i class="fa-solid fa-check" aria-hidden="true"></i>`
+          ? `<img src="/images/check.png"/>>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required disabled > `
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value2 === "checked"
-          ? `<i class="fa-solid fa-check" aria-hidden="true"></i>`
+          ? `<img src="/images/check.png"/>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value3 === "checked"
-          ? `<i class="fa-solid fa-check" aria-hidden="true"></i>`
+          ? `<img src="/images/check.png"/>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value4 === "checked"
-          ? `<i class="fa-solid fa-check" aria-hidden="true"></i>`
+          ? `<img src="/images/check.png"/>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
