@@ -219,7 +219,7 @@ const Url = ({ url }) => {
                </label>
                <input disabled type="text" class="form-control" id="firstname"
                   style=" padding : 10px;  margin :10px;width: 180px; text-align: center;"
-                  name="firstname" required="" value=${userData.firstname}>
+                  name="firstname" required="" value=${formValues.firstname}>
             </div>
             <div class="col-md-3">
                <label className="m-2 text-dark" style={{ width: "180px" }}>
@@ -227,14 +227,14 @@ const Url = ({ url }) => {
                </label>
                <input disabled type="text" class="form-control" id="lastname"
                   style=" padding : 10px;  margin :10px;width: 180px; text-align: center;"
-                  name="lastname" required="" value=${userData.lastname}>
+                  name="lastname" required="" value=${formValues.lastname}>
             </div>
             <div class="col-md-3">
                <label className="m-2 text-dark" style={{ width: "180px" }}>
                Phone-no:-
                </label>
                <input disabled type="number" class="form-control" id="phoneno"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="phoneno" required="" value=${
-                 userData.phoneno
+                 formValues.phoneno
                }>
             </div>
             <div class="col-md-3">
@@ -242,7 +242,7 @@ const Url = ({ url }) => {
                Contact-Email:-
                </label>
                <input disabled type="email" class="form-control" id="email"  name="email" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${
-                 userData.email
+                 formValues.email
                }>
             </div>
             <div class="col-md-3">
@@ -258,7 +258,7 @@ const Url = ({ url }) => {
                SSN:-
                </label>
                <input disabled type="number" class="form-control" id="name"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="ssn" required="" value=${
-                 userData.ssn
+                 formValues.ssn
                }>
             </div>
             <div class="mb-3 d-flex " style="display:flex; flex-direction:column;">
