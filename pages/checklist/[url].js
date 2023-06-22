@@ -2,7 +2,7 @@ import InputField from "../../components/InputField";
 import moment from "moment-timezone";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { useFormik } from "formik";
+import { Formik, useFormik } from "formik";
 import * as Yup from "yup";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
@@ -23,6 +23,7 @@ const Url = ({ url }) => {
   const [sign, setSign] = useState("");
   const [dateofBirth, setDateOfBirth] = useState(new Date());
   const [loading, setLoading] = useState(true);
+  const [formValues, setFormValues] = useState("");
   const [data, setData] = useState([]);
   const [userData, setUserData] = useState({
     firstname: "",
@@ -46,16 +47,18 @@ const Url = ({ url }) => {
 
   const formik = useFormik({
     initialValues: {
-      name: "",
+      firstname: "",
+      lastname: "",
       phoneno: "",
       email: "",
       dob: "",
       ssn: "",
     },
     validationSchema: Yup.object({
-      name: Yup.string().required("Required"),
+      firstname: Yup.string().required("Required"),
+      lastname: Yup.string().required("Required"),
       phoneno: Yup.string().required("Required"),
-      ssn: Yup.string()
+      ssn: Yup.number()
         .required("Social Security Number is required")
         .min(4, "Social Security Number Must be 4 Digits long")
         .max(4, "Social Security Number Must be 5 Digits long"),
@@ -66,9 +69,7 @@ const Url = ({ url }) => {
         .max(10, "Contact Number should not be long more than 10 digits"),
     }),
     onSubmit: (values) => {
-      CreateEmployee(values, navigate);
-      alert(JSON.stringify(values, null, 2));
-      // setFormState(values);
+      setUserData(values);
     },
   });
 
@@ -376,16 +377,19 @@ const Url = ({ url }) => {
    </body>
 </html>`;
     setHTML(Html);
+
+    const formatDob = moment(formValues.dob).format("MM/DD/YYYY");
+
     const options = {
       method: "POST",
       url: `${host}list/submitCheckList`,
       headers: { "Content-Type": "application/json" },
       data: {
-        name: userData.name,
-        phoneno: userData.phoneno,
-        email: userData.email,
-        dob: userData.dob,
-        ssn: userData.ssn,
+        name: formValues.name,
+        phoneno: formValues.phoneno,
+        email: formValues.email,
+        dob: formatDob,
+        ssn: formValues.ssn,
         references: references,
         list: data.list,
         htmlData: Html,
@@ -413,20 +417,6 @@ const Url = ({ url }) => {
       .catch(function (error) {
         alert(error);
       });
-  };
-
-  const handledetailsChange = (e, name) => {
-    if (name === "phoneno" || name === "ssn") {
-      setUserData({ ...userData, [name]: parseInt(e.target.value) });
-    } else if (name === "dob") {
-      setDob(true);
-      setUserData({
-        ...userData,
-        [name]: moment(e).format("MM/DD/YYYY"),
-      });
-    } else {
-      setUserData({ ...userData, [name]: e.target.value });
-    }
   };
 
   const handleReferences = (e, index) => {
@@ -466,12 +456,20 @@ const Url = ({ url }) => {
         }
       });
   };
-  const word = url;
 
   const capitalized = url.charAt(0).toUpperCase() + url.slice(1);
   useEffect(() => tableData(), []);
+
+  const { values, handleChange, handleBlur, handleSubmit, setFieldValue } =
+    formik;
+
   return (
-    <>
+    <form
+      onSubmit={(e) => {
+        setFormValues(values);
+        submitData(e);
+      }}
+    >
       <div className="container checklist-head">
         <div className="midas-logo">
           <img src="/images/logo.webp" />
@@ -490,47 +488,56 @@ const Url = ({ url }) => {
               <div className="form-group row mb-3 d-flex align-items-center">
                 <InputField
                   label={"Enter First Name"}
-                  value={userData.firstname}
+                  value={values.firstname}
                   type={"text"}
                   placeholder={"First Name"}
-                  onChange={(e) => handledetailsChange(e, "firstname")}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                   id={"firstname"}
+                  required={true}
                   name={"firstname"}
                 />
                 <InputField
                   label={"Enter Last Name"}
-                  value={userData.lastname}
+                  value={values.lastname}
                   type={"text"}
                   placeholder={"Last Name"}
-                  onChange={(e) => handledetailsChange(e, "lastname")}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                   id={"lastname"}
+                  required={true}
                   name={"lastname"}
                 />
                 <InputField
                   label={"Enter Phone number"}
-                  value={userData.phoneno}
+                  value={values.phoneno}
                   type={"number"}
                   placeholder={"Enter Phone number"}
-                  onChange={(e) => handledetailsChange(e, "phoneno")}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                   id={"phoneno"}
+                  required={true}
                   name={"phoneno"}
                 />
                 <InputField
                   label={"Enter E-mail"}
-                  value={userData.email}
+                  value={values.email}
                   type={"email"}
                   placeholder={"Enter E-mail"}
-                  onChange={(e) => handledetailsChange(e, "email")}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                   id={"email"}
+                  required={true}
                   name={"email"}
                 />
                 {dob === true ? (
                   <div className="btn col-md-3" onClick={() => setDob(false)}>
                     <InputField
                       label={"Date Of Birth"}
-                      value={userData.dob}
+                      value={values.dob}
                       type={"button"}
                       id={"dob"}
+                      required={true}
                       name={"dob"}
                       disabled={true}
                       style={{ width: "180px" }}
@@ -542,25 +549,26 @@ const Url = ({ url }) => {
                       Enter DOB
                     </label>
                     <ReactDatePicker
-                      selected={dateofBirth}
+                      selected={values.dob}
                       name="dob"
-                      onChange={(date) => handledetailsChange(date, "dob")}
+                      onChange={(date) => setFieldValue("dob", date)}
                       className="form-control calender"
                       placeholderText="Select Date Of Birth"
                       peekNextMonth
                       showMonthDropdown
                       showYearDropdown
-                      dropdownMode="select"
                     />
                   </div>
                 )}
                 <InputField
                   label={"Last four SSN digit"}
-                  value={userData.ssn}
+                  value={values.ssn}
                   type={"number"}
                   placeholder={"Last four SSN digit"}
-                  onChange={(e) => handledetailsChange(e, "ssn")}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                   id={"name"}
+                  required={true}
                   name={"ssn"}
                 />
                 {from && to == "Invalid date" ? (
@@ -629,56 +637,57 @@ const Url = ({ url }) => {
                 <div className="col-md-11"></div>
               </div>
               {active === false ? (
-                <form>
-                  <div className="form-group row mb-3 d-flex align-items-center">
-                    {references.map((item, index) => (
-                      <>
-                        <InputField
-                          label={"Enter Referre's Name"}
-                          value={item.name}
-                          type={"text"}
-                          placeholder={"Full Name"}
-                          onChange={(e) => handleReferences(e, index)}
-                          id={"name"}
-                          name={"name"}
-                        />
-                        <InputField
-                          label={"Enter Referre's Phone"}
-                          value={item.phoneno}
-                          type={"number"}
-                          placeholder={"Enter Phone number"}
-                          onChange={(e) => handleReferences(e, index)}
-                          id={"phoneno"}
-                          name={"phoneno"}
-                        />
-                        <InputField
-                          label={"Enter E-mail"}
-                          value={item.email}
-                          type={"email"}
-                          placeholder={"Enter Referre's E-mail"}
-                          onChange={(e) => handleReferences(e, index)}
-                          id={"email"}
-                          name={"email"}
-                        />
-                        {references.length === 2 ? (
-                          <button
-                            className="btn btn-danger col-md-3 mt-5 mb-2"
-                            disabled={true}
-                          >
-                            Add References
-                          </button>
-                        ) : (
-                          <button
-                            className="btn btn-danger col-md-3 mt-5  mb-2"
-                            onClick={(e) => handleAddReference(e)}
-                          >
-                            Add References
-                          </button>
-                        )}
-                      </>
-                    ))}
-                  </div>
-                </form>
+                <div className="form-group row mb-3 d-flex align-items-center">
+                  {references.map((item, index) => (
+                    <>
+                      <InputField
+                        label={"Enter Referre's Name"}
+                        value={item.name}
+                        type={"text"}
+                        placeholder={"Full Name"}
+                        onChange={(e) => handleReferences(e, index)}
+                        id={"name"}
+                        name={"name"}
+                        required={false}
+                      />
+                      <InputField
+                        label={"Enter Referre's Phone"}
+                        value={item.phoneno}
+                        type={"number"}
+                        placeholder={"Enter Phone number"}
+                        onChange={(e) => handleReferences(e, index)}
+                        id={"phoneno"}
+                        name={"phoneno"}
+                        required={false}
+                      />
+                      <InputField
+                        label={"Enter E-mail"}
+                        value={item.email}
+                        type={"email"}
+                        placeholder={"Enter Referre's E-mail"}
+                        onChange={(e) => handleReferences(e, index)}
+                        id={"email"}
+                        name={"email"}
+                        required={false}
+                      />
+                      {references.length === 2 ? (
+                        <button
+                          className="btn btn-danger col-md-3 mt-5 mb-2"
+                          disabled={true}
+                        >
+                          Add References
+                        </button>
+                      ) : (
+                        <button
+                          className="btn btn-danger col-md-3 mt-5  mb-2"
+                          onClick={(e) => handleAddReference(e)}
+                        >
+                          Add References
+                        </button>
+                      )}
+                    </>
+                  ))}
+                </div>
               ) : null}
 
               <div class="form-group row mt-3 ">
@@ -720,225 +729,18 @@ const Url = ({ url }) => {
       {data?.list === undefined ? (
         <>Wait</>
       ) : (
-        <form onSubmit={(e) => submitData(e)}>
-          <div className="container">
-            <div className="row">
-              {data.list.map((list, index) => {
-                const ItemsVariable =
-                  list.title === "CERTIFICATIONS"
-                    ? list.items.pop()
-                    : list.items;
+        <div className="container">
+          <div className="row">
+            {data.list.map((list, index) => {
+              const ItemsVariable =
+                list.title === "CERTIFICATIONS" ? list.items.pop() : list.items;
 
-                return (
-                  <>
-                    {list.title == "CERTIFICATIONS" ? (
-                      <>
-                        <div
-                          className="col-md-4"
-                          style={{ display: "inherit" }}
-                          key={index}
-                        >
-                          <table className="table table-bordered">
-                            <thead className="health-table">
-                              <tr>
-                                <th className="health-row" colspan="4">
-                                  {list.title}
-                                </th>
-                                <th
-                                  className="health-row small"
-                                  style={{
-                                    width: "20px",
-                                    textAlign: "center",
-                                  }}
-                                  scope="col"
-                                >
-                                  1
-                                </th>
-                                <th
-                                  className="health-row small"
-                                  style={{
-                                    width: "20px",
-                                    textAlign: "center",
-                                  }}
-                                  scope="col"
-                                >
-                                  2
-                                </th>
-                                <th
-                                  className="health-row small"
-                                  style={{
-                                    width: "20px",
-                                    textAlign: "center",
-                                  }}
-                                  scope="col"
-                                >
-                                  3
-                                </th>
-                                <th
-                                  className="health-row small"
-                                  style={{
-                                    width: "20px",
-                                    textAlign: "center",
-                                  }}
-                                  scope="col"
-                                >
-                                  4
-                                </th>
-                              </tr>
-                            </thead>
-
-                            <tbody key={index}>
-                              <tr>
-                                <th
-                                  className="table-data"
-                                  colspan="4"
-                                  scope="row"
-                                >
-                                  {ItemsVariable.name}
-                                </th>
-                                <td class="table-data">
-                                  <input
-                                    type="radio"
-                                    value={"checked"}
-                                    onChange={(e) =>
-                                      (ItemsVariable.value1 = e.target.value)
-                                    }
-                                    id="flexRadioDefault1"
-                                    required={true}
-                                  />
-                                </td>
-                                <td class="table-data">
-                                  <input
-                                    type="radio"
-                                    value={"checked"}
-                                    onChange={(e) =>
-                                      (ItemsVariable.value2 = e.target.value)
-                                    }
-                                    id="flexRadioDefault1"
-                                    required
-                                  />
-                                </td>
-                                <td class="table-data">
-                                  <input
-                                    type="radio"
-                                    value={"checked"}
-                                    onChange={(e) =>
-                                      (ItemsVariable.value3 = e.target.value)
-                                    }
-                                    id="flexRadioDefault1"
-                                    required
-                                  />
-                                </td>
-
-                                <td class="table-data">
-                                  <input
-                                    type="radio"
-                                    value={"checked"}
-                                    onChange={(e) =>
-                                      (ItemsVariable.value4 = e.target.value)
-                                    }
-                                    id="flexRadioDefault1"
-                                    required
-                                  />
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-
-                        <div
-                          className="col-md-6"
-                          style={{ display: "inherit" }}
-                          key={index}
-                        >
-                          <table className="table table-bordered">
-                            <thead className="health-table">
-                              <tr>
-                                <th className="health-row" colspan="4">
-                                  {list.title}
-                                </th>
-
-                                <th>
-                                  <span>Expiry Date</span>
-                                </th>
-                              </tr>
-                            </thead>
-                            {list.items.map((item, index) => (
-                              <tbody key={index}>
-                                <tr>
-                                  <th
-                                    className="table-data"
-                                    colspan="3"
-                                    scope="row"
-                                  >
-                                    <input
-                                      type="checkbox"
-                                      value=""
-                                      id="certification"
-                                      style={{ marginRight: "10px" }}
-                                      required
-                                    />
-                                  </th>
-                                  <th>{item.name}</th>
-                                  <th>
-                                    <td>
-                                      <input
-                                        type="date"
-                                        class="form-control"
-                                        id="date"
-                                        aria-describedby="date"
-                                        placeholder="Select date"
-                                      />
-                                    </td>
-                                  </th>
-                                </tr>
-                              </tbody>
-                            ))}
-
-                            <tbody>
-                              <tr>
-                                <th colSpan={4}>
-                                  Other:Specify
-                                  <textarea
-                                    class="form-control"
-                                    id="floatingTextarea2"
-                                  ></textarea>
-                                </th>
-                                <th>
-                                  <input
-                                    type="date"
-                                    class="form-control"
-                                    id="date"
-                                    aria-describedby="date"
-                                    placeholder="Select date"
-                                  />
-                                </th>
-                              </tr>
-                              <tr>
-                                <th colSpan={4}>
-                                  Other : Specify
-                                  <textarea
-                                    class="form-control"
-                                    id="floatingTextarea2"
-                                  ></textarea>
-                                </th>
-                                <th>
-                                  <input
-                                    type="date"
-                                    class="form-control"
-                                    id="date"
-                                    aria-describedby="date"
-                                    placeholder="Select date"
-                                  />
-                                </th>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </>
-                    ) : (
+              return (
+                <>
+                  {list.title == "CERTIFICATIONS" ? (
+                    <>
                       <div
-                        className="col-md-6"
+                        className="col-md-4"
                         style={{ display: "inherit" }}
                         key={index}
                       >
@@ -950,31 +752,120 @@ const Url = ({ url }) => {
                               </th>
                               <th
                                 className="health-row small"
-                                style={{ width: "20px", textAlign: "center" }}
+                                style={{
+                                  width: "20px",
+                                  textAlign: "center",
+                                }}
                                 scope="col"
                               >
                                 1
                               </th>
                               <th
                                 className="health-row small"
-                                style={{ width: "20px", textAlign: "center" }}
+                                style={{
+                                  width: "20px",
+                                  textAlign: "center",
+                                }}
                                 scope="col"
                               >
                                 2
                               </th>
                               <th
                                 className="health-row small"
-                                style={{ width: "20px", textAlign: "center" }}
+                                style={{
+                                  width: "20px",
+                                  textAlign: "center",
+                                }}
                                 scope="col"
                               >
                                 3
                               </th>
                               <th
                                 className="health-row small"
-                                style={{ width: "20px", textAlign: "center" }}
+                                style={{
+                                  width: "20px",
+                                  textAlign: "center",
+                                }}
                                 scope="col"
                               >
                                 4
+                              </th>
+                            </tr>
+                          </thead>
+
+                          <tbody key={index}>
+                            <tr>
+                              <th
+                                className="table-data"
+                                colspan="4"
+                                scope="row"
+                              >
+                                {ItemsVariable.name}
+                              </th>
+                              <td class="table-data">
+                                <input
+                                  type="radio"
+                                  value={"checked"}
+                                  onChange={(e) =>
+                                    (ItemsVariable.value1 = e.target.value)
+                                  }
+                                  id="flexRadioDefault1"
+                                  required={true}
+                                />
+                              </td>
+                              <td class="table-data">
+                                <input
+                                  type="radio"
+                                  value={"checked"}
+                                  onChange={(e) =>
+                                    (ItemsVariable.value2 = e.target.value)
+                                  }
+                                  id="flexRadioDefault1"
+                                  required
+                                />
+                              </td>
+                              <td class="table-data">
+                                <input
+                                  type="radio"
+                                  value={"checked"}
+                                  onChange={(e) =>
+                                    (ItemsVariable.value3 = e.target.value)
+                                  }
+                                  id="flexRadioDefault1"
+                                  required
+                                />
+                              </td>
+
+                              <td class="table-data">
+                                <input
+                                  type="radio"
+                                  value={"checked"}
+                                  onChange={(e) =>
+                                    (ItemsVariable.value4 = e.target.value)
+                                  }
+                                  id="flexRadioDefault1"
+                                  required
+                                />
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <div
+                        className="col-md-6"
+                        style={{ display: "inherit" }}
+                        key={index}
+                      >
+                        <table className="table table-bordered">
+                          <thead className="health-table">
+                            <tr>
+                              <th className="health-row" colspan="4">
+                                {list.title}
+                              </th>
+
+                              <th>
+                                <span>Expiry Date</span>
                               </th>
                             </tr>
                           </thead>
@@ -983,121 +874,235 @@ const Url = ({ url }) => {
                               <tr>
                                 <th
                                   className="table-data"
-                                  colspan="4"
+                                  colspan="3"
                                   scope="row"
                                 >
-                                  {item.name}
+                                  <input
+                                    type="checkbox"
+                                    value=""
+                                    id="certification"
+                                    style={{ marginRight: "10px" }}
+                                    required
+                                  />
                                 </th>
-                                <td class="table-data">
-                                  <input
-                                    type="radio"
-                                    value={"checked"}
-                                    onChange={(e) =>
-                                      (item.value1 = e.target.value)
-                                    }
-                                    id="flexRadioDefault1"
-                                    required
-                                  />
-                                </td>
-                                <td class="table-data">
-                                  <input
-                                    type="radio"
-                                    value={"checked"}
-                                    onChange={(e) =>
-                                      (item.value2 = e.target.value)
-                                    }
-                                    id="flexRadioDefault1"
-                                    required
-                                  />
-                                </td>
-                                <td class="table-data">
-                                  <input
-                                    type="radio"
-                                    value={"checked"}
-                                    onChange={(e) =>
-                                      (item.value3 = e.target.value)
-                                    }
-                                    id="flexRadioDefault1"
-                                    required
-                                  />
-                                </td>
-
-                                <td class="table-data">
-                                  <input
-                                    type="radio"
-                                    value={"checked"}
-                                    onChange={(e) =>
-                                      (item.value4 = e.target.value)
-                                    }
-                                    id="flexRadioDefault1"
-                                    required
-                                  />
-                                </td>
+                                <th>{item.name}</th>
+                                <th>
+                                  <td>
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      id="date"
+                                      aria-describedby="date"
+                                      placeholder="Select date"
+                                    />
+                                  </td>
+                                </th>
                               </tr>
                             </tbody>
                           ))}
+
+                          <tbody>
+                            <tr>
+                              <th colSpan={4}>
+                                Other:Specify
+                                <textarea
+                                  class="form-control"
+                                  id="floatingTextarea2"
+                                ></textarea>
+                              </th>
+                              <th>
+                                <input
+                                  type="date"
+                                  class="form-control"
+                                  id="date"
+                                  aria-describedby="date"
+                                  placeholder="Select date"
+                                />
+                              </th>
+                            </tr>
+                            <tr>
+                              <th colSpan={4}>
+                                Other : Specify
+                                <textarea
+                                  class="form-control"
+                                  id="floatingTextarea2"
+                                ></textarea>
+                              </th>
+                              <th>
+                                <input
+                                  type="date"
+                                  class="form-control"
+                                  id="date"
+                                  aria-describedby="date"
+                                  placeholder="Select date"
+                                />
+                              </th>
+                            </tr>
+                          </tbody>
                         </table>
                       </div>
-                    )}
-                  </>
-                );
-              })}
+                    </>
+                  ) : (
+                    <div
+                      className="col-md-6"
+                      style={{ display: "inherit" }}
+                      key={index}
+                    >
+                      <table className="table table-bordered">
+                        <thead className="health-table">
+                          <tr>
+                            <th className="health-row" colspan="4">
+                              {list.title}
+                            </th>
+                            <th
+                              className="health-row small"
+                              style={{ width: "20px", textAlign: "center" }}
+                              scope="col"
+                            >
+                              1
+                            </th>
+                            <th
+                              className="health-row small"
+                              style={{ width: "20px", textAlign: "center" }}
+                              scope="col"
+                            >
+                              2
+                            </th>
+                            <th
+                              className="health-row small"
+                              style={{ width: "20px", textAlign: "center" }}
+                              scope="col"
+                            >
+                              3
+                            </th>
+                            <th
+                              className="health-row small"
+                              style={{ width: "20px", textAlign: "center" }}
+                              scope="col"
+                            >
+                              4
+                            </th>
+                          </tr>
+                        </thead>
+                        {list.items.map((item, index) => (
+                          <tbody key={index}>
+                            <tr>
+                              <th
+                                className="table-data"
+                                colspan="4"
+                                scope="row"
+                              >
+                                {item.name}
+                              </th>
+                              <td class="table-data">
+                                <input
+                                  type="radio"
+                                  value={"checked"}
+                                  onChange={(e) =>
+                                    (item.value1 = e.target.value)
+                                  }
+                                  id="flexRadioDefault1"
+                                  required
+                                />
+                              </td>
+                              <td class="table-data">
+                                <input
+                                  type="radio"
+                                  value={"checked"}
+                                  onChange={(e) =>
+                                    (item.value2 = e.target.value)
+                                  }
+                                  id="flexRadioDefault1"
+                                  required
+                                />
+                              </td>
+                              <td class="table-data">
+                                <input
+                                  type="radio"
+                                  value={"checked"}
+                                  onChange={(e) =>
+                                    (item.value3 = e.target.value)
+                                  }
+                                  id="flexRadioDefault1"
+                                  required
+                                />
+                              </td>
+
+                              <td class="table-data">
+                                <input
+                                  type="radio"
+                                  value={"checked"}
+                                  onChange={(e) =>
+                                    (item.value4 = e.target.value)
+                                  }
+                                  id="flexRadioDefault1"
+                                  required
+                                />
+                              </td>
+                            </tr>
+                          </tbody>
+                        ))}
+                      </table>
+                    </div>
+                  )}
+                </>
+              );
+            })}
+          </div>
+          <div>
+            <div class="form-group row mt-3 d-flex ">
+              <div className="col-md-1">
+                <input type="checkbox" id="declare" required />
+              </div>
+              <div className="col-md-11">
+                <p className="declare-para">
+                  I hereby certify that ALL information I have provided on this
+                  skills checklist and all other documentation, is true and
+                  accurate. I understand and acknowledge that any
+                  misrepresentation or omission may result in disqualification
+                  from employment and/or immediate termination.
+                </p>
+              </div>
+            </div>
+            <div
+              className="container declare-box"
+              style={{ marginTop: "10px" }}
+            >
+              <div className="date-box">
+                <p>Date signed-:</p>
+                <strong>
+                  <span>{newDate}</span>
+                </strong>
+              </div>
+              <div className="sign-box">
+                <strong>
+                  <span>Signature</span>
+                </strong>
+                <input
+                  style={{ marginTop: "10px" }}
+                  type="text"
+                  className="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Your Signature"
+                  onChange={(e) => setSign(e.target.value)}
+                  value={sign}
+                />
+              </div>
             </div>
             <div>
-              <div class="form-group row mt-3 d-flex ">
-                <div className="col-md-1">
-                  <input type="checkbox" id="declare" required />
-                </div>
-                <div className="col-md-11">
-                  <p className="declare-para">
-                    I hereby certify that ALL information I have provided on
-                    this skills checklist and all other documentation, is true
-                    and accurate. I understand and acknowledge that any
-                    misrepresentation or omission may result in disqualification
-                    from employment and/or immediate termination.
-                  </p>
-                </div>
-              </div>
-              <div
-                className="container declare-box"
-                style={{ marginTop: "10px" }}
+              <button
+                style={{ marginTop: "20px", marginBottom: "20px" }}
+                className="btn btn-primary"
+                type="submit"
               >
-                <div className="date-box">
-                  <p>Date signed-:</p>
-                  <strong>
-                    <span>{newDate}</span>
-                  </strong>
-                </div>
-                <div className="sign-box">
-                  <strong>
-                    <span>Signature</span>
-                  </strong>
-                  <input
-                    style={{ marginTop: "10px" }}
-                    type="text"
-                    className="form-control"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                    placeholder="Your Signature"
-                    onChange={(e) => setSign(e.target.value)}
-                    value={sign}
-                  />
-                </div>
-              </div>
-              <div>
-                <button
-                  style={{ marginTop: "20px", marginBottom: "20px" }}
-                  className="btn btn-primary"
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </div>
+                Submit
+              </button>
             </div>
           </div>
-        </form>
+        </div>
       )}
-    </>
+    </form>
   );
 };
 
