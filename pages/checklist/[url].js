@@ -167,7 +167,7 @@ const Url = ({ url }) => {
 
   const inputDate = JSON.stringify(dateofbith);
 
-  const submitData = (e) => {
+  const submitData = (e, values) => {
     e.preventDefault();
     const th =
       data === undefined || data.length === 0
@@ -219,7 +219,7 @@ const Url = ({ url }) => {
                </label>
                <input disabled type="text" class="form-control" id="firstname"
                   style=" padding : 10px;  margin :10px;width: 180px; text-align: center;"
-                  name="firstname" required="" value=${formValues.firstname}>
+                  name="firstname" required="" value=${values.firstname}>
             </div>
             <div class="col-md-3">
                <label className="m-2 text-dark" style={{ width: "180px" }}>
@@ -227,14 +227,14 @@ const Url = ({ url }) => {
                </label>
                <input disabled type="text" class="form-control" id="lastname"
                   style=" padding : 10px;  margin :10px;width: 180px; text-align: center;"
-                  name="lastname" required="" value=${formValues.lastname}>
+                  name="lastname" required="" value=${values.lastname}>
             </div>
             <div class="col-md-3">
                <label className="m-2 text-dark" style={{ width: "180px" }}>
                Phone-no:-
                </label>
                <input disabled type="number" class="form-control" id="phoneno"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="phoneno" required="" value=${
-                 formValues.phoneno
+                 values.phoneno
                }>
             </div>
             <div class="col-md-3">
@@ -242,7 +242,7 @@ const Url = ({ url }) => {
                Contact-Email:-
                </label>
                <input disabled type="email" class="form-control" id="email"  name="email" style=" padding : 10px; width: 180px; text-align: center; margin :10px;" required="" value=${
-                 formValues.email
+                 values.email
                }>
             </div>
             <div class="col-md-3">
@@ -258,7 +258,7 @@ const Url = ({ url }) => {
                SSN:-
                </label>
                <input disabled type="number" class="form-control" id="name"  style=" padding : 10px; width: 180px; text-align: center; margin :10px;" name="ssn" required="" value=${
-                 formValues.ssn
+                 values.ssn
                }>
             </div>
             <div class="mb-3 d-flex " style="display:flex; flex-direction:column;">
@@ -385,16 +385,18 @@ const Url = ({ url }) => {
       url: `${host}list/submitCheckList`,
       headers: { "Content-Type": "application/json" },
       data: {
-        name: formValues.name,
-        phoneno: formValues.phoneno,
-        email: formValues.email,
+        firstname: values.firstname,
+        lastname: values.lastname,
+        phoneno: values.phoneno,
+        email: values.email,
         dob: formatDob,
-        ssn: formValues.ssn,
+        ssn: values.ssn,
         references: references,
         list: data.list,
         htmlData: Html,
         listName: data.Listname,
         requestTimeOffDate: { startDate: from, endDate: to },
+        categoryname: url,
       },
     };
 
@@ -464,12 +466,7 @@ const Url = ({ url }) => {
     formik;
 
   return (
-    <form
-      onSubmit={(e) => {
-        setFormValues(values);
-        submitData(e);
-      }}
-    >
+    <form onSubmit={(e) => submitData(e, values)}>
       <div className="container checklist-head">
         <div className="midas-logo">
           <img src="/images/logo.webp" />
@@ -810,6 +807,7 @@ const Url = ({ url }) => {
                                     (ItemsVariable.value1 = e.target.value)
                                   }
                                   id="flexRadioDefault1"
+                                  name={ItemsVariable.name}
                                   required={true}
                                 />
                               </td>
@@ -821,6 +819,7 @@ const Url = ({ url }) => {
                                     (ItemsVariable.value2 = e.target.value)
                                   }
                                   id="flexRadioDefault1"
+                                  name={ItemsVariable.name}
                                   required
                                 />
                               </td>
@@ -832,6 +831,7 @@ const Url = ({ url }) => {
                                     (ItemsVariable.value3 = e.target.value)
                                   }
                                   id="flexRadioDefault1"
+                                  name={ItemsVariable.name}
                                   required
                                 />
                               </td>
@@ -844,6 +844,7 @@ const Url = ({ url }) => {
                                     (ItemsVariable.value4 = e.target.value)
                                   }
                                   id="flexRadioDefault1"
+                                  name={ItemsVariable.name}
                                   required
                                 />
                               </td>
@@ -1002,6 +1003,7 @@ const Url = ({ url }) => {
                                     (item.value1 = e.target.value)
                                   }
                                   id="flexRadioDefault1"
+                                  name={item.name}
                                   required
                                 />
                               </td>
@@ -1013,6 +1015,7 @@ const Url = ({ url }) => {
                                     (item.value2 = e.target.value)
                                   }
                                   id="flexRadioDefault1"
+                                  name={item.name}
                                   required
                                 />
                               </td>
@@ -1024,6 +1027,7 @@ const Url = ({ url }) => {
                                     (item.value3 = e.target.value)
                                   }
                                   id="flexRadioDefault1"
+                                  name={item.name}
                                   required
                                 />
                               </td>
@@ -1036,6 +1040,7 @@ const Url = ({ url }) => {
                                     (item.value4 = e.target.value)
                                   }
                                   id="flexRadioDefault1"
+                                  name={item.name}
                                   required
                                 />
                               </td>
