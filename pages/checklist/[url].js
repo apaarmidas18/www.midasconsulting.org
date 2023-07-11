@@ -402,7 +402,6 @@ const Url = ({ url }) => {
         categoryname: url,
       },
     };
-    console.log(options.data);
 
     axios
       .request(options)
@@ -468,7 +467,7 @@ const Url = ({ url }) => {
 
   const { values, handleChange, handleBlur, handleSubmit, setFieldValue } =
     formik;
-  console.log("check1:", check1);
+
   return (
     <form onSubmit={(e) => submitData(e, values)}>
       <div className="container checklist-head">
@@ -1010,7 +1009,6 @@ const Url = ({ url }) => {
                           </tr>
                         </thead>
                         {list.items.map((item, index) => {
-                          console.log(list.items);
                           return (
                             <tbody key={index}>
                               <tr>
