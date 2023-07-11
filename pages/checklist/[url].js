@@ -41,6 +41,10 @@ const Url = ({ url }) => {
       key: "selection",
     },
   ]);
+  const [check1, setCheck1] = useState(false);
+  const [check2, setCheck2] = useState(false);
+  const [check3, setCheck3] = useState(false);
+  const [check4, setCheck4] = useState(false);
 
   const router = useRouter();
   //Validation*************************************************
@@ -146,10 +150,9 @@ const Url = ({ url }) => {
     });
 
     // Generate the table header
-
     // Generate the table body
-
     // Finish the table markup
+
     tableHTML += "</table>";
     tableHTML += "</form>";
     tableHTML += "</div>";
@@ -465,7 +468,7 @@ const Url = ({ url }) => {
 
   const { values, handleChange, handleBlur, handleSubmit, setFieldValue } =
     formik;
-
+  console.log("check1:", check1);
   return (
     <form onSubmit={(e) => submitData(e, values)}>
       <div className="container checklist-head">
@@ -804,9 +807,14 @@ const Url = ({ url }) => {
                                 <input
                                   type="radio"
                                   value={"checked"}
-                                  onChange={(e) =>
-                                    (ItemsVariable.value1 = e.target.value)
-                                  }
+                                  onChange={(e) => {
+                                    ItemsVariable.value1 = e.target.value;
+                                    ItemsVariable.value2 === "checked" ||
+                                    ItemsVariable.value3 === "checked" ||
+                                    ItemsVariable.value4 === "checked"
+                                      ? (ItemsVariable.value1 = "")
+                                      : null;
+                                  }}
                                   id="flexRadioDefault1"
                                   name={ItemsVariable.name}
                                   required={true}
@@ -816,9 +824,14 @@ const Url = ({ url }) => {
                                 <input
                                   type="radio"
                                   value={"checked"}
-                                  onChange={(e) =>
-                                    (ItemsVariable.value2 = e.target.value)
-                                  }
+                                  onChange={(e) => {
+                                    ItemsVariable.value2 = e.target.value;
+                                    ItemsVariable.value1 === "checked" ||
+                                    ItemsVariable.value3 === "checked" ||
+                                    ItemsVariable.value4 === "checked"
+                                      ? (ItemsVariable.value2 = "")
+                                      : null;
+                                  }}
                                   id="flexRadioDefault1"
                                   name={ItemsVariable.name}
                                   required
@@ -828,9 +841,14 @@ const Url = ({ url }) => {
                                 <input
                                   type="radio"
                                   value={"checked"}
-                                  onChange={(e) =>
-                                    (ItemsVariable.value3 = e.target.value)
-                                  }
+                                  onChange={(e) => {
+                                    ItemsVariable.value3 = e.target.value;
+                                    ItemsVariable.value1 === "checked" ||
+                                    ItemsVariable.value2 === "checked" ||
+                                    ItemsVariable.value4 === "checked"
+                                      ? (ItemsVariable.value3 = "")
+                                      : null;
+                                  }}
                                   id="flexRadioDefault1"
                                   name={ItemsVariable.name}
                                   required
@@ -841,9 +859,14 @@ const Url = ({ url }) => {
                                 <input
                                   type="radio"
                                   value={"checked"}
-                                  onChange={(e) =>
-                                    (ItemsVariable.value4 = e.target.value)
-                                  }
+                                  onChange={(e) => {
+                                    ItemsVariable.value4 = e.target.value;
+                                    ItemsVariable.value1 === "checked" ||
+                                    ItemsVariable.value2 === "checked" ||
+                                    ItemsVariable.value3 === "checked"
+                                      ? (ItemsVariable.value4 = "")
+                                      : null;
+                                  }}
                                   id="flexRadioDefault1"
                                   name={ItemsVariable.name}
                                   required
@@ -986,68 +1009,99 @@ const Url = ({ url }) => {
                             </th>
                           </tr>
                         </thead>
-                        {list.items.map((item, index) => (
-                          <tbody key={index}>
-                            <tr>
-                              <th
-                                className="table-data"
-                                colspan="4"
-                                scope="row"
-                              >
-                                {item.name}
-                              </th>
-                              <td class="table-data">
-                                <input
-                                  type="radio"
-                                  value={"checked"}
-                                  onChange={(e) =>
-                                    (item.value1 = e.target.value)
-                                  }
-                                  id="flexRadioDefault1"
-                                  name={item.name}
-                                  required
-                                />
-                              </td>
-                              <td class="table-data">
-                                <input
-                                  type="radio"
-                                  value={"checked"}
-                                  onChange={(e) =>
-                                    (item.value2 = e.target.value)
-                                  }
-                                  id="flexRadioDefault1"
-                                  name={item.name}
-                                  required
-                                />
-                              </td>
-                              <td class="table-data">
-                                <input
-                                  type="radio"
-                                  value={"checked"}
-                                  onChange={(e) =>
-                                    (item.value3 = e.target.value)
-                                  }
-                                  id="flexRadioDefault1"
-                                  name={item.name}
-                                  required
-                                />
-                              </td>
+                        {list.items.map((item, index) => {
+                          console.log(list.items);
+                          return (
+                            <tbody key={index}>
+                              <tr>
+                                <th
+                                  className="table-data"
+                                  colspan="4"
+                                  scope="row"
+                                >
+                                  {item.name}
+                                </th>
 
-                              <td class="table-data">
-                                <input
-                                  type="radio"
-                                  value={"checked"}
-                                  onChange={(e) =>
-                                    (item.value4 = e.target.value)
-                                  }
-                                  id="flexRadioDefault1"
-                                  name={item.name}
-                                  required
-                                />
-                              </td>
-                            </tr>
-                          </tbody>
-                        ))}
+                                <td class="table-data">
+                                  <input
+                                    type="radio"
+                                    value={"checked"}
+                                    onChange={(e) => {
+                                      setCheck1(true);
+                                      item.value1 = e.target.value;
+                                      item.value2 === "checked" ||
+                                      item.value3 === "checked" ||
+                                      item.value4 === "checked"
+                                        ? (item.value1 = "")
+                                        : null;
+                                    }}
+                                    id="flexRadioDefault1"
+                                    name={item.name}
+                                    required
+                                  />
+                                </td>
+
+                                <td class="table-data">
+                                  <input
+                                    type="radio"
+                                    value={"checked"}
+                                    onChange={(e) => {
+                                      setCheck2(true);
+                                      item.value2 = e.target.value;
+
+                                      item.value1 === "checked" ||
+                                      item.value3 === "checked" ||
+                                      item.value4 === "checked"
+                                        ? (item.value2 = "")
+                                        : null;
+                                    }}
+                                    id="flexRadioDefault1"
+                                    name={item.name}
+                                    required
+                                  />
+                                </td>
+
+                                <td class="table-data">
+                                  <input
+                                    type="radio"
+                                    value={"checked"}
+                                    onChange={(e) => {
+                                      setCheck3(true);
+                                      item.value3 = e.target.value;
+                                      item.value1 === "checked" ||
+                                      item.value2 === "checked" ||
+                                      item.value4 === "checked"
+                                        ? (item.value1 = "")
+                                        : null;
+                                    }}
+                                    id="flexRadioDefault1"
+                                    name={item.name}
+                                    required
+                                  />
+                                </td>
+
+                                <td class="table-data">
+                                  <input
+                                    type="radio"
+                                    value={"checked"}
+                                    onChange={(e) => {
+                                      setCheck4(true);
+                                      item.value4 = e.target.value;
+                                      item.value1 === "checked" ||
+                                      item.value2 === "checked" ||
+                                      item.value3 === "checked"
+                                        ? (item.value1 = "")
+                                        : null;
+                                    }}
+                                    id="flexRadioDefault1"
+                                    name={item.name}
+                                    required
+                                  />
+                                </td>
+                              </tr>
+                            </tbody>
+                          );
+                        })}
                       </table>
                     </div>
                   )}

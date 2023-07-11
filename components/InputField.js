@@ -11,6 +11,7 @@ const InputField = ({
   onClick,
   disabled,
   style,
+  maxlength,
 }) => {
   return (
     <div className="col-md-3">
@@ -29,6 +30,7 @@ const InputField = ({
         onClick={onClick}
         disabled={disabled}
         style={style}
+        maxlength={maxlength}
       />
     </div>
   );
