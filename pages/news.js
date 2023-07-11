@@ -26,23 +26,23 @@ const news = () => {
         <div className="row" style={{ marginTop: "40px" }}>
           <div className="col-md-4">
             <Infocard
-              cardimage="/images/animate.jpg"
+              cardimage="/images/team2.png"
               cardalt="illustration"
               cardlink={"#"}
-              cardname="Midas Expands East Coast Footprint with New Atlanta and Philadelphia Offices"
+              cardname="Thriving Together: Celebrated Red Band Ceremony in Style!"
             />
           </div>
           <div className="col-md-4">
             <Infocard
-              cardimage="/images/animate.jpg"
+              cardimage="/images/staf.png"
               cardalt="illustration"
               cardlink={"#"}
-              cardname="Midas Technology Rated Among Top Vendors in the 2023 Best in KLAS Report"
+              cardname="Midas Technology Rated Among Top Vendors in the 2023"
             />
           </div>
           <div className="col-md-4">
             <Infocard
-              cardimage="/images/animate.jpg"
+              cardimage="/images/team.jpg"
               cardalt="illustration"
               cardlink={"#"}
               cardname="Midas Wins ClearlyRated’s 2023 Best of Staffing Client"
@@ -80,14 +80,14 @@ const news = () => {
           </div>
           <div className="col-md-6 news-row">
             <Newslist
-              news="Chicago Tribune Names Midas a Winner of the Chicagoland Top Workplaces 2022 Award"
+              news="Navigating Digital Transformation: Embracing Technology for Competitive Advantage"
               date="Nov 7, 2022"
             />
           </div>
 
           <div className="col-md-6 news-row">
             <Newslist
-              news="Midas Announces Recipients of the 2022 Talentomorrow Talent Scholarship"
+              news="Milestone Moments: Celebrating Redband Ceremony for Success of our Team-mates"
               date="Sep 15, 2022"
             />
           </div>
