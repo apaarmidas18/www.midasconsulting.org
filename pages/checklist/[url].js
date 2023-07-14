@@ -218,8 +218,10 @@ const Url = ({ url }) => {
 
    
    <form>
-        <div class="container checklist-head">
+        <div class="container checklist-head mt-5">
+        <div class="text-center">
           <h2> ${capitalized} Skills Checklist</h2>
+          </div>
           <div class="col-md-12 p-1">
             <div class="row">
               <div class="form-group row mb-3 d-flex align-items-center bg-light border rounded p-2">
@@ -431,7 +433,7 @@ const Url = ({ url }) => {
       }
    
       <div>
-         <div class="form-group row mt-3 d-flex ">
+         <div class="form-group row mt-3 d-flex mx-5">
             <div className="col-md-11">
                <p className="declare-para">
                   I hereby certify that ALL information I have provided on this
@@ -442,9 +444,9 @@ const Url = ({ url }) => {
                </p>
             </div>
          </div>
-         <div
+         <div 
             style="margin-top: 10px;  justify-content: space-between;  display: flex; flex-direction:row;"
-            >
+              class="mx-5">
             <div className="date-box">
                <p>Date signed-:</p>
                <strong>
@@ -506,7 +508,7 @@ const Url = ({ url }) => {
           }).then((willDelete) => {
             if (willDelete) {
               swal("Your Request Has Been Submitted!", "success");
-              window.location.reload();
+              // window.location.reload();
             }
           });
           setLoading(false);
