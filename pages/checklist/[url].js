@@ -1123,82 +1123,96 @@ const Url = ({ url }) => {
                                     colspan="4"
                                     scope="row"
                                   >
-                                    {item.name}
+                                    {item.subcat ? (
+                                      <strong>{item.subcat} </strong>
+                                    ) : (
+                                      item.name
+                                    )}
                                   </th>
+                                  {item.subcat ? (
+                                    <>
+                                      <td class="table-data"></td>
+                                      <td class="table-data"></td>
+                                      <td class="table-data"></td>
+                                      <td class="table-data"></td>
+                                    </>
+                                  ) : (
+                                    <>
+                                      <td class="table-data">
+                                        <input
+                                          type="radio"
+                                          value={"checked"}
+                                          onChange={(e) => {
+                                            setCheck1(true);
+                                            item.value1 = e.target.value;
+                                            item.value2 === "checked" ||
+                                            item.value3 === "checked" ||
+                                            item.value4 === "checked"
+                                              ? (item.value1 = "")
+                                              : null;
+                                          }}
+                                          id="flexRadioDefault1"
+                                          name={item.name}
+                                          required
+                                        />
+                                      </td>
+                                      <td class="table-data">
+                                        <input
+                                          type="radio"
+                                          value={"checked"}
+                                          onChange={(e) => {
+                                            setCheck2(true);
+                                            item.value2 = e.target.value;
 
-                                  <td class="table-data">
-                                    <input
-                                      type="radio"
-                                      value={"checked"}
-                                      onChange={(e) => {
-                                        setCheck1(true);
-                                        item.value1 = e.target.value;
-                                        item.value2 === "checked" ||
-                                        item.value3 === "checked" ||
-                                        item.value4 === "checked"
-                                          ? (item.value1 = "")
-                                          : null;
-                                      }}
-                                      id="flexRadioDefault1"
-                                      name={item.name}
-                                      required
-                                    />
-                                  </td>
-                                  <td class="table-data">
-                                    <input
-                                      type="radio"
-                                      value={"checked"}
-                                      onChange={(e) => {
-                                        setCheck2(true);
-                                        item.value2 = e.target.value;
-
-                                        item.value1 === "checked" ||
-                                        item.value3 === "checked" ||
-                                        item.value4 === "checked"
-                                          ? (item.value2 = "")
-                                          : null;
-                                      }}
-                                      id="flexRadioDefault1"
-                                      name={item.name}
-                                      required
-                                    />
-                                  </td>
-                                  <td class="table-data">
-                                    <input
-                                      type="radio"
-                                      value={"checked"}
-                                      onChange={(e) => {
-                                        setCheck3(true);
-                                        item.value3 = e.target.value;
-                                        item.value1 === "checked" ||
-                                        item.value2 === "checked" ||
-                                        item.value4 === "checked"
-                                          ? (item.value1 = "")
-                                          : null;
-                                      }}
-                                      id="flexRadioDefault1"
-                                      name={item.name}
-                                      required
-                                    />
-                                  </td>
-                                  <td class="table-data">
-                                    <input
-                                      type="radio"
-                                      value={"checked"}
-                                      onChange={(e) => {
-                                        setCheck4(true);
-                                        item.value4 = e.target.value;
-                                        item.value1 === "checked" ||
-                                        item.value2 === "checked" ||
-                                        item.value3 === "checked"
-                                          ? (item.value1 = "")
-                                          : null;
-                                      }}
-                                      id="flexRadioDefault1"
-                                      name={item.name}
-                                      required
-                                    />
-                                  </td>
+                                            item.value1 === "checked" ||
+                                            item.value3 === "checked" ||
+                                            item.value4 === "checked"
+                                              ? (item.value2 = "")
+                                              : null;
+                                          }}
+                                          id="flexRadioDefault1"
+                                          name={item.name}
+                                          required
+                                        />
+                                      </td>
+                                      <td class="table-data">
+                                        <input
+                                          type="radio"
+                                          value={"checked"}
+                                          onChange={(e) => {
+                                            setCheck3(true);
+                                            item.value3 = e.target.value;
+                                            item.value1 === "checked" ||
+                                            item.value2 === "checked" ||
+                                            item.value4 === "checked"
+                                              ? (item.value1 = "")
+                                              : null;
+                                          }}
+                                          id="flexRadioDefault1"
+                                          name={item.name}
+                                          required
+                                        />
+                                      </td>
+                                      <td class="table-data">
+                                        <input
+                                          type="radio"
+                                          value={"checked"}
+                                          onChange={(e) => {
+                                            setCheck4(true);
+                                            item.value4 = e.target.value;
+                                            item.value1 === "checked" ||
+                                            item.value2 === "checked" ||
+                                            item.value3 === "checked"
+                                              ? (item.value1 = "")
+                                              : null;
+                                          }}
+                                          id="flexRadioDefault1"
+                                          name={item.name}
+                                          required
+                                        />
+                                      </td>
+                                    </>
+                                  )}
                                 </tr>
                               </tbody>
                             );
