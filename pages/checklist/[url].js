@@ -495,21 +495,16 @@ const Url = ({ url }) => {
         categoryname: url,
       },
     };
-    setLoading(false);
+    setLoading(true);
     axios
       .request(options)
       .then(function (response) {
         setLoading(true);
-        if (response.data.baseResponse.status == 1) {
+        if (response.data.baseResponse.status === 1) {
           swal({
-            title: "We have gathered all your information",
-            text: "Please proceed to submit request.",
+            title: "Response received.",
+            text: "Thank you! Your response has been received.",
             icon: "success",
-          }).then((willDelete) => {
-            if (willDelete) {
-              swal("Your Request Has Been Submitted!", "success");
-              // window.location.reload();
-            }
           });
           setLoading(false);
         }
@@ -564,6 +559,13 @@ const Url = ({ url }) => {
 
   return (
     <>
+      <div className={loading ? "loader-container-show" : "loader-container"}>
+        <div id="loading-bar-spinner" class="spinner">
+          <div class="spinner-icon">
+            <div class="spinner-icon2"></div>
+          </div>
+        </div>
+      </div>
       <form onSubmit={(e) => submitData(e, values)}>
         <div className="container checklist-head">
           <div className="midas-logo">
