@@ -495,7 +495,7 @@ const Url = ({ url }) => {
         categoryname: url,
       },
     };
-    setLoading(true);
+    setLoading(false);
     axios
       .request(options)
       .then(function (response) {
