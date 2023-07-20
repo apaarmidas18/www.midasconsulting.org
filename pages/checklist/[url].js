@@ -672,7 +672,7 @@ const Url = ({ url }) => {
                         placeholder={"Last four SSN digit"}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        id={"name"}
+                        id={"ssn"}
                         required={true}
                         name={"ssn"}
                       />
@@ -751,7 +751,7 @@ const Url = ({ url }) => {
                               type={"text"}
                               placeholder={"Full Name"}
                               onChange={(e) => handleReferences(e, index)}
-                              id={"name"}
+                              id={"rname"}
                               name={"name"}
                               required={false}
                             />
@@ -761,7 +761,7 @@ const Url = ({ url }) => {
                               type={"number"}
                               placeholder={"Enter Phone number"}
                               onChange={(e) => handleReferences(e, index)}
-                              id={"phoneno"}
+                              id={"rphoneno"}
                               name={"phoneno"}
                               required={false}
                             />
@@ -771,7 +771,7 @@ const Url = ({ url }) => {
                               type={"email"}
                               placeholder={"Enter Referre's E-mail"}
                               onChange={(e) => handleReferences(e, index)}
-                              id={"email"}
+                              id={"remail"}
                               name={"email"}
                               required={false}
                             />
@@ -1029,7 +1029,6 @@ const Url = ({ url }) => {
                                           <input
                                             type="date"
                                             class="form-control"
-                                            id="date"
                                             aria-describedby="date"
                                             placeholder="Select date"
                                           />
@@ -1052,7 +1051,6 @@ const Url = ({ url }) => {
                                       <input
                                         type="date"
                                         class="form-control"
-                                        id="date"
                                         aria-describedby="date"
                                         placeholder="Select date"
                                       />
@@ -1070,7 +1068,6 @@ const Url = ({ url }) => {
                                       <input
                                         type="date"
                                         class="form-control"
-                                        id="date"
                                         aria-describedby="date"
                                         placeholder="Select date"
                                       />
