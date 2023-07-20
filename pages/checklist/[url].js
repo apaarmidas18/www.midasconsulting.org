@@ -928,7 +928,6 @@ const Url = ({ url }) => {
                                             ? (ItemsVariable.value1 = "")
                                             : null;
                                         }}
-                                        id="flexRadioDefault1"
                                         name={ItemsVariable.name}
                                         required={true}
                                       />
@@ -945,7 +944,6 @@ const Url = ({ url }) => {
                                             ? (ItemsVariable.value2 = "")
                                             : null;
                                         }}
-                                        id="flexRadioDefault1"
                                         name={ItemsVariable.name}
                                         required
                                       />
@@ -962,7 +960,6 @@ const Url = ({ url }) => {
                                             ? (ItemsVariable.value3 = "")
                                             : null;
                                         }}
-                                        id="flexRadioDefault1"
                                         name={ItemsVariable.name}
                                         required
                                       />
@@ -980,7 +977,6 @@ const Url = ({ url }) => {
                                             ? (ItemsVariable.value4 = "")
                                             : null;
                                         }}
-                                        id="flexRadioDefault1"
                                         name={ItemsVariable.name}
                                         required
                                       />
@@ -1167,7 +1163,6 @@ const Url = ({ url }) => {
                                                   ? (item.value1 = "")
                                                   : null;
                                               }}
-                                              id="flexRadioDefault1"
                                               name={item.name}
                                               required
                                             />
@@ -1185,7 +1180,6 @@ const Url = ({ url }) => {
                                                   ? (item.value2 = "")
                                                   : null;
                                               }}
-                                              id="flexRadioDefault1"
                                               name={item.name}
                                               required
                                             />
@@ -1202,7 +1196,6 @@ const Url = ({ url }) => {
                                                   ? (item.value1 = "")
                                                   : null;
                                               }}
-                                              id="flexRadioDefault1"
                                               name={item.name}
                                               required
                                             />
@@ -1219,7 +1212,6 @@ const Url = ({ url }) => {
                                                   ? (item.value1 = "")
                                                   : null;
                                               }}
-                                              id="flexRadioDefault1"
                                               name={item.name}
                                               required
                                             />
