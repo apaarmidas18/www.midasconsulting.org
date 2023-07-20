@@ -122,25 +122,25 @@ const Url = ({ url }) => {
 
       tableHTML += `<td class="table-data">${
         ite.value1 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 12px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required disabled > `
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value2 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 12px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value3 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 12px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value4 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 12px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
@@ -1285,6 +1285,7 @@ const Url = ({ url }) => {
               </div>
             )}
           </form>
+          {/* <div className="container"></div> */}
         </>
       ) : (
         "Please wait while we fetch checklist for you "
