@@ -340,7 +340,7 @@ const Url = ({ url }) => {
                     />
                   </div>
                   <div class="col-md-4">
-                    <label class="m-2 text-dark"> E-mail</label>
+                    <label class="m-2 text-dark">Referre's E-mail</label>
                     <input
                       type="email"
                       class="form-control"
@@ -365,6 +365,19 @@ const Url = ({ url }) => {
                      value=${references[1].name}
                     />
                   </div>
+                  
+                  <div class="col-md-4">
+                    <label class="m-2 text-dark">Referee's Phone </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="email"
+                      placeholder="Enter Referre's E-mail"
+                      name="email"
+                      required=""
+                     value=${references[1].phoneno}
+                    />
+                  </div>
                   <div class="col-md-4">
                     <label class="m-2 text-dark">Referee's E-mail</label>
                     <input
@@ -374,18 +387,6 @@ const Url = ({ url }) => {
                       name="email"
                       required=""
                      value=${references[1].email}
-                    />
-                  </div>
-                  <div class="col-md-4">
-                    <label class="m-2 text-dark">Referee's Phone Number</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="email"
-                      placeholder="Enter Referre's E-mail"
-                      name="email"
-                      required=""
-                     value=${references[1].phoneno}
                     />
                   </div>
               
@@ -766,7 +767,7 @@ const Url = ({ url }) => {
                               required={false}
                             />
                             <InputField
-                              label={"Enter E-mail"}
+                              label={"Enter Referre's E-mail"}
                               value={item.email}
                               type={"email"}
                               placeholder={"Enter Referre's E-mail"}
