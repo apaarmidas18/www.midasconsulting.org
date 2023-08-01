@@ -277,7 +277,7 @@ const Url = ({ url }) => {
                     />
                   </div>
                   <div class="col-md-4">
-                    <label class="m-2 text-dark">DOB</label>
+                    <label class="m-2 text-dark">Date of Birth</label>
                     <input
                       type="text"
                       class="form-control"
@@ -514,6 +514,7 @@ const Url = ({ url }) => {
   };
 
   const handleReferences = (e, index) => {
+    e.preventDefault();
     const { name, value } = e.target;
     if (name === "phoneno") {
       const list = [...references];
@@ -652,7 +653,7 @@ const Url = ({ url }) => {
                             className="m-2 text-dark"
                             style={{ width: "180px" }}
                           >
-                            Enter DOB
+                            Enter Date of Birth
                           </label>
                           <ReactDatePicker
                             selected={values.dob}
@@ -849,6 +850,8 @@ const Url = ({ url }) => {
                       list.title === "CERTIFICATIONS"
                         ? list.items.pop()
                         : list.items;
+
+                    console.log("ItemsVariable::", ItemsVariable);
 
                     return (
                       <>
