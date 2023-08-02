@@ -18,7 +18,6 @@ import { host } from "../../static";
 const Url = ({ url }) => {
   const router = useRouter();
 
-  console.log("url:", url);
   const [active, setActive] = useState(false);
   const [html, setHTML] = useState("");
   const [dob, setDob] = useState(false);
@@ -32,11 +31,17 @@ const Url = ({ url }) => {
     lastname: "",
     phoneno: "",
     email: "",
-    dob: dateofBirth,
+    dob: "",
     ssn: "",
+    address: "",
   });
   const [showDate, setShowDate] = useState(false);
   const [references, setReferenes] = useState([
+    {
+      name: "",
+      phoneno: "",
+      email: "",
+    },
     {
       name: "",
       phoneno: "",
@@ -61,6 +66,7 @@ const Url = ({ url }) => {
       email: "",
       dob: "",
       ssn: "",
+      address: "",
     },
     validationSchema: Yup.object({
       firstname: Yup.string().required("Required"),
@@ -75,6 +81,7 @@ const Url = ({ url }) => {
         .required("Contact-Number is required")
         .min(10, "Contact Number should not be long less than 10 digits")
         .max(10, "Contact Number should not be long more than 10 digits"),
+      address: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
       setUserData(values);
@@ -97,7 +104,7 @@ const Url = ({ url }) => {
 
     let tableHTML = `<div class="container" style="width: 400px; text-align: center; margin-top: 20px; ">`;
     tableHTML = `<div class="row">`;
-    tableHTML = `<div  class="col-md-6" >`;
+    tableHTML = `<div  class="col-md-6">`;
     tableHTML = `<form>`;
     tableHTML = `<table class="table table-bordered" style="width: 50vh; text-align: center; margin-left:160px;">`;
 
@@ -122,25 +129,25 @@ const Url = ({ url }) => {
 
       tableHTML += `<td class="table-data">${
         ite.value1 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: black;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required disabled > `
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value2 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: black;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value3 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: black;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value4 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: black;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
@@ -283,7 +290,7 @@ const Url = ({ url }) => {
                       class="form-control"
                       id="dob"
                       name="dob"
-                      value=${inputDate}
+                      value=${inputDate === "Invalid date" ? "" : inputDate}
                     disabled
                     />
                   </div>
@@ -297,6 +304,19 @@ const Url = ({ url }) => {
                       name="ssn"
                       required=""
                       value=${values.ssn}
+                      disabled
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="m-2 text-dark">Address</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address"
+                      placeholder="Address"
+                      name="address"
+                      required=""
+                      value=${values.address}
                       disabled
                     />
                   </div>
@@ -490,6 +510,7 @@ const Url = ({ url }) => {
         list: data.list,
         htmlData: Html,
         listName: data.Listname,
+        address: values.address,
         requestTimeOffDate: { startDate: from, endDate: to },
         categoryname: url,
       },
@@ -506,6 +527,7 @@ const Url = ({ url }) => {
             icon: "success",
           });
           setLoading(false);
+          window.location.reload();
         }
       })
       .catch(function (error) {
@@ -527,17 +549,6 @@ const Url = ({ url }) => {
     }
   };
 
-  const handleAddReference = (e) => {
-    e.preventDefault();
-    setReferenes([
-      ...references,
-      {
-        name: "",
-        phoneno: "",
-        email: "",
-      },
-    ]);
-  };
   const tableData = () => {
     const options = { method: "GET" };
 
@@ -588,46 +599,46 @@ const Url = ({ url }) => {
                   <div class="form-group row mb-3 d-flex align-items-center bg-light border rounded p-2">
                     <div className="form-group row mb-3 d-flex align-items-center">
                       <InputField
-                        label={"Enter First Name"}
+                        label={"Enter First Name*"}
                         value={values.firstname}
                         type={"text"}
                         placeholder={"First Name"}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        id={"firstname"}
+                        id={"validationCustom03"}
                         required={true}
                         name={"firstname"}
                       />
                       <InputField
-                        label={"Enter Last Name"}
+                        label={"Enter Last Name*"}
                         value={values.lastname}
                         type={"text"}
                         placeholder={"Last Name"}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        id={"lastname"}
+                        id={"validationCustom03"}
                         required={true}
                         name={"lastname"}
                       />
                       <InputField
-                        label={"Enter Phone number"}
+                        label={"Enter Phone number*"}
                         value={values.phoneno}
                         type={"number"}
                         placeholder={"Enter Phone number"}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        id={"phoneno"}
+                        id={"validationCustom03"}
                         required={true}
                         name={"phoneno"}
                       />
                       <InputField
-                        label={"Enter E-mail"}
+                        label={"Enter E-mail*"}
                         value={values.email}
                         type={"email"}
                         placeholder={"Enter E-mail"}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        id={"email"}
+                        id={"validationCustom03"}
                         required={true}
                         name={"email"}
                       />
@@ -637,7 +648,7 @@ const Url = ({ url }) => {
                           onClick={() => setDob(false)}
                         >
                           <InputField
-                            label={"Date Of Birth"}
+                            label={"Date Of Birth*"}
                             value={values.dob}
                             type={"button"}
                             id={"dob"}
@@ -667,6 +678,7 @@ const Url = ({ url }) => {
                           />
                         </div>
                       )}
+
                       <InputField
                         label={"Last four SSN digit"}
                         value={values.ssn}
@@ -674,10 +686,22 @@ const Url = ({ url }) => {
                         placeholder={"Last four SSN digit"}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        id={"ssn"}
+                        id={"validationCustom03"}
                         required={true}
                         name={"ssn"}
                       />
+                      <InputField
+                        label={"Enter Your Address"}
+                        value={values.address}
+                        type={"text"}
+                        placeholder={"Enter Your Address"}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        id={"validationCustom03"}
+                        required={true}
+                        name={"address"}
+                      />
+
                       {from && to == "Invalid date" ? (
                         ""
                       ) : (
@@ -690,12 +714,12 @@ const Url = ({ url }) => {
                         </>
                       )}
 
-                      <div className="col-md-3" style={{ marginTop: "40px" }}>
+                      <div className="col-md-1" style={{ marginTop: "40px" }}>
                         <span
                           className="btn bg-danger text-white border rounded "
                           onClick={() => setShowDate(true)}
                         >
-                          Select Request time off
+                          <i class="fa-solid fa-plus"></i>
                         </span>
                       </div>
                       {/* ------------------------------------------------------------------------- */}
@@ -732,7 +756,7 @@ const Url = ({ url }) => {
                     </div>
 
                     {/* ------------------------------------------------------------------------- */}
-                    <div class="form-group row mt-3 ">
+                    <div class="form-group row mt-3">
                       <div className="col-md-11">
                         <span
                           className="btn  btn-danger"
@@ -743,59 +767,43 @@ const Url = ({ url }) => {
                       </div>
                       <div className="col-md-11"></div>
                     </div>
-                    {active === false ? (
-                      <div className="form-group row mb-3 d-flex align-items-center">
-                        {references.map((item, index) => (
-                          <>
-                            <InputField
-                              label={"Enter Referre's Name"}
-                              value={item.name}
-                              type={"text"}
-                              placeholder={"Full Name"}
-                              onChange={(e) => handleReferences(e, index)}
-                              id={"rname"}
-                              name={"name"}
-                              required={false}
-                            />
-                            <InputField
-                              label={"Enter Referre's Phone"}
-                              value={item.phoneno}
-                              type={"number"}
-                              placeholder={"Enter Phone number"}
-                              onChange={(e) => handleReferences(e, index)}
-                              id={"rphoneno"}
-                              name={"phoneno"}
-                              required={false}
-                            />
-                            <InputField
-                              label={"Enter Referre's E-mail"}
-                              value={item.email}
-                              type={"email"}
-                              placeholder={"Enter Referre's E-mail"}
-                              onChange={(e) => handleReferences(e, index)}
-                              id={"remail"}
-                              name={"email"}
-                              required={false}
-                            />
-                            {references.length === 2 ? (
-                              <button
-                                className="btn btn-danger col-md-3 mt-5 mb-2"
-                                disabled={true}
-                              >
-                                Add References
-                              </button>
-                            ) : (
-                              <button
-                                className="btn btn-danger col-md-3 mt-5  mb-2"
-                                onClick={(e) => handleAddReference(e)}
-                              >
-                                Add References
-                              </button>
-                            )}
-                          </>
-                        ))}
-                      </div>
-                    ) : null}
+
+                    <div className="refences-div">
+                      {references.map((item, index) => (
+                        <div className="form-group row mb-3 d-flex align-items-center">
+                          <InputField
+                            label={"Enter Referre's Name"}
+                            value={item.name}
+                            type={"text"}
+                            placeholder={"Full Name"}
+                            onChange={(e) => handleReferences(e, index)}
+                            id={"validationCustom03"}
+                            name={"name"}
+                            required={false}
+                          />
+                          <InputField
+                            label={"Enter Referre's Phone"}
+                            value={item.phoneno}
+                            type={"number"}
+                            placeholder={"Enter Phone number"}
+                            onChange={(e) => handleReferences(e, index)}
+                            id={"validationCustom03"}
+                            name={"phoneno"}
+                            required={false}
+                          />
+                          <InputField
+                            label={"Enter Referre's E-mail"}
+                            value={item.email}
+                            type={"text"}
+                            placeholder={"Enter Referre's E-mail"}
+                            onChange={(e) => handleReferences(e, index)}
+                            id={"validationCustom03"}
+                            name={"email"}
+                            required={false}
+                          />
+                        </div>
+                      ))}
+                    </div>
 
                     <div class="form-group row mt-3 ">
                       <div className="col-md-11">
@@ -1289,10 +1297,9 @@ const Url = ({ url }) => {
               </div>
             )}
           </form>
-          {/* <div className="container"></div> */}
         </>
       ) : (
-        "Please wait while we fetch checklist for you "
+        "Please wait while we fetch checklist for you"
       )}
     </>
   );

@@ -14,25 +14,27 @@ const InputField = ({
   maxlength,
 }) => {
   return (
-    <div className="col-md-3">
-      <label className="m-2 text-dark" style={style}>
-        {label}
-      </label>
-      <input
-        type={type}
-        class="form-control"
-        id={id}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        name={name}
-        required
-        onClick={onClick}
-        disabled={disabled}
-        style={style}
-        maxlength={maxlength}
-      />
-    </div>
+    <>
+      <div className={label === "Request Time Off" ? "col-md-2" : "col-md-3"}>
+        <label className="m-2 text-dark" style={style}>
+          {label}
+        </label>
+        <input
+          type={type}
+          class="form-control"
+          id={id}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          name={name}
+          required
+          onClick={onClick}
+          disabled={disabled}
+          style={style}
+          maxlength={maxlength}
+        />
+      </div>
+    </>
   );
 };
 
