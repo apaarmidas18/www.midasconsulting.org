@@ -675,6 +675,7 @@ const Url = ({ url }) => {
                             peekNextMonth
                             showMonthDropdown
                             showYearDropdown
+                            showMonthArrow
                           />
                         </div>
                       )}
