@@ -1130,17 +1130,3 @@ input::-webkit-inner-spin-button {
 .refences-div {
   margin-left: 150px;
 }
-.react-datepicker__year-dropdown
-  .react-datepicker__year-option:first-child::before {
-  content: "\25B2";
-  position: absolute;
-  margin: auto;
-  left: 42%;
-}
-
-.react-datepicker__year-dropdown::after {
-  content: "\25BC";
-  display: block;
-  position: relative;
-  bottom: 27px;
-}

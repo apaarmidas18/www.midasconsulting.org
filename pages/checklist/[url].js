@@ -129,25 +129,25 @@ const Url = ({ url }) => {
 
       tableHTML += `<td class="table-data">${
         ite.value1 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: black;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 25px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required disabled > `
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value2 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: black;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 25px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value3 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: black;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 25px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value4 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: black;  border-radius: 50px; margin-left: 20px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 25px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
@@ -519,6 +519,7 @@ const Url = ({ url }) => {
     axios
       .request(options)
       .then(function (response) {
+        console.log(response);
         setLoading(true);
         if (response.data.baseResponse.status === 1) {
           swal({
@@ -642,43 +643,17 @@ const Url = ({ url }) => {
                         required={true}
                         name={"email"}
                       />
-                      {dob === true ? (
-                        <div
-                          className="btn col-md-3"
-                          onClick={() => setDob(false)}
-                        >
-                          <InputField
-                            label={"Date Of Birth*"}
-                            value={values.dob}
-                            type={"button"}
-                            id={"dob"}
-                            required={true}
-                            name={"dob"}
-                            disabled={true}
-                            style={{ width: "180px" }}
-                          />
-                        </div>
-                      ) : (
-                        <div className="col-md-3">
-                          <label
-                            className="m-2 text-dark"
-                            style={{ width: "180px" }}
-                          >
-                            Enter Date of Birth
-                          </label>
-                          <ReactDatePicker
-                            selected={values.dob}
-                            name="dob"
-                            onChange={(date) => setFieldValue("dob", date)}
-                            className="form-control calender"
-                            placeholderText="Select Date Of Birth"
-                            peekNextMonth
-                            showMonthDropdown
-                            showYearDropdown
-                            showMonthArrow
-                          />
-                        </div>
-                      )}
+
+                      <InputField
+                        label={"Date Of Birth*"}
+                        value={values.dob}
+                        type={"date"}
+                        id={"dob"}
+                        required={true}
+                        name={"dob"}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                      />
 
                       <InputField
                         label={"Last four SSN digit"}
@@ -1298,6 +1273,7 @@ const Url = ({ url }) => {
               </div>
             )}
           </form>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
         </>
       ) : (
         "Please wait while we fetch checklist for you"
