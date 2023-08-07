@@ -174,7 +174,7 @@ const Url = ({ url }) => {
 
   const submitData = (e, values) => {
     const dateofbith = moment(values.dob).format("MM/DD/YYYY");
-    console.log(values.dob);
+    // console.log(values.dob);
     const inputDate = JSON.stringify(dateofbith);
     e.preventDefault();
     const th =
@@ -432,7 +432,7 @@ const Url = ({ url }) => {
     axios
       .request(options)
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         setLoading(true);
         if (response.data.baseResponse.status === 1) {
           swal({
@@ -452,7 +452,7 @@ const Url = ({ url }) => {
   const handleReferences = (e, index) => {
     e.preventDefault();
     const { name, value } = e.target;
-    console.log(value, "value");
+    // console.log(value, "value");
     if (name === "phoneno") {
       const list = [...references];
       list[index][name] = parseInt(value);
@@ -489,7 +489,7 @@ const Url = ({ url }) => {
     errors,
     touched,
   } = formik;
-  console.log("values:", values);
+  // console.log("values:", values);
   return (
     <>
       {url !== "" || url !== undefined || url !== null ? (
