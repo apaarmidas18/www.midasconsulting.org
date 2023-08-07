@@ -129,25 +129,25 @@ const Url = ({ url }) => {
 
       tableHTML += `<td class="table-data">${
         ite.value1 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 25px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 30px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required disabled > `
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value2 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 25px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 30px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value3 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 25px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 30px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
       tableHTML += `<td class="table-data">${
         ite.value4 === "checked"
-          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 25px" class ="circle-box"></div>`
+          ? `<div style = "height: 15px; width: 15px; background: #0f875b;  border-radius: 50px; margin-left: 30px" class ="circle-box"></div>`
           : `<input class="form-check-input" type="radio" name=${ite.name}
                         required id="flexRadioDefault" disabled >`
       } </td>`;
@@ -432,7 +432,6 @@ const Url = ({ url }) => {
     axios
       .request(options)
       .then(function (response) {
-        // console.log(response);
         setLoading(true);
         if (response.data.baseResponse.status === 1) {
           swal({
@@ -440,7 +439,7 @@ const Url = ({ url }) => {
             text: "Thank you! Your response has been received.",
             icon: "success",
           });
-          setLoading(false);
+          setLoading(true);
           window.location.reload();
         }
       })
@@ -503,7 +502,7 @@ const Url = ({ url }) => {
               </div>
             </div>
           </div>
-          <form>
+          <form onSubmit={(e) => submitData(e, values)}>
             <div className="container checklist-head">
               <div className="midas-logo">
                 <img src="/images/logo.webp" />
@@ -1181,6 +1180,7 @@ const Url = ({ url }) => {
                         placeholder="Your Signature"
                         onChange={(e) => setSign(e.target.value)}
                         value={sign}
+                        required={true}
                       />
                     </div>
                   </div>
@@ -1190,7 +1190,6 @@ const Url = ({ url }) => {
                       className="btn btn-primary"
                       type="submit"
                       disabled={loading}
-                      onClick={(e) => submitData(e, values)}
                     >
                       Submit
                     </button>
