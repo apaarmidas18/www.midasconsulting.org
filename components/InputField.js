@@ -12,6 +12,9 @@ const InputField = ({
   disabled,
   style,
   maxlength,
+
+  errors,
+  touched,
 }) => {
   return (
     <>

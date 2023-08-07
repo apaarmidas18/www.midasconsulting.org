@@ -2,7 +2,7 @@ import InputField from "../../components/InputField";
 import moment from "moment-timezone";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { Formik, useFormik } from "formik";
+import { Form, Formik, FormikProvider, useFormik } from "formik";
 import * as Yup from "yup";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
@@ -81,10 +81,10 @@ const Url = ({ url }) => {
         .required("Contact-Number is required")
         .min(10, "Contact Number should not be long less than 10 digits")
         .max(10, "Contact Number should not be long more than 10 digits"),
-      address: Yup.string().required("Required"),
+      // address: Yup.string().required("Required"),
     }),
-    onSubmit: (values) => {
-      setUserData(values);
+    onSubmit: (values, e) => {
+      submitData(values, e);
     },
   });
 
@@ -172,11 +172,10 @@ const Url = ({ url }) => {
 
   const StringDate = JSON.stringify(date);
 
-  const dateofbith = moment(userData.dob).format("MM/DD/YYYY");
-
-  const inputDate = JSON.stringify(dateofbith);
-
   const submitData = (e, values) => {
+    const dateofbith = moment(values.dob).format("MM/DD/YYYY");
+    console.log(values.dob);
+    const inputDate = JSON.stringify(dateofbith);
     e.preventDefault();
     const th =
       data === undefined || data.length === 0
@@ -233,55 +232,27 @@ const Url = ({ url }) => {
                 <div class="form-group row mb-3 d-flex align-items-center">
                   <div class="col-md-4">
                     <label class="m-2 text-dark">First Name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="firstname"
-                      placeholder="First Name"
-                      name="firstname"
-                      required=""
-                      value=${values.firstname}
-                      disabled
-                    />
+                    <span class="form-control" style="background-color: #e9ecef;">${
+                      values.firstname
+                    }</span>
                   </div>
                   <div class="col-md-4">
                     <label class="m-2 text-dark">Last Name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="lastname"
-                      placeholder="Last Name"
-                      name="lastname"
-                      required=""
-                      value=${values.lastname}
-                      disabled
-                    />
+                    <span class="form-control" style="background-color: #e9ecef;">${
+                      values.lastname
+                    }</span>
                   </div>
                   <div class="col-md-4">
                     <label class="m-2 text-dark">Phone number</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="phoneno"
-                      placeholder="Enter Phone number"
-                      name="phoneno"
-                      required=""
-                       value=${values.phoneno}
-                      disabled
-                    />
+                    <span class="form-control" style="background-color: #e9ecef;">${
+                      values.phoneno
+                    }</span>
                   </div>
                   <div class="col-md-4">
                     <label class="m-2 text-dark">E-mail</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      placeholder="Enter E-mail"
-                      name="email"
-                      required=""
-                      value=${values.email}
-                      disabled
-                    />
+                    <span class="form-control" style="background-color: #e9ecef;">${
+                      values.email
+                    }</span>
                   </div>
                   <div class="col-md-4">
                     <label class="m-2 text-dark">Date of Birth</label>
@@ -296,30 +267,11 @@ const Url = ({ url }) => {
                   </div>
                   <div class="col-md-4">
                     <label class="m-2 text-dark">Last four SSN digit</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="ssn"
-                      placeholder="Last four SSN digit"
-                      name="ssn"
-                      required=""
-                      value=${values.ssn}
-                      disabled
-                    />
+                   <span class="form-control" style="background-color: #e9ecef;">${
+                     values.ssn
+                   }</span>
                   </div>
-                  <div class="col-md-4">
-                    <label class="m-2 text-dark">Address</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="address"
-                      placeholder="Address"
-                      name="address"
-                      required=""
-                      value=${values.address}
-                      disabled
-                    />
-                  </div>
+                 
                   <div class="col-md-4">
                     <label class="m-2 text-dark">Request Time Off</label>
                     <input
@@ -333,81 +285,51 @@ const Url = ({ url }) => {
                       }
                     />
                   </div>
+                   <div class="col-md-6">
+                    <label class="m-2 text-dark">Address</label>
+                   
+                     <span class="form-control" style="background-color: #e9ecef;">${
+                       values.address
+                     }</span>
+                   
+                  </div>
                 </div>        
                 <div class="form-group row mb-3 d-flex align-items-center">
                   <div class="col-md-4">
                     <label class="m-2 text-dark"> Referre's Name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      placeholder="Full Name"
-                      name="name"
-                      required=""
-                      value=${references[0].name}
-                    />
+                     <span class="form-control" style="background-color: #e9ecef;">${
+                       references[0].name
+                     }</span>
+                   
                   </div>
                   <div class="col-md-4">
                     <label class="m-2 text-dark"> Referre's Phone</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="phoneno"
-                      placeholder="Enter Phone number"
-                      name="phoneno"
-                      required=""
-                      value=${references[0].phoneno}
-                    />
+                     <span class="form-control" style="background-color: #e9ecef;">${
+                       references[0].phoneno
+                     }</span>
                   </div>
                   <div class="col-md-4">
                     <label class="m-2 text-dark">Referre's E-mail</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      placeholder="Enter Referre's E-mail"
-                      name="email"
-                      required=""
-                     value=${references[0].email}
-                    />
+                     <span class="form-control" style="background-color: #e9ecef;">${
+                       references[0].email
+                     }</span>
                   </div>
                     ${
                       references[1]
                         ? `  
          <div class="col-md-4">
                     <label class="m-2 text-dark">Referee's Name</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      name="email"
-                      required=""
-                     value=${references[1].name}
-                    />
+                      <span class="form-control" style="background-color: #e9ecef;">${references[1].name}</span>
+                   
                   </div>
                   
                   <div class="col-md-4">
                     <label class="m-2 text-dark">Referee's Phone </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="email"
-                      placeholder="Enter Referre's E-mail"
-                      name="email"
-                      required=""
-                     value=${references[1].phoneno}
-                    />
+                      <span class="form-control" style="background-color: #e9ecef;">${references[1].phoneno}</span>
                   </div>
                   <div class="col-md-4">
                     <label class="m-2 text-dark">Referee's E-mail</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="email"
-                      name="email"
-                      required=""
-                     value=${references[1].email}
-                    />
+                     <span class="form-control" style="background-color: #e9ecef;">${references[1].email}</span>
                   </div>
               
             `
@@ -476,16 +398,7 @@ const Url = ({ url }) => {
                <strong>
                <span>Signature</span>
                </strong>
-               <input
-                  style=" padding : 5px; width: 180px; text-align: center; margin-top :10px;""
-                  type="text"
-                  className="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Your Signature"
-                  value=${sign}
-                 
-                  />
+                <span class="form-control" style="background-color: #e9ecef; padding : 5px; width: 180px;  margin-top :10px;">${sign}</span>
             </div>
          </div>
       </div>
@@ -539,6 +452,7 @@ const Url = ({ url }) => {
   const handleReferences = (e, index) => {
     e.preventDefault();
     const { name, value } = e.target;
+    console.log(value, "value");
     if (name === "phoneno") {
       const list = [...references];
       list[index][name] = parseInt(value);
@@ -566,9 +480,16 @@ const Url = ({ url }) => {
 
   useEffect(() => tableData(), []);
 
-  const { values, handleChange, handleBlur, handleSubmit, setFieldValue } =
-    formik;
-
+  const {
+    values,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+    setFieldValue,
+    errors,
+    touched,
+  } = formik;
+  console.log("values:", values);
   return (
     <>
       {url !== "" || url !== undefined || url !== null ? (
@@ -582,7 +503,7 @@ const Url = ({ url }) => {
               </div>
             </div>
           </div>
-          <form onSubmit={(e) => submitData(e, values)}>
+          <form>
             <div className="container checklist-head">
               <div className="midas-logo">
                 <img src="/images/logo.webp" />
@@ -609,7 +530,12 @@ const Url = ({ url }) => {
                         id={"validationCustom03"}
                         required={true}
                         name={"firstname"}
+                        error="firstname"
+                        touch="firstname"
+                        errors={errors}
+                        touched={touched}
                       />
+
                       <InputField
                         label={"Enter Last Name*"}
                         value={values.lastname}
@@ -621,6 +547,7 @@ const Url = ({ url }) => {
                         required={true}
                         name={"lastname"}
                       />
+
                       <InputField
                         label={"Enter Phone number*"}
                         value={values.phoneno}
@@ -632,6 +559,7 @@ const Url = ({ url }) => {
                         required={true}
                         name={"phoneno"}
                       />
+
                       <InputField
                         label={"Enter E-mail*"}
                         value={values.email}
@@ -666,10 +594,10 @@ const Url = ({ url }) => {
                         required={true}
                         name={"ssn"}
                       />
+
                       <InputField
                         label={"Enter Your Address"}
                         value={values.address}
-                        type={"text"}
                         placeholder={"Enter Your Address"}
                         onChange={handleChange}
                         onBlur={handleBlur}
@@ -689,7 +617,6 @@ const Url = ({ url }) => {
                           />
                         </>
                       )}
-
                       <div className="col-md-1" style={{ marginTop: "40px" }}>
                         <span
                           className="btn bg-danger text-white border rounded "
@@ -834,8 +761,6 @@ const Url = ({ url }) => {
                       list.title === "CERTIFICATIONS"
                         ? list.items.pop()
                         : list.items;
-
-                    console.log("ItemsVariable::", ItemsVariable);
 
                     return (
                       <>
@@ -1265,6 +1190,7 @@ const Url = ({ url }) => {
                       className="btn btn-primary"
                       type="submit"
                       disabled={loading}
+                      onClick={(e) => submitData(e, values)}
                     >
                       Submit
                     </button>
@@ -1273,11 +1199,11 @@ const Url = ({ url }) => {
               </div>
             )}
           </form>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
         </>
       ) : (
         "Please wait while we fetch checklist for you"
       )}
+      {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
     </>
   );
 };
