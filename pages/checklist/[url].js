@@ -250,7 +250,7 @@ const Url = ({ url }) => {
                   </div>
                   <div class="col-md-4">
                     <label class="m-2 text-dark">E-mail</label>
-                    <span class="form-control" style="background-color: #e9ecef;">${
+                    <span class="form-control" style="background-color: #e9ecef; font-size: 11px;">${
                       values.email
                     }</span>
                   </div>
@@ -310,7 +310,7 @@ const Url = ({ url }) => {
                   </div>
                   <div class="col-md-4">
                     <label class="m-2 text-dark">Referre's E-mail</label>
-                     <span class="form-control" style="background-color: #e9ecef;">${
+                     <span class="form-control" style="background-color: #e9ecef; font-size: 11px;">${
                        references[0].email
                      }</span>
                   </div>
@@ -329,7 +329,7 @@ const Url = ({ url }) => {
                   </div>
                   <div class="col-md-4">
                     <label class="m-2 text-dark">Referee's E-mail</label>
-                     <span class="form-control" style="background-color: #e9ecef;">${references[1].email}</span>
+                     <span class="form-control" style="background-color: #e9ecef; font-size: 11px;">${references[1].email}</span>
                   </div>
               
             `
