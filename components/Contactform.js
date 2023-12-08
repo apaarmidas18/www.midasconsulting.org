@@ -72,7 +72,7 @@ const Contactform = () => {
                   <div className="row">
                     <div className="col-md-6">
                       <button
-                        data-res="<?php echo $sum; ?>"
+                       
                         type="button"
                         className="btn btn-dark w-100 fw-bold"
                       >

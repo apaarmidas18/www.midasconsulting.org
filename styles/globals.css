@@ -1130,3 +1130,65 @@ input::-webkit-inner-spin-button {
 .refences-div {
   margin-left: 150px;
 }
+
+
+
+/* //Modal CSS **********************************************************/
+
+
+
+.modal-dialog {
+  margin-top: 120px !important;
+}
+.modal-content {
+  border-radius: 10 !important;
+}
+.modal {
+  --bs-modal-width: 650px !important;
+}
+
+.modal-custom-head {
+  font-size: 30px;
+  display: block;
+  color: #252525;
+  font-weight: 900;
+  line-height: 36px;
+  padding: 15px 20px 0px 28px;
+}
+.modal-body {
+  padding: 20px 30px;
+}
+
+
+.permission-box{
+  align-items: baseline;
+  gap: 10px;
+  padding: 26px 7px;
+}
+.permission-box span{
+  font-size: 20px;
+  color: #7c7c7c;
+  font-weight: 400;
+}
+.agree-btn{
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.privacy-modal{
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+.privacy-modal:hover{
+color: #cb1829;
+}
+
+
+@media only screen and (max-width: 720px) {
+  .permission-box span{
+    font-size: 13px;
+  }
+}

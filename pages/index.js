@@ -8,8 +8,11 @@ import Footer from "../components/Footer";
 import Heading from "../components/Heading";
 import Paragraph from "../components/Paragraph";
 import Link from "next/link";
+import { useState } from "react";
+import Pop_up from "../components/Modal";
 
 export default function Home() {
+  const [show, setShow] = useState(false);
   return (
     <>
       <Head>
@@ -20,6 +23,7 @@ export default function Home() {
       </Head>
       <Navbar />
       {/* <Banner /> */}
+      <Pop_up show={show} setShow={setShow}  />
       <div className="container-fluid firstbanner">
         <div className="row">
           <div className="col-md-6 color-row">
