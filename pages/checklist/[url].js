@@ -753,7 +753,7 @@ const Url = ({ url }) => {
               </div>
             </div>
 
-            {/* {data?.list === undefined ||
+            {data?.list === undefined ||
             data?.list === {} ||
             data?.list === null ||
             data?.list === [] ? (
@@ -1202,7 +1202,7 @@ const Url = ({ url }) => {
                   </div>
                 </div>
               </div>
-            )} */}
+            )}
           </form>
         </>
       ) : (
