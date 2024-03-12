@@ -16,6 +16,7 @@
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "formik": "^2.4.1",
+    "geoip-lite": "^1.4.10",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",
     "next": "13.2.4",
@@ -29,8 +30,12 @@
     "react-html2pdf": "^1.0.1",
     "react-icons": "^4.8.0",
     "react-slick": "^0.29.0",
+    "request-ip": "^3.3.0",
     "slick-carousel": "^1.8.1",
     "sweetalert": "^2.1.2",
     "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.25"
   }
 }

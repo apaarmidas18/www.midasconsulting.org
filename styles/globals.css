@@ -1131,11 +1131,7 @@ input::-webkit-inner-spin-button {
   margin-left: 150px;
 }
 
-
-
 /* //Modal CSS **********************************************************/
-
-
 
 .modal-dialog {
   margin-top: 120px !important;
@@ -1159,36 +1155,37 @@ input::-webkit-inner-spin-button {
   padding: 20px 30px;
 }
 
-
-.permission-box{
+.permission-box {
   align-items: baseline;
   gap: 10px;
   padding: 26px 7px;
 }
-.permission-box span{
+.permission-box span {
   font-size: 20px;
   color: #7c7c7c;
   font-weight: 400;
 }
-.agree-btn{
+.agree-btn {
   display: flex;
   justify-content: end;
   gap: 10px;
   margin-top: 20px;
 }
 
-.privacy-modal{
+.privacy-modal {
   color: #000;
   text-decoration: none;
   font-weight: 500;
 }
-.privacy-modal:hover{
-color: #cb1829;
+.privacy-modal:hover {
+  color: #cb1829;
 }
 
-
 @media only screen and (max-width: 720px) {
-  .permission-box span{
+  .permission-box span {
     font-size: 13px;
+  }
+  .refences-div {
+    margin-left: 0px;
   }
 }

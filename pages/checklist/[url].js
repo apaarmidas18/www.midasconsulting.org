@@ -14,6 +14,8 @@ import swal from "sweetalert";
 import "react-datepicker/dist/react-datepicker.css";
 import ReactDatePicker from "react-datepicker";
 import { host } from "../../static";
+import requestIp from "request-ip";
+import { NextApiRequest, NextApiResponse } from "next";
 
 const Url = ({ url }) => {
   const router = useRouter();
@@ -488,7 +490,11 @@ const Url = ({ url }) => {
     errors,
     touched,
   } = formik;
-  // console.log("values:", values);
+  // async function myRoute(req: NextApiRequest, res: NextApiResponse) {
+  //   const detectedIp = requestIp.getClientIp(req);
+  //   res.status(200).json({ ip: detectedIp });
+  // }
+
   return (
     <>
       {url !== "" || url !== undefined || url !== null ? (
@@ -747,7 +753,7 @@ const Url = ({ url }) => {
               </div>
             </div>
 
-            {data?.list === undefined ||
+            {/* {data?.list === undefined ||
             data?.list === {} ||
             data?.list === null ||
             data?.list === [] ? (
@@ -1196,7 +1202,7 @@ const Url = ({ url }) => {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
           </form>
         </>
       ) : (
@@ -1209,9 +1215,8 @@ const Url = ({ url }) => {
 
 export default Url;
 
-export async function getServerSideProps(context) {
-  const { url } = context.query;
-
+export async function getServerSideProps({ query, res, req }) {
+  const { url } = query;
   return {
     props: { url: url },
   };
