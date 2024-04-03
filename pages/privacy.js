@@ -80,6 +80,10 @@ const privacy = () => {
         </p>
         <h2>DATA WE COLLECT AND HOW WE USE IT</h2>
         <h3>Personal Identifiable Information</h3>
+        <strong>
+          We refrain from gathering phone numbers, and any consent you provide
+          will not be disclosed to third-party providers.
+        </strong>
         <p>
           In general, you may visit our websites without telling us who you are
           or revealing any information about yourself. Midas does collect the
