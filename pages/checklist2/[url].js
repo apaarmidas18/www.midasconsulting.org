@@ -113,6 +113,8 @@ const Url = ({ url, id }) => {
 
     tableHTML += `<thead class="health-table" style="position: relative">`;
     tableHTML += "<tr>";
+    tableHTML +=
+      '<img class="logo-container" style="position: absolute; width= 500px; height:200px; opacity: 0.1; transform: rotate(335deg);left: 25%" src="https://midasconsulting.org/images/logo.webp" />';
     tableHTML += `<th class="health-row" colspan="4">${title}</th>`;
 
     tableHTML += `<th  class="health-row small" scope="col" style="width: 100px; text-align: center;">1</th>`;
@@ -224,6 +226,7 @@ const Url = ({ url, id }) => {
 
 
    <div class="container mt-5">
+   <img class="website-logo " style=" width:150px " src="https://midasconsulting.org/images/logo.webp" />
    </div>
    <form>
         <div class="container checklist-head mt-3">
