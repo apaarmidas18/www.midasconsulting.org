@@ -16,9 +16,8 @@ import ReactDatePicker from "react-datepicker";
 import { host } from "../../static";
 import requestIp from "request-ip";
 import { NextApiRequest, NextApiResponse } from "next";
-import { id } from "date-fns/locale";
 
-const Url = ({ url, id }) => {
+const Url = ({ url }) => {
   const router = useRouter();
 
   const [active, setActive] = useState(false);
@@ -78,12 +77,19 @@ const Url = ({ url, id }) => {
       ssn: Yup.number()
         .required("Social Security Number is required")
         .min(4, "Social Security Number Must be 4 Digits long")
-        .max(4, "Social Security Number Must be 5 Digits long"),
+        .max(4, "Social Security Number Must be 4 Digits long"),
       email: Yup.string().email("Invalid email address").required("Required"),
-      dob: Yup.string()
-        .required("Contact-Number is required")
-        .min(10, "Contact Number should not be long less than 10 digits")
-        .max(10, "Contact Number should not be long more than 10 digits"),
+      dob: Yup.date()
+        .required("Date of Birth is required")
+        .test(
+          "not-in-future",
+          "Date of Birth cannot be a future date",
+          function (value) {
+            const selectedDate = new Date(value);
+            const currentDate = new Date();
+            return selectedDate <= currentDate;
+          }
+        ),
       // address: Yup.string().required("Required"),
     }),
     onSubmit: (values, e) => {
@@ -105,16 +111,16 @@ const Url = ({ url, id }) => {
   function renderTable(datas, title) {
     // Start building the table markup
 
-    let tableHTML = `<div class="container" style="width: 400px; text-align: center; margin-top: 20px;">`;
+    let tableHTML = `<div class="container" style="width: 400px; text-align: center; margin-top: 20px; ">`;
     tableHTML = `<div class="row">`;
     tableHTML = `<div  class="col-md-6">`;
     tableHTML = `<form>`;
-    tableHTML = `<table class="table table-bordered" style="width: 50vh; text-align: center; margin-left:160px; position: relative">`;
+    tableHTML = `<table class="table table-bordered" style="width: 50vh; text-align: center; margin-left:160px;">`;
 
-    tableHTML += `<thead class="health-table" style="position: relative">`;
+    tableHTML += `<thead class="health-table">`;
     tableHTML += "<tr>";
-    tableHTML += `<th class="health-row" colspan="4">${title}</th>`;
 
+    tableHTML += `<th class="health-row" colspan="4">${title}</th>`;
     tableHTML += `<th  class="health-row small" scope="col" style="width: 100px; text-align: center;">1</th>`;
     tableHTML += `<th  class="health-row small" scope="col" style="width: 100px; text-align: center;">2</th>`;
     tableHTML += `<th  class="health-row small" scope="col" style="width: 100px; text-align: center;">3</th>`;
@@ -125,6 +131,7 @@ const Url = ({ url, id }) => {
 
     datas.map((ite, index) => {
       tableHTML += "<tbody>";
+
       tableHTML += "<tr>";
 
       tableHTML += `<th class="table-data" colspan="4" scope="row">${ite.name}</th>`;
@@ -162,7 +169,6 @@ const Url = ({ url, id }) => {
 
     tableHTML += "</table>";
     tableHTML += "</form>";
-
     tableHTML += "</div>";
     tableHTML += "</div>";
     tableHTML += "</div>";
@@ -223,10 +229,9 @@ const Url = ({ url, id }) => {
    <body>
 
 
-   <div class="container mt-5">
-   </div>
+   
    <form>
-        <div class="container checklist-head mt-3">
+        <div class="container checklist-head mt-5">
         <div class="text-center">
           <h2> ${capitalized} Skills Checklist</h2>
           </div>
@@ -366,7 +371,6 @@ const Url = ({ url, id }) => {
           </div>
         </div>
       </form>
-   
 
       
       ${
@@ -469,47 +473,17 @@ const Url = ({ url, id }) => {
   };
 
   const tableData = () => {
-    // const options = { method: "GET" };
-    // const options = {
-    //   method: "GET",
-    //   // hostname: "localhost",
-    //   // port: "9000",
-    //   // path: "/list/getCheckList/lpn?=&id=5434546543654654",
-    //   headers: {
-    //     // cookie: "JSESSIONID=6DCFF82A8DE56CF44793B1A3A5F0D827",
-    //     "User-Agent": "insomnia/8.6.1",
-    //     "content-type": "application/json",
-    //     "Content-Length": "0",
-    //   },
-    // };
-    console.log("IIIID", id, `${host}list/getCheckList/${url}?id=${id}`);
-    let options = {
-      method: "GET",
-      headers: {
-        "User-Agent": "insomnia/8.6.1",
-      },
-    };
+    const options = { method: "GET" };
 
-    fetch(`${host}list/getCheckList/${url}?id=${id}`, options)
-      .then((res) => res.json())
-      // .then((json) => console.log(json))
+    fetch(`${host}list/getCheckList/${url}`, options)
+      .then((response) => response.json())
       .then((response) => {
         if (response.baseResponse.status === 1) {
           setData(response.response);
         } else {
           router.push("/404");
         }
-      })
-      .catch((err) => console.error("error:" + err));
-    // fetch(`${host}list/getCheckList/${url}?id=${id}`, options)
-    //   .then((response) => response.json())
-    //   .then((response) => {
-    //     if (response.baseResponse.status === 1) {
-    //       setData(response.response);
-    //     } else {
-    //       router.push("/404");
-    //     }
-    //   });
+      });
   };
 
   useEffect(() => tableData(), []);
@@ -877,7 +851,7 @@ const Url = ({ url, id }) => {
                                             : null;
                                         }}
                                         name={ItemsVariable.name}
-                                        required={true}
+                                        // required={true}
                                       />
                                     </td>
                                     <td class="table-data">
@@ -893,7 +867,7 @@ const Url = ({ url, id }) => {
                                             : null;
                                         }}
                                         name={ItemsVariable.name}
-                                        required
+                                        // required
                                       />
                                     </td>
                                     <td class="table-data">
@@ -909,7 +883,7 @@ const Url = ({ url, id }) => {
                                             : null;
                                         }}
                                         name={ItemsVariable.name}
-                                        required
+                                        // required
                                       />
                                     </td>
 
@@ -926,7 +900,7 @@ const Url = ({ url, id }) => {
                                             : null;
                                         }}
                                         name={ItemsVariable.name}
-                                        required
+                                        // required
                                       />
                                     </td>
                                   </tr>
@@ -964,7 +938,7 @@ const Url = ({ url, id }) => {
                                           value=""
                                           id="certification"
                                           style={{ marginRight: "10px" }}
-                                          required
+                                          // required
                                         />
                                       </th>
                                       <th>{item.name}</th>
@@ -1112,7 +1086,7 @@ const Url = ({ url, id }) => {
                                                   : null;
                                               }}
                                               name={item.name}
-                                              required
+                                              // required
                                             />
                                           </td>
                                           <td class="table-data">
@@ -1129,7 +1103,7 @@ const Url = ({ url, id }) => {
                                                   : null;
                                               }}
                                               name={item.name}
-                                              required
+                                              // required
                                             />
                                           </td>
                                           <td class="table-data">
@@ -1145,7 +1119,7 @@ const Url = ({ url, id }) => {
                                                   : null;
                                               }}
                                               name={item.name}
-                                              required
+                                              // required
                                             />
                                           </td>
                                           <td class="table-data">
@@ -1161,7 +1135,7 @@ const Url = ({ url, id }) => {
                                                   : null;
                                               }}
                                               name={item.name}
-                                              required
+                                              // required
                                             />
                                           </td>
                                         </>
@@ -1246,8 +1220,8 @@ const Url = ({ url, id }) => {
 export default Url;
 
 export async function getServerSideProps({ query, res, req }) {
-  const { url, id } = query;
+  const { url } = query;
   return {
-    props: { url: url, id: id },
+    props: { url: url },
   };
 }
