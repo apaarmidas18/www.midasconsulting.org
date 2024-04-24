@@ -1077,7 +1077,7 @@ const Url = ({ url, id, mail, r }) => {
                                               : null;
                                           }}
                                           name={ItemsVariable.name}
-                                          // required={true}
+                                          required={true}
                                         />
                                       </td>
                                       <td class="table-data">
@@ -1096,7 +1096,7 @@ const Url = ({ url, id, mail, r }) => {
                                               : null;
                                           }}
                                           name={ItemsVariable.name}
-                                          // required
+                                          required
                                         />
                                       </td>
                                       <td class="table-data">
@@ -1115,7 +1115,7 @@ const Url = ({ url, id, mail, r }) => {
                                               : null;
                                           }}
                                           name={ItemsVariable.name}
-                                          // required
+                                          required
                                         />
                                       </td>
 
@@ -1135,7 +1135,7 @@ const Url = ({ url, id, mail, r }) => {
                                               : null;
                                           }}
                                           name={ItemsVariable.name}
-                                          // required
+                                          required
                                         />
                                       </td>
                                     </tr>
@@ -1173,7 +1173,7 @@ const Url = ({ url, id, mail, r }) => {
                                             value=""
                                             id="certification"
                                             style={{ marginRight: "10px" }}
-                                            // required
+                                            required
                                           />
                                         </th>
                                         <th>{item.name}</th>
@@ -1321,7 +1321,7 @@ const Url = ({ url, id, mail, r }) => {
                                                     : null;
                                                 }}
                                                 name={item.name}
-                                                // required
+                                                required
                                               />
                                             </td>
                                             <td class="table-data">
@@ -1338,7 +1338,7 @@ const Url = ({ url, id, mail, r }) => {
                                                     : null;
                                                 }}
                                                 name={item.name}
-                                                // required
+                                                required
                                               />
                                             </td>
                                             <td class="table-data">
@@ -1354,7 +1354,7 @@ const Url = ({ url, id, mail, r }) => {
                                                     : null;
                                                 }}
                                                 name={item.name}
-                                                // required
+                                                required
                                               />
                                             </td>
                                             <td class="table-data">
@@ -1370,7 +1370,7 @@ const Url = ({ url, id, mail, r }) => {
                                                     : null;
                                                 }}
                                                 name={item.name}
-                                                // required
+                                                required
                                               />
                                             </td>
                                           </>
@@ -2026,7 +2026,7 @@ const Url = ({ url, id, mail, r }) => {
                                               : null;
                                           }}
                                           name={ItemsVariable.name}
-                                          // required={true}
+                                          required={true}
                                         />
                                       </td>
                                       <td class="table-data">
@@ -2045,7 +2045,7 @@ const Url = ({ url, id, mail, r }) => {
                                               : null;
                                           }}
                                           name={ItemsVariable.name}
-                                          // required
+                                          required
                                         />
                                       </td>
                                       <td class="table-data">
@@ -2064,7 +2064,7 @@ const Url = ({ url, id, mail, r }) => {
                                               : null;
                                           }}
                                           name={ItemsVariable.name}
-                                          // required
+                                          required
                                         />
                                       </td>
 
@@ -2084,7 +2084,7 @@ const Url = ({ url, id, mail, r }) => {
                                               : null;
                                           }}
                                           name={ItemsVariable.name}
-                                          // required
+                                          required
                                         />
                                       </td>
                                     </tr>
@@ -2122,7 +2122,7 @@ const Url = ({ url, id, mail, r }) => {
                                             value=""
                                             id="certification"
                                             style={{ marginRight: "10px" }}
-                                            // required
+                                            required
                                           />
                                         </th>
                                         <th>{item.name}</th>
@@ -2270,7 +2270,7 @@ const Url = ({ url, id, mail, r }) => {
                                                     : null;
                                                 }}
                                                 name={item.name}
-                                                // required
+                                                required
                                               />
                                             </td>
                                             <td class="table-data">
@@ -2287,7 +2287,7 @@ const Url = ({ url, id, mail, r }) => {
                                                     : null;
                                                 }}
                                                 name={item.name}
-                                                // required
+                                                required
                                               />
                                             </td>
                                             <td class="table-data">
@@ -2303,7 +2303,7 @@ const Url = ({ url, id, mail, r }) => {
                                                     : null;
                                                 }}
                                                 name={item.name}
-                                                // required
+                                                required
                                               />
                                             </td>
                                             <td class="table-data">
@@ -2319,7 +2319,7 @@ const Url = ({ url, id, mail, r }) => {
                                                     : null;
                                                 }}
                                                 name={item.name}
-                                                // required
+                                                required
                                               />
                                             </td>
                                           </>
