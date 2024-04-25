@@ -123,7 +123,7 @@ const Url = ({ url, id, mail, r }) => {
       });
   };
 
-  console.log(rtrData);
+  // console.log(rtrData);
 
   //Validation*************************************************
   const newDate = moment().tz("US/Central").format("YYYY-MM-DD");
@@ -679,7 +679,10 @@ const Url = ({ url, id, mail, r }) => {
       },
     };
 
-    fetch(`${host}list/getCheckList2/${url}?id=${id}&r=${r}`, options)
+    fetch(
+      `${host}list/getCheckList2/${url}?id=${id}&mail=${mail}&r=${r}`,
+      options
+    )
       .then((res) => res.json())
       // .then((json) => console.log(json))
       .then((response) => {
