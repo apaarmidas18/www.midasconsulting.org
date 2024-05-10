@@ -17,6 +17,7 @@ import { host } from "../../static";
 import requestIp from "request-ip";
 import { NextApiRequest, NextApiResponse } from "next";
 import { id } from "date-fns/locale";
+import CryptoJS from "crypto-js";
 
 const Url = ({ url, id, mail, r }) => {
   const router = useRouter();
@@ -99,6 +100,19 @@ const Url = ({ url, id, mail, r }) => {
     },
   });
 
+  var userEmail = mail;
+
+  const secretKey = "secretHello";
+
+  function decryptURL(encryptedURL, secretKey) {
+    const decodedURL = decodeURIComponent(encryptedURL);
+    const encryptedBase64 = Buffer.from(decodedURL, "base64").toString();
+    const bytes = CryptoJS.AES.decrypt(encryptedBase64, secretKey);
+    const decryptedURL = bytes.toString(CryptoJS.enc.Utf8);
+    return decryptedURL;
+  }
+  const decryptedMail = decryptURL(userEmail, secretKey);
+
   const rtrDetails = () => {
     const options = {
       method: "GET",
@@ -106,7 +120,10 @@ const Url = ({ url, id, mail, r }) => {
         "User-Agent": "insomnia/8.6.1",
       },
     };
-    fetch(`https://api.midastech.org/api/email/getAllLinks/${mail}`, options)
+    fetch(
+      `https://api.midastech.org/api/email/getAllLinks/${decryptedMail}`,
+      options
+    )
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
