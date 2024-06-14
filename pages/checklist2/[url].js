@@ -19,7 +19,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { id } from "date-fns/locale";
 import CryptoJS from "crypto-js";
 
-const Url = ({ url, id, mail, r }) => {
+const Url = ({ url, id, mail, r, mi }) => {
   const router = useRouter();
   const [active, setActive] = useState(false);
   const [html, setHTML] = useState("");
@@ -120,10 +120,12 @@ const Url = ({ url, id, mail, r }) => {
         "User-Agent": "insomnia/8.6.1",
       },
     };
-    fetch(
-      `https://api.midastech.org/api/email/getAllLinks/${decryptedMail}`,
-      options
-    )
+
+    const url = mi
+      ? `https://api.midastech.org/api/email/getLinksById/${mi}`
+      : `https://api.midastech.org/api/email/getAllLinks/${decryptedMail}`;
+
+    fetch(url, options)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -131,7 +133,7 @@ const Url = ({ url, id, mail, r }) => {
         return response.json();
       })
       .then((responseData) => {
-        setRtrData(responseData[0]);
+        setRtrData(responseData[0] || responseData);
         // Process the response data here
       })
       .catch((error) => {
@@ -139,6 +141,59 @@ const Url = ({ url, id, mail, r }) => {
         // Handle error cases here
       });
   };
+
+  // const rtrDetails = () => {
+  //   const options = {
+  //     method: "GET",
+  //     headers: {
+  //       "User-Agent": "insomnia/8.6.1",
+  //     },
+  //   };
+  //   fetch(
+  //     `https://api.midastech.org/api/email/getAllLinks/${decryptedMail}`,
+  //     options
+  //   )
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error(`HTTP error! Status: ${response.status}`);
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((responseData) => {
+  //       setRtrData(responseData[0]);
+  //       // Process the response data here
+  //     })
+  //     .catch((error) => {
+  //       console.error("Fetch error:", error);
+  //       // Handle error cases here
+  //     });
+  // };
+
+  // const rtrDetails = () => {
+  //   const options = {
+  //     method: "GET",
+  //     headers: {
+  //       "User-Agent": "insomnia/8.6.1",
+  //     },
+  //   };
+  //   fetch(`http://10.0.0.80:9291/api/email/getLinksById/${mi}`, options)
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error(`HTTP error! Status: ${response.status}`);
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((responseData) => {
+  //       console.log(responseData);
+
+  //       setRtrData(responseData);
+  //       // Process the response data here
+  //     })
+  //     .catch((error) => {
+  //       console.error("Fetch error:", error);
+  //       // Handle error cases here
+  //     });
+  // };
 
   console.log(rtrData);
 
@@ -1557,6 +1612,19 @@ const Url = ({ url, id, mail, r }) => {
                           })}
                         </ul>
                       </div>
+                      <div
+                        className="date-box"
+                        style={{
+                          display: "flex",
+                          alignItems: "baseline",
+                          gap: "10px",
+                        }}
+                      >
+                        <p>Date signed-:</p>
+                        <strong>
+                          <span>{newDate}</span>
+                        </strong>
+                      </div>
                       <div className="sign-box-rtr">
                         <strong>
                           <span>Signature</span>
@@ -1688,6 +1756,19 @@ const Url = ({ url, id, mail, r }) => {
                             return <li key={index}>{item}</li>;
                           })}
                         </ul>
+                      </div>
+                      <div
+                        className="date-box"
+                        style={{
+                          display: "flex",
+                          alignItems: "baseline",
+                          gap: "10px",
+                        }}
+                      >
+                        <p>Date signed-:</p>
+                        <strong>
+                          <span>{newDate}</span>
+                        </strong>
                       </div>
                       <div className="sign-box-rtr">
                         <strong>
@@ -2427,8 +2508,9 @@ const Url = ({ url, id, mail, r }) => {
 export default Url;
 
 export async function getServerSideProps({ query, res, req }) {
-  const { url, id, mail, r } = query;
+  const { url, id, mail, r, mi } = query;
+  const safeMi = mi ?? null;
   return {
-    props: { url: url, id: id, mail: mail, r: r },
+    props: { url: url, id: id, mail: mail, r: r, mi: safeMi },
   };
 }
