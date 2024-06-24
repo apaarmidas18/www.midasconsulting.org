@@ -31,6 +31,7 @@ const Url = ({ url, id, mail, r, mi }) => {
   const [loading, setLoading] = useState(false);
   const [formValues, setFormValues] = useState("");
   const [data, setData] = useState([]);
+  const [senderMail, setSenderMail] = useState("");
   const [userData, setUserData] = useState({
     firstname: "",
     lastname: "",
@@ -101,7 +102,6 @@ const Url = ({ url, id, mail, r, mi }) => {
   });
 
   var userEmail = mail;
-
 
   const secretKey = "secretHello";
 
@@ -626,6 +626,7 @@ const Url = ({ url, id, mail, r, mi }) => {
         address: values.address,
         requestTimeOffDate: { startDate: from, endDate: to },
         categoryname: url,
+        senderMail: senderMail,
       },
     };
     setLoading(true);
@@ -735,6 +736,7 @@ const Url = ({ url, id, mail, r, mi }) => {
       .then((response) => {
         if (response.baseResponse.status === 1) {
           setData(response.response);
+          setSenderMail(response.recruiterMail);
         } else {
           router.push("/404");
         }
