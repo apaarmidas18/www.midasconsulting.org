@@ -90,12 +90,12 @@ const privacy = () => {
           internet protocol (“IP”) addresses and domain names of visitors for
           site administration purposes, such as to analyze the data for trends
           and statistics. No personal information is obtained through an IP
-          address, but the patterns of usage may be tracked and monitored. We
-          may share statistical or aggregated non-personal information about our
+          address, but the patterns of usage may be tracked and monitored.
+          {/* We may share statistical or aggregated non-personal information about our
           users with advertisers, business partners, sponsors and other third
           parties. This data is used to customize our website content and
           advertising to deliver a better experience to our users. Please see
-          the section below on cookies for more information.
+          the section below on cookies for more information. */}
         </p>
 
         <p>
@@ -298,13 +298,14 @@ const privacy = () => {
           out your credit card or other account information to third parties
           unless you authorize us to do so or if it is necessary to fulfill our
           responsibilities, including, but not limited to, delivering a product
-          or service you order. We currently use a third party vendor to process
+          or service you order.
+          {/* We currently use a third party vendor to process
           online payments. In addition to a credit card number or account
           information, they may also request your name, cardholder’s name,
           billing address, phone number, and email address. While making these
           purchases for products or services, this Privacy Policy will not apply
           and the transaction and collection will be governed by the third
-          party’s privacy policy and/or terms of use.
+          party’s privacy policy and/or terms of use. */}
         </p>
         <h3>Further Disclosures of Personal Information</h3>
         <p>
