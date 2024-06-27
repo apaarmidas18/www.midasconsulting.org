@@ -100,6 +100,58 @@ const privacy = () => {
           <li>Request transfer of your personal data.</li>
         </ul>
 
+        <h4 className="mb-0">How we use cookies?</h4>
+        <p>
+          If you agree, a website or its service provider may place little files
+          called cookies on your computer's hard disc. These files help the
+          website's or service provider's systems identify your browser and
+          store and retrieve specific data. For example, cookies enable us to
+          save and manage the products in your shopping cart. In order to give
+          you better services, they are also utilised to assist us in
+          understanding your preferences based on past or present site activity.
+          In order to provide users with improved site experiences and tools in
+          the future, we also utilise cookies to help us gather aggregate data
+          about site traffic and site participation. We might enter into
+          agreements with outside service providers to help us with
+        </p>
+
+        <h4 className="mb-0">How to opt out or modify your information?</h4>
+        <p>
+          For information removal, modification, or opt-out, send an email to
+          removeinfo@midasconsulting.org Please be aware that for record-keeping
+          and service purposes, we might preserve information regarding a
+          specific sales transaction.
+        </p>
+
+        <h4 className="mb-0">Third Party Links</h4>
+        <p>
+          We might put connections to external websites on our website in an
+          effort to give you more value. The privacy policies of these connected
+          websites are independent and different. As a result, we disclaim all
+          duty and responsibility for the actions and material on any linked
+          websites. However, we work hard to maintain the integrity of our
+          website and appreciate any comments regarding these linked
+          sites—including if a particular link is broken.
+        </p>
+
+        <h4 className="mb-0">Questions and feedback</h4>
+        <p>
+          We appreciate any feedback, queries, and privacy-related worries you
+          may have. Kindly provide us with any and all feedback on privacy or
+          any other matter.
+        </p>
+
+        <h4 className="mb-0">Online Policy Only</h4>
+
+        <p>
+          This online privacy statement only relates to data that we collect
+          online; it does not apply to data that we gather offline. This online
+          privacy statement only relates to data that we collect online; it does
+          not apply to data that we gather offline.
+        </p>
+        <h4 className="mb-0">Your consent</h4>
+        <p>By using our site, you consent to our privacy policy.</p>
+
         <h4 className="mb-0">Contact Us</h4>
         <p className="mb-0">
           If you have any questions about this Privacy Policy or our privacy
@@ -110,7 +162,7 @@ const privacy = () => {
           75243
         </p>
         <p className="mb-0">
-          <strong>Email : </strong>admin@midasconsulting.org
+          <strong>Email : </strong>removeinfo@midasconsulting.org
         </p>
         <p>
           <strong>Phone No : </strong>(469) 361-2442
