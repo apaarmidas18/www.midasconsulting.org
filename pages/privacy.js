@@ -73,7 +73,7 @@ const privacy = () => {
           advance notice, except as described below. We may share your personal
           data with:
         </p>
-        <ul>
+        <ul className="mb-0">
           <li>
             Service providers who help us deliver our products and services.
           </li>
@@ -82,6 +82,12 @@ const privacy = () => {
             Other third parties only with your consent or at your direction.
           </li>
         </ul>
+        <p>
+          No mobile information will be shared with third parties/affiliates for
+          marketing/promotional purposes. All other categories exclude text
+          messaging originator opt-in data and consent; this information will
+          not be shared with any third parties.{" "}
+        </p>
         <h4 className="mb-0">Data Security</h4>
         <p>
           We have implemented appropriate technical and organizational security
@@ -141,14 +147,14 @@ const privacy = () => {
           any other matter.
         </p>
 
-        <h4 className="mb-0">Online Policy Only</h4>
+        {/* <h4 className="mb-0">Online Policy Only</h4>
 
         <p>
           This online privacy statement only relates to data that we collect
           online; it does not apply to data that we gather offline. This online
           privacy statement only relates to data that we collect online; it does
           not apply to data that we gather offline.
-        </p>
+        </p> */}
         <h4 className="mb-0">Your consent</h4>
         <p>By using our site, you consent to our privacy policy.</p>
 
