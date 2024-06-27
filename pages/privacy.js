@@ -16,15 +16,17 @@ const privacy = () => {
       <div className="container ">
         <h2 style={{ marginTop: "50px" }}>Privacy Policy</h2>
         <p>
-          Midas Consulting (“Midas” “us” “we” or “our”) is committed to
+          <b>Midas Consulting (“Midas” “us” “we” or “our”)</b> is committed to
           protecting your privacy. This Privacy Policy explains how we collect,
           use, disclose, and safeguard your information when you visit our
           website <b>www.midasconsulting.org</b> , use our services, or engage
           with us in other ways. Please read this policy carefully to understand
           our practices regarding your personal data and how we will treat it.
         </p>
-        <h2 className="mt-5">Information We Collect</h2>
-        <p>We may collect and process the following data about you:</p>
+        <h4 className="mb-0">Information We Collect</h4>
+        <p className="mb-0">
+          We may collect and process the following data about you:
+        </p>
         <ul>
           <li>
             <strong>Personal Information</strong> : Name, email address, phone
@@ -50,8 +52,10 @@ const privacy = () => {
             preferences.
           </li>
         </ul>
-        <h2 className="mt-5">How We Use Your Information</h2>
-        <p>We use your personal data for various purposes, including:</p>
+        <h4 className="mb-0">How We Use Your Information</h4>
+        <p className="mb-0">
+          We use your personal data for various purposes, including:
+        </p>
         <ul>
           <li>Providing and managing your account.</li>
           <li>Processing your orders and delivering products or services.</li>
@@ -62,8 +66,8 @@ const privacy = () => {
           <li>Improving our products, services, and website.</li>
           <li>Complying with legal or regulatory requirements</li>
         </ul>
-        <h2 className="mt-5">Disclosure of Your Information</h2>
-        <p>
+        <h4 className="mb-0">Disclosure of Your Information</h4>
+        <p className="mb-0">
           We do not sell, trade, or otherwise transfer your personally
           identifiable information to outside parties unless we provide you with
           advance notice, except as described below. We may share your personal
@@ -78,15 +82,15 @@ const privacy = () => {
             Other third parties only with your consent or at your direction.
           </li>
         </ul>
-        <h2 className="mt-5">Data Security</h2>
+        <h4 className="mb-0">Data Security</h4>
         <p>
           We have implemented appropriate technical and organizational security
           measures designed to protect the security of any personal information
           we process. However, please note that no method of transmission over
           the internet or method of electronic storage is completely secure.
         </p>
-        <h3 className="mt-3">Your Rights</h3>
-        <p>You have the right to:</p>
+        <h4 className="mb-0">Your Rights</h4>
+        <p className="mb-0">You have the right to:</p>
         <ul>
           <li>Access your personal data.</li>
           <li>Request correction of your personal data.</li>
@@ -96,26 +100,23 @@ const privacy = () => {
           <li>Request transfer of your personal data.</li>
         </ul>
 
-        <h2 className="mt-5">Contact Us</h2>
-        <p>
+        <h4 className="mb-0">Contact Us</h4>
+        <p className="mb-0">
           If you have any questions about this Privacy Policy or our privacy
           practices, please contact us at:
         </p>
-        <p>
-          <strong>Name : </strong>Midas Consulting
-        </p>
-        <p>
+        <p className="mb-0">
           <strong>Address : </strong>9330 Lyndon B Johnson Fwy #900, Dallas, TX,
           75243
         </p>
-        <p>
+        <p className="mb-0">
           <strong>Email : </strong>admin@midasconsulting.org
         </p>
         <p>
           <strong>Phone No : </strong>(469) 361-2442
         </p>
 
-        <h2 className="mt-5">Changes to This Privacy Policy</h2>
+        <h4 className="mb-0">Changes to This Privacy Policy</h4>
         <p className="mb-5">
           We may update this Privacy Policy from time to time in order to
           reflect changes to our practices or for other operational, legal, or
