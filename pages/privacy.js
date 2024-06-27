@@ -16,12 +16,12 @@ const privacy = () => {
       <div className="container ">
         <h2 style={{ marginTop: "50px" }}>Privacy Policy</h2>
         <p>
-          <b>Midas Consulting (“Midas” “us” “we” or “our”)</b> is committed to
-          protecting your privacy. This Privacy Policy explains how we collect,
-          use, disclose, and safeguard your information when you visit our
-          website <b>www.midasconsulting.org</b> , use our services, or engage
-          with us in other ways. Please read this policy carefully to understand
-          our practices regarding your personal data and how we will treat it.
+          <b>Midas Consulting</b> is committed to protecting your privacy. This
+          Privacy Policy explains how we collect, use, disclose, and safeguard
+          your information when you visit our website{" "}
+          <b>www.midasconsulting.org</b> , use our services, or engage with us
+          in other ways. Please read this policy carefully to understand our
+          practices regarding your personal data and how we will treat it.
         </p>
         <h4 className="mb-0">Information We Collect</h4>
         <p className="mb-0">
@@ -162,7 +162,7 @@ const privacy = () => {
           75243
         </p>
         <p className="mb-0">
-          <strong>Email : </strong>removeinfo@midasconsulting.org
+          <strong>Email : </strong>admin@midasconsulting.org
         </p>
         <p>
           <strong>Phone No : </strong>(469) 361-2442
