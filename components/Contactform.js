@@ -114,9 +114,9 @@ const Contactform = () => {
                     services.
                   </span>
                 </div>
-                <div className="col-12">
+                <div className="col-12 mt-4">
                   <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-3">
                       <button
                         type="button"
                         className="btn btn-dark w-100 fw-bold"
