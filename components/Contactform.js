@@ -69,10 +69,55 @@ const Contactform = () => {
                   ></textarea>
                 </div>
                 <div className="col-12">
+                  <label for="your-message" className="form-label">
+                    SMS Consent Agreement
+                  </label>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Yes, I consent to having Midas Consulting contact me via
+                      SMS messaging.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault2"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      No, I DO NOT consent to having Midas Consulting contact me
+                      via SMS messaging.
+                    </label>
+                  </div>
+                  <span
+                    className="mt-3"
+                    style={{
+                      color: "gray",
+                      fontSize: "15px",
+                      fontWeight: "600",
+                    }}
+                  >
+                    By providing your mobile phone number and clicking the "Yes,
+                    I consent" button, you agree to receive SMS messages from
+                    Midas Consulting for informational and promotional purposes.
+                    Standard message and data rates may apply. You can opt-out
+                    at any time by replying "STOP" to any of our messages. Your
+                    consent is not required for the purchase of any goods or
+                    services.
+                  </span>
+                </div>
+                <div className="col-12">
                   <div className="row">
                     <div className="col-md-6">
                       <button
-                       
                         type="button"
                         className="btn btn-dark w-100 fw-bold"
                       >

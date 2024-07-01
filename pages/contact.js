@@ -22,13 +22,13 @@ const contact = () => {
         <Paragraph para="Contact Us for any query at  (469) 361-2442" />
       </div>
       <Contactform />
-      <div className="container">
+      {/* <div className="container">
         <p style={{ color: "#e31f24" }}>
           ** By providing a telephone number and submitting this form you are
           consenting to be contacted by SMS text message. Message & data rates
           may apply. You can reply STOP to opt-out of further messaging.
         </p>
-      </div>
+      </div> */}
       <Footer />
     </>
   );
