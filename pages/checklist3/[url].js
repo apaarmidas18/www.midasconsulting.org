@@ -1048,153 +1048,139 @@ const Url = ({ url, id, mail, r, mi }) => {
 
                       return (
                         <>
-                          {list.title == "CERTIFICATIONS" ? (
-                            <>
-                              <div
-                                className="col-md-4"
-                                style={{ display: "inherit" }}
-                                key={index}
-                              >
-                                <table className="table table-bordered">
-                                  <thead className="health-table">
-                                    <tr>
-                                      <th className="health-row" colspan="4">
-                                        {list.title}
-                                      </th>
-                                      <th
-                                        className="health-row small"
-                                        style={{
-                                          width: "20px",
-                                          textAlign: "center",
-                                        }}
-                                        scope="col"
-                                      >
-                                        1
-                                      </th>
-                                      <th
-                                        className="health-row small"
-                                        style={{
-                                          width: "20px",
-                                          textAlign: "center",
-                                        }}
-                                        scope="col"
-                                      >
-                                        2
-                                      </th>
-                                      <th
-                                        className="health-row small"
-                                        style={{
-                                          width: "20px",
-                                          textAlign: "center",
-                                        }}
-                                        scope="col"
-                                      >
-                                        3
-                                      </th>
-                                      <th
-                                        className="health-row small"
-                                        style={{
-                                          width: "20px",
-                                          textAlign: "center",
-                                        }}
-                                        scope="col"
-                                      >
-                                        4
-                                      </th>
-                                    </tr>
-                                  </thead>
-
-                                  <tbody key={index}>
-                                    <tr>
-                                      <th
-                                        className="table-data"
-                                        colspan="4"
-                                        scope="row"
-                                      >
-                                        {ItemsVariable.name}
-                                      </th>
-                                      <td class="table-data">
-                                        <input
-                                          type="radio"
-                                          value={"checked"}
-                                          onChange={(e) => {
-                                            ItemsVariable.value1 =
-                                              e.target.value;
-                                            ItemsVariable.value2 ===
-                                              "checked" ||
-                                            ItemsVariable.value3 ===
-                                              "checked" ||
-                                            ItemsVariable.value4 === "checked"
-                                              ? (ItemsVariable.value1 = "")
-                                              : null;
-                                          }}
-                                          name={ItemsVariable.name}
-                                          required={true}
-                                        />
-                                      </td>
-                                      <td class="table-data">
-                                        <input
-                                          type="radio"
-                                          value={"checked"}
-                                          onChange={(e) => {
-                                            ItemsVariable.value2 =
-                                              e.target.value;
-                                            ItemsVariable.value1 ===
-                                              "checked" ||
-                                            ItemsVariable.value3 ===
-                                              "checked" ||
-                                            ItemsVariable.value4 === "checked"
-                                              ? (ItemsVariable.value2 = "")
-                                              : null;
-                                          }}
-                                          name={ItemsVariable.name}
-                                          required
-                                        />
-                                      </td>
-                                      <td class="table-data">
-                                        <input
-                                          type="radio"
-                                          value={"checked"}
-                                          onChange={(e) => {
-                                            ItemsVariable.value3 =
-                                              e.target.value;
-                                            ItemsVariable.value1 ===
-                                              "checked" ||
-                                            ItemsVariable.value2 ===
-                                              "checked" ||
-                                            ItemsVariable.value4 === "checked"
-                                              ? (ItemsVariable.value3 = "")
-                                              : null;
-                                          }}
-                                          name={ItemsVariable.name}
-                                          required
-                                        />
-                                      </td>
-
-                                      <td class="table-data">
-                                        <input
-                                          type="radio"
-                                          value={"checked"}
-                                          onChange={(e) => {
-                                            ItemsVariable.value4 =
-                                              e.target.value;
-                                            ItemsVariable.value1 ===
-                                              "checked" ||
-                                            ItemsVariable.value2 ===
-                                              "checked" ||
-                                            ItemsVariable.value3 === "checked"
-                                              ? (ItemsVariable.value4 = "")
-                                              : null;
-                                          }}
-                                          name={ItemsVariable.name}
-                                          required
-                                        />
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </div>
-
+                          <>
+                            {list.title === "CERTIFICATIONS" ? (
+                              <>
+                                <div
+                                  className="col-md-4"
+                                  style={{ display: "inherit" }}
+                                  key={index}
+                                >
+                                  <table className="table table-bordered">
+                                    <thead className="health-table">
+                                      <tr>
+                                        <th className="health-row" colSpan="4">
+                                          {list.title}
+                                        </th>
+                                        {[1, 2, 3, 4].map((num) => (
+                                          <th
+                                            key={num}
+                                            className="health-row small"
+                                            style={{
+                                              width: "20px",
+                                              textAlign: "center",
+                                            }}
+                                            scope="col"
+                                          >
+                                            {num}
+                                          </th>
+                                        ))}
+                                      </tr>
+                                    </thead>
+                                    <tbody key={index}>
+                                      <tr>
+                                        <th
+                                          className="table-data"
+                                          colSpan="4"
+                                          scope="row"
+                                        >
+                                          {ItemsVariable.name}
+                                        </th>
+                                        {[1, 2, 3, 4].map((num) => (
+                                          <td className="table-data" key={num}>
+                                            <input
+                                              type="radio"
+                                              value="checked"
+                                              onClick={() => {
+                                                ItemsVariable.value1 =
+                                                  num === 1 ? "checked" : null;
+                                                ItemsVariable.value2 =
+                                                  num === 2 ? "checked" : null;
+                                                ItemsVariable.value3 =
+                                                  num === 3 ? "checked" : null;
+                                                ItemsVariable.value4 =
+                                                  num === 4 ? "checked" : null;
+                                              }}
+                                              name={ItemsVariable.name}
+                                              required
+                                            />
+                                          </td>
+                                        ))}
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <div
+                                  className="col-md-6"
+                                  style={{ display: "inherit" }}
+                                  key={index}
+                                >
+                                  <table className="table table-bordered">
+                                    <thead className="health-table">
+                                      <tr>
+                                        <th className="health-row" colSpan="4">
+                                          {list.title}
+                                        </th>
+                                        <th>
+                                          <span>Expiry Date</span>
+                                        </th>
+                                      </tr>
+                                    </thead>
+                                    {list.items.map((item, idx) => (
+                                      <tbody key={idx}>
+                                        <tr>
+                                          <th
+                                            className="table-data"
+                                            colSpan="3"
+                                            scope="row"
+                                          >
+                                            <input
+                                              type="checkbox"
+                                              value=""
+                                              id="certification"
+                                              style={{ marginRight: "10px" }}
+                                              required
+                                            />
+                                          </th>
+                                          <th>{item.name}</th>
+                                          <th>
+                                            <input
+                                              type="date"
+                                              className="form-control"
+                                              aria-describedby="date"
+                                              placeholder="Select date"
+                                            />
+                                          </th>
+                                        </tr>
+                                      </tbody>
+                                    ))}
+                                    <tbody>
+                                      {["Other:Specify", "Other : Specify"].map(
+                                        (label, idx) => (
+                                          <tr key={idx}>
+                                            <th colSpan={4}>
+                                              {label}
+                                              <textarea
+                                                className="form-control"
+                                                id="floatingTextarea2"
+                                              ></textarea>
+                                            </th>
+                                            <th>
+                                              <input
+                                                type="date"
+                                                className="form-control"
+                                                aria-describedby="date"
+                                                placeholder="Select date"
+                                              />
+                                            </th>
+                                          </tr>
+                                        )
+                                      )}
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </>
+                            ) : (
                               <div
                                 className="col-md-6"
                                 style={{ display: "inherit" }}
@@ -1203,237 +1189,89 @@ const Url = ({ url, id, mail, r, mi }) => {
                                 <table className="table table-bordered">
                                   <thead className="health-table">
                                     <tr>
-                                      <th className="health-row" colspan="4">
+                                      <th className="health-row" colSpan="4">
                                         {list.title}
                                       </th>
-
-                                      <th>
-                                        <span>Expiry Date</span>
-                                      </th>
+                                      {[1, 2, 3, 4].map((num) => (
+                                        <th
+                                          key={num}
+                                          className="health-row small"
+                                          style={{
+                                            width: "20px",
+                                            textAlign: "center",
+                                          }}
+                                          scope="col"
+                                        >
+                                          {num}
+                                        </th>
+                                      ))}
                                     </tr>
                                   </thead>
-                                  {list.items.map((item, index) => (
-                                    <tbody key={index}>
+                                  {list.items.map((item, idx) => (
+                                    <tbody key={idx}>
                                       <tr>
                                         <th
                                           className="table-data"
-                                          colspan="3"
-                                          scope="row"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            value=""
-                                            id="certification"
-                                            style={{ marginRight: "10px" }}
-                                            required
-                                          />
-                                        </th>
-                                        <th>{item.name}</th>
-                                        <th>
-                                          <td>
-                                            <input
-                                              type="date"
-                                              class="form-control"
-                                              aria-describedby="date"
-                                              placeholder="Select date"
-                                            />
-                                          </td>
-                                        </th>
-                                      </tr>
-                                    </tbody>
-                                  ))}
-
-                                  <tbody>
-                                    <tr>
-                                      <th colSpan={4}>
-                                        Other:Specify
-                                        <textarea
-                                          class="form-control"
-                                          id="floatingTextarea2"
-                                        ></textarea>
-                                      </th>
-                                      <th>
-                                        <input
-                                          type="date"
-                                          class="form-control"
-                                          aria-describedby="date"
-                                          placeholder="Select date"
-                                        />
-                                      </th>
-                                    </tr>
-                                    <tr>
-                                      <th colSpan={4}>
-                                        Other : Specify
-                                        <textarea
-                                          class="form-control"
-                                          id="floatingTextarea2"
-                                        ></textarea>
-                                      </th>
-                                      <th>
-                                        <input
-                                          type="date"
-                                          class="form-control"
-                                          aria-describedby="date"
-                                          placeholder="Select date"
-                                        />
-                                      </th>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </div>
-                            </>
-                          ) : (
-                            <div
-                              className="col-md-6"
-                              style={{ display: "inherit" }}
-                              key={index}
-                            >
-                              <table className="table table-bordered">
-                                <thead className="health-table">
-                                  <tr>
-                                    <th className="health-row" colspan="4">
-                                      {list.title}
-                                    </th>
-                                    <th
-                                      className="health-row small"
-                                      style={{
-                                        width: "20px",
-                                        textAlign: "center",
-                                      }}
-                                      scope="col"
-                                    >
-                                      1
-                                    </th>
-                                    <th
-                                      className="health-row small"
-                                      style={{
-                                        width: "20px",
-                                        textAlign: "center",
-                                      }}
-                                      scope="col"
-                                    >
-                                      2
-                                    </th>
-                                    <th
-                                      className="health-row small"
-                                      style={{
-                                        width: "20px",
-                                        textAlign: "center",
-                                      }}
-                                      scope="col"
-                                    >
-                                      3
-                                    </th>
-                                    <th
-                                      className="health-row small"
-                                      style={{
-                                        width: "20px",
-                                        textAlign: "center",
-                                      }}
-                                      scope="col"
-                                    >
-                                      4
-                                    </th>
-                                  </tr>
-                                </thead>
-                                {list.items.map((item, index) => {
-                                  return (
-                                    <tbody key={index}>
-                                      <tr>
-                                        <th
-                                          className="table-data"
-                                          colspan="4"
+                                          colSpan="4"
                                           scope="row"
                                         >
                                           {item.subcat ? (
-                                            <strong>{item.subcat} </strong>
+                                            <strong>{item.subcat}</strong>
                                           ) : (
                                             item.name
                                           )}
                                         </th>
                                         {item.subcat ? (
                                           <>
-                                            <td class="table-data"></td>
-                                            <td class="table-data"></td>
-                                            <td class="table-data"></td>
-                                            <td class="table-data"></td>
+                                            {[1, 2, 3, 4].map((num) => (
+                                              <td
+                                                key={num}
+                                                className="table-data"
+                                              ></td>
+                                            ))}
                                           </>
                                         ) : (
                                           <>
-                                            <td class="table-data">
-                                              <input
-                                                type="radio"
-                                                value={"checked"}
-                                                onChange={(e) => {
-                                                  item.value1 = e.target.value;
-                                                  item.value2 === "checked" ||
-                                                  item.value3 === "checked" ||
-                                                  item.value4 === "checked"
-                                                    ? (item.value1 = "")
-                                                    : null;
-                                                }}
-                                                name={item.name}
-                                                required
-                                              />
-                                            </td>
-                                            <td class="table-data">
-                                              <input
-                                                type="radio"
-                                                value={"checked"}
-                                                onChange={(e) => {
-                                                  item.value2 = e.target.value;
-
-                                                  item.value1 === "checked" ||
-                                                  item.value3 === "checked" ||
-                                                  item.value4 === "checked"
-                                                    ? (item.value2 = "")
-                                                    : null;
-                                                }}
-                                                name={item.name}
-                                                required
-                                              />
-                                            </td>
-                                            <td class="table-data">
-                                              <input
-                                                type="radio"
-                                                value={"checked"}
-                                                onChange={(e) => {
-                                                  item.value3 = e.target.value;
-                                                  item.value1 === "checked" ||
-                                                  item.value2 === "checked" ||
-                                                  item.value4 === "checked"
-                                                    ? (item.value1 = "")
-                                                    : null;
-                                                }}
-                                                name={item.name}
-                                                required
-                                              />
-                                            </td>
-                                            <td class="table-data">
-                                              <input
-                                                type="radio"
-                                                value={"checked"}
-                                                onChange={(e) => {
-                                                  item.value4 = e.target.value;
-                                                  item.value1 === "checked" ||
-                                                  item.value2 === "checked" ||
-                                                  item.value3 === "checked"
-                                                    ? (item.value1 = "")
-                                                    : null;
-                                                }}
-                                                name={item.name}
-                                                required
-                                              />
-                                            </td>
+                                            {[1, 2, 3, 4].map((num) => (
+                                              <td
+                                                className="table-data"
+                                                key={num}
+                                              >
+                                                <input
+                                                  type="radio"
+                                                  value="checked"
+                                                  onClick={() => {
+                                                    item.value1 =
+                                                      num === 1
+                                                        ? "checked"
+                                                        : null;
+                                                    item.value2 =
+                                                      num === 2
+                                                        ? "checked"
+                                                        : null;
+                                                    item.value3 =
+                                                      num === 3
+                                                        ? "checked"
+                                                        : null;
+                                                    item.value4 =
+                                                      num === 4
+                                                        ? "checked"
+                                                        : null;
+                                                  }}
+                                                  name={item.name}
+                                                  required
+                                                />
+                                              </td>
+                                            ))}
                                           </>
                                         )}
                                       </tr>
                                     </tbody>
-                                  );
-                                })}
-                              </table>
-                            </div>
-                          )}
+                                  ))}
+                                </table>
+                              </div>
+                            )}
+                          </>
                         </>
                       );
                     })}
