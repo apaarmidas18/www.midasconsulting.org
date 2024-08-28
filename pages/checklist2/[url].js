@@ -2244,7 +2244,7 @@ const Url = ({ url, id, mail, r, mi }) => {
                                                   item.value1 === "checked" ||
                                                   item.value2 === "checked" ||
                                                   item.value4 === "checked"
-                                                    ? (item.value1 = "")
+                                                    ? (item.value3 = "")
                                                     : null;
                                                 }}
                                                 name={item.name}
@@ -2260,7 +2260,7 @@ const Url = ({ url, id, mail, r, mi }) => {
                                                   item.value1 === "checked" ||
                                                   item.value2 === "checked" ||
                                                   item.value3 === "checked"
-                                                    ? (item.value1 = "")
+                                                    ? (item.value4 = "")
                                                     : null;
                                                 }}
                                                 name={item.name}
