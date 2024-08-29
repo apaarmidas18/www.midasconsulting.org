@@ -595,6 +595,7 @@ const Url = ({ url, id, mail, r, mi }) => {
     <div class="sign-box-rtr">
       <strong><span>Signature</span></strong>
      <span class="form-control" style="background-color: #e9ecef; padding : 5px; width: 180px;  margin-top :10px;">${rtrSign}</span>
+     <br />
      <span>Date Signed: ${newDate}</span>
     </div>
   </div>
@@ -1905,7 +1906,7 @@ const Url = ({ url, id, mail, r, mi }) => {
                                         <input
                                           type="radio"
                                           value={"checked"}
-                                          onChange={(e) => {                                            
+                                          onChange={(e) => {
                                             ItemsVariable.value1 =
                                               e.target.value;
                                             ItemsVariable.value2 ===
@@ -1952,7 +1953,7 @@ const Url = ({ url, id, mail, r, mi }) => {
                                               "checked" ||
                                             ItemsVariable.value4 === "checked"
                                               ? (ItemsVariable.value3 = "")
-                                              : null;                                            
+                                              : null;
                                           }}
                                           name={ItemsVariable.name}
                                           required
@@ -2128,7 +2129,7 @@ const Url = ({ url, id, mail, r, mi }) => {
                                   return (
                                     <tbody key={index}>
                                       <tr>
-                                    {console.log(item.value2)}
+                                        {console.log(item.value2)}
                                         <th
                                           className="table-data"
                                           colspan="4"
@@ -2154,8 +2155,11 @@ const Url = ({ url, id, mail, r, mi }) => {
                                                 type="radio"
                                                 value={"checked"}
                                                 onChange={(e) => {
-                                                  console.log("target", e.target.value);
-                                                                                                    
+                                                  console.log(
+                                                    "target",
+                                                    e.target.value
+                                                  );
+
                                                   item.value1 = e.target.value;
                                                   item.value2 === "checked" ||
                                                   item.value3 === "checked" ||
@@ -2172,7 +2176,10 @@ const Url = ({ url, id, mail, r, mi }) => {
                                                 type="radio"
                                                 value={"checked"}
                                                 onChange={(e) => {
-                                                  console.log("target", e.target.value);
+                                                  console.log(
+                                                    "target",
+                                                    e.target.value
+                                                  );
 
                                                   item.value2 = e.target.value;
                                                   item.value1 === "checked" ||
@@ -2190,7 +2197,10 @@ const Url = ({ url, id, mail, r, mi }) => {
                                                 type="radio"
                                                 value={"checked"}
                                                 onChange={(e) => {
-                                                  console.log("target", e.target.value);
+                                                  console.log(
+                                                    "target",
+                                                    e.target.value
+                                                  );
                                                   item.value3 = e.target.value;
                                                   item.value1 === "checked" ||
                                                   item.value2 === "checked" ||
@@ -2207,7 +2217,10 @@ const Url = ({ url, id, mail, r, mi }) => {
                                                 type="radio"
                                                 value={"checked"}
                                                 onChange={(e) => {
-                                                  console.log("target", e.target.value);
+                                                  console.log(
+                                                    "target",
+                                                    e.target.value
+                                                  );
                                                   item.value4 = e.target.value;
                                                   item.value1 === "checked" ||
                                                   item.value2 === "checked" ||

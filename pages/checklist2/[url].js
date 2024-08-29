@@ -622,7 +622,8 @@ const Url = ({ url, id, mail, r, mi }) => {
     </div>
     <div class="sign-box-rtr">
       <strong><span>Signature</span></strong>
-     <span class="form-control" style="background-color: #e9ecef; padding : 5px; width: 180px;  margin-top :10px;">${rtrSign}</span>\
+     <span class="form-control" style="background-color: #e9ecef; padding : 5px; width: 180px;  margin-top :10px;">${rtrSign}</span>
+     <br />
      <span>Date Signed: ${newDate}</span>
     </div>
   </div>
