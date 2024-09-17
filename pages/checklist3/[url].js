@@ -1429,10 +1429,13 @@ const Url = ({ url, id, mail, r, mi }) => {
                           })}
                         </ul>
                       </div>
-                      <p>Date signed-:</p>
-                      <strong>
-                        <span>{newDate}</span>
-                      </strong>
+                      <p>
+                        Date signed-:&nbsp;
+                        <strong>
+                          <span>{newDate}</span>
+                        </strong>
+                      </p>
+
                       <div className="sign-box-rtr">
                         <strong>
                           <span>Signature</span>
