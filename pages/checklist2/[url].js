@@ -199,7 +199,7 @@ const Url = ({ url, id, mail, r, mi }) => {
   console.log(rtrData);
 
   //Validation*************************************************
-  const newDate = moment().tz("US/Central").format("YYYY-MM-DD");
+  const newDate = moment().tz("US/Central").format("MM-DD-YYYY");
 
   const from =
     state[0].startDate === ""

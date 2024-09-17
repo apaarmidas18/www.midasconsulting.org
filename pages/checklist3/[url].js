@@ -173,7 +173,7 @@ const Url = ({ url, id, mail, r, mi }) => {
   // console.log("local", localStorage.getItem("authUser"));
 
   //Validation*************************************************
-  const newDate = moment().tz("US/Central").format("YYYY-MM-DD");
+  const newDate = moment().tz("US/Central").format("MM-DD-YYYY");
 
   const from =
     state[0].startDate === ""
@@ -1299,10 +1299,12 @@ const Url = ({ url, id, mail, r, mi }) => {
                       style={{ marginTop: "10px" }}
                     >
                       <div className="date-box">
-                        <p>Date signed-:</p>
-                        <strong>
-                          <span>{newDate}</span>
-                        </strong>
+                        <p>
+                          Date signed-:&nbsp;
+                          <strong>
+                            <span>{newDate}</span>
+                          </strong>
+                        </p>
                       </div>
                       <div className="sign-box">
                         <strong>
@@ -1427,6 +1429,10 @@ const Url = ({ url, id, mail, r, mi }) => {
                           })}
                         </ul>
                       </div>
+                      <p>Date signed-:</p>
+                      <strong>
+                        <span>{newDate}</span>
+                      </strong>
                       <div className="sign-box-rtr">
                         <strong>
                           <span>Signature</span>
@@ -1558,6 +1564,14 @@ const Url = ({ url, id, mail, r, mi }) => {
                             return <li key={index}>{item}</li>;
                           })}
                         </ul>
+                      </div>
+                      <div className="date-box">
+                        <p>
+                          Date signed-:&nbsp;
+                          <strong>
+                            <span>{newDate}</span>
+                          </strong>
+                        </p>
                       </div>
                       <div className="sign-box-rtr">
                         <strong>
