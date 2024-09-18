@@ -1,6 +1,43 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import React from "react";
 const index = () => {
+  React.useEffect(() => {
+    // Send the error info to the API route
+    console.log("urlrlr", window.location.href);
+
+    fetch("http://34.230.215.187:9292/api/email/sendEmailChecklistLink", {
+      method: "POST",
+      headers: {
+        Accept: "*/*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id: "66eb3db89b7a936d1b86e767",
+        email: "anubhav.kaushik@midasconsulting.org",
+        recruiterEmail: "anubhav.kaushik@midasconsulting.org",
+        linkHtml: window.location.href,
+        checklistName: "lpn",
+        mailSelection: "Checklist",
+        jobTitle: "string",
+        jobDuration: "string",
+        guaranteedHours: "string",
+        shift: "string",
+        payRate: "string",
+        facilityAddress: "string",
+        grossWeekly: "string",
+        responsibilities: ["string"],
+        requirements: ["string"],
+        firstName: "string",
+        lastName: "string",
+        userId: "string",
+        phone: "string",
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log("Success:", data))
+      .catch((error) => console.error("Error:", error));
+  }, []);
   return (
     <>
       <div
