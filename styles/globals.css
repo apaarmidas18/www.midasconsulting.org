@@ -1327,3 +1327,9 @@ input::-webkit-inner-spin-button {
     transform: rotate(360deg);
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .table-bordered {
+    margin-right: 10px;
+  }
+}
