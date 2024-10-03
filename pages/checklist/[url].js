@@ -534,10 +534,10 @@ const Url = ({ url }) => {
                   <div class="form-group row mb-3 d-flex align-items-center bg-light border rounded p-2">
                     <div className="form-group row mb-3 d-flex align-items-center">
                       <InputField
-                        label={"Enter First Name*"}
+                        label={"First Name*"}
                         value={values.firstname}
                         type={"text"}
-                        placeholder={"First Name"}
+                        placeholder={"Enter First Name"}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         id={"validationCustom03"}
@@ -550,10 +550,10 @@ const Url = ({ url }) => {
                       />
 
                       <InputField
-                        label={"Enter Last Name*"}
+                        label={"Last Name*"}
                         value={values.lastname}
                         type={"text"}
-                        placeholder={"Last Name"}
+                        placeholder={"Enter Last Name"}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         id={"validationCustom03"}
@@ -562,7 +562,7 @@ const Url = ({ url }) => {
                       />
 
                       <InputField
-                        label={"Enter Phone number*"}
+                        label={"Phone number*"}
                         value={values.phoneno}
                         type={"number"}
                         placeholder={"Enter Phone number"}
@@ -574,7 +574,7 @@ const Url = ({ url }) => {
                       />
 
                       <InputField
-                        label={"Enter E-mail*"}
+                        label={"E-mail*"}
                         value={values.email}
                         type={"email"}
                         placeholder={"Enter E-mail"}
@@ -600,7 +600,7 @@ const Url = ({ url }) => {
                         label={"Last four SSN digit"}
                         value={values.ssn}
                         type={"number"}
-                        placeholder={"Last four SSN digit"}
+                        placeholder={"Enter Last four SSN digit"}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         id={"validationCustom03"}
@@ -609,7 +609,7 @@ const Url = ({ url }) => {
                       />
 
                       <InputField
-                        label={"Enter Your Address"}
+                        label={"Address"}
                         value={values.address}
                         placeholder={"Enter Your Address"}
                         onChange={handleChange}
@@ -688,17 +688,17 @@ const Url = ({ url }) => {
                       {references.map((item, index) => (
                         <div className="form-group row mb-3 d-flex align-items-center">
                           <InputField
-                            label={"Enter Referre's Name"}
+                            label={"Referre's Name"}
                             value={item.name}
                             type={"text"}
-                            placeholder={"Full Name"}
+                            placeholder={"Enter Full Name"}
                             onChange={(e) => handleReferences(e, index)}
                             id={"validationCustom03"}
                             name={"name"}
                             required={false}
                           />
                           <InputField
-                            label={"Enter Referre's Phone"}
+                            label={"Referre's Phone"}
                             value={item.phoneno}
                             type={"number"}
                             placeholder={"Enter Phone number"}
@@ -708,7 +708,7 @@ const Url = ({ url }) => {
                             required={false}
                           />
                           <InputField
-                            label={"Enter Referre's E-mail"}
+                            label={"Referre's E-mail"}
                             value={item.email}
                             type={"text"}
                             placeholder={"Enter Referre's E-mail"}
