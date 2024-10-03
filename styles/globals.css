@@ -1328,6 +1328,12 @@ input::-webkit-inner-spin-button {
   }
 }
 
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
 @media only screen and (max-width: 768px) {
   .table-bordered {
     margin-right: 10px;

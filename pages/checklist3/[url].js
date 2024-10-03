@@ -78,10 +78,11 @@ const Url = ({ url, id, mail, r, mi }) => {
       firstname: Yup.string().required("Required"),
       lastname: Yup.string().required("Required"),
       phoneno: Yup.string().required("Required"),
-      ssn: Yup.number()
-        .required("Social Security Number is required")
-        .min(4, "Social Security Number Must be 4 Digits long")
-        .max(4, "Social Security Number Must be 4 Digits long"),
+      ssn: Yup.string()
+        .matches(/^[0-9]+$/, "Please enter only numbers")
+        .required("SSN is required")
+        .min(4, "Enter Last 4 Digits only")
+        .max(4, "Enter Last 4 Digits only"),
       email: Yup.string().email("Invalid email address").required("Required"),
       dob: Yup.date()
         .required("Date of Birth is required")
@@ -816,8 +817,8 @@ const Url = ({ url, id, mail, r, mi }) => {
                           name={"firstname"}
                           error="firstname"
                           touch="firstname"
-                          errors={errors}
-                          touched={touched}
+                          errors={formik.errors.firstname}
+                          touched={formik.touched.firstname}
                         />
 
                         <InputField
@@ -830,6 +831,8 @@ const Url = ({ url, id, mail, r, mi }) => {
                           id={"validationCustom03"}
                           required={true}
                           name={"lastname"}
+                          errors={formik.errors.lastname}
+                          touched={formik.touched.lastname}
                         />
 
                         <InputField
@@ -842,6 +845,8 @@ const Url = ({ url, id, mail, r, mi }) => {
                           id={"validationCustom03"}
                           required={true}
                           name={"phoneno"}
+                          errors={formik.errors.phoneno}
+                          touched={formik.touched.phoneno}
                         />
 
                         <InputField
@@ -854,6 +859,8 @@ const Url = ({ url, id, mail, r, mi }) => {
                           id={"validationCustom03"}
                           required={true}
                           name={"email"}
+                          errors={formik.errors.email}
+                          touched={formik.touched.email}
                         />
 
                         <InputField
@@ -865,18 +872,22 @@ const Url = ({ url, id, mail, r, mi }) => {
                           name={"dob"}
                           onChange={handleChange}
                           onBlur={handleBlur}
+                          errors={formik.errors.dob}
+                          touched={formik.touched.dob}
                         />
 
                         <InputField
                           label={"Last four SSN digit"}
                           value={values.ssn}
-                          type={"number"}
+                          type={"text"}
                           placeholder={"Enter Last four SSN digit"}
                           onChange={handleChange}
                           onBlur={handleBlur}
                           id={"validationCustom03"}
                           required={true}
                           name={"ssn"}
+                          errors={formik.errors.ssn}
+                          touched={formik.touched.ssn}
                         />
 
                         <InputField
@@ -888,6 +899,8 @@ const Url = ({ url, id, mail, r, mi }) => {
                           id={"validationCustom03"}
                           required={true}
                           name={"address"}
+                          errors={formik.errors.address}
+                          touched={formik.touched.address}
                         />
 
                         {from && to == "Invalid date" ? (
@@ -1620,8 +1633,8 @@ const Url = ({ url, id, mail, r, mi }) => {
                           name={"firstname"}
                           error="firstname"
                           touch="firstname"
-                          errors={errors}
-                          touched={touched}
+                          errors={formik.errors.firstname}
+                          touched={formik.touched.firstname}
                         />
 
                         <InputField
@@ -1634,6 +1647,8 @@ const Url = ({ url, id, mail, r, mi }) => {
                           id={"validationCustom03"}
                           required={true}
                           name={"lastname"}
+                          errors={formik.errors.lastname}
+                          touched={formik.touched.lastname}
                         />
 
                         <InputField
@@ -1646,6 +1661,8 @@ const Url = ({ url, id, mail, r, mi }) => {
                           id={"validationCustom03"}
                           required={true}
                           name={"phoneno"}
+                          errors={formik.errors.phoneno}
+                          touched={formik.touched.phoneno}
                         />
 
                         <InputField
@@ -1658,6 +1675,8 @@ const Url = ({ url, id, mail, r, mi }) => {
                           id={"validationCustom03"}
                           required={true}
                           name={"email"}
+                          errors={formik.errors.email}
+                          touched={formik.touched.email}
                         />
 
                         <InputField
@@ -1669,18 +1688,22 @@ const Url = ({ url, id, mail, r, mi }) => {
                           name={"dob"}
                           onChange={handleChange}
                           onBlur={handleBlur}
+                          errors={formik.errors.dob}
+                          touched={formik.touched.dob}
                         />
 
                         <InputField
                           label={"Last four SSN digit"}
                           value={values.ssn}
-                          type={"number"}
+                          type={"text"}
                           placeholder={"Last four SSN digit"}
                           onChange={handleChange}
                           onBlur={handleBlur}
                           id={"validationCustom03"}
                           required={true}
                           name={"ssn"}
+                          errors={formik.errors.ssn}
+                          touched={formik.touched.ssn}
                         />
 
                         <InputField
