@@ -834,8 +834,8 @@ const Url = ({ url, id, mail, r, mi }) => {
 
   const submitData = (e, values, candidateData, token) => {
     createCandidate(candidateData, token);
-    // createCandidatebyFirstReference(references, token);
-    // createCandidatebySecondReference(references, token);
+    createCandidatebyFirstReference(references, token);
+    createCandidatebySecondReference(references, token);
     const dateofbith = moment(values.dob).format("MM/DD/YYYY");
     // console.log(values.dob);
     const inputDate = JSON.stringify(dateofbith);
