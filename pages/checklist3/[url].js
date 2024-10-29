@@ -294,10 +294,6 @@ const Url = ({ url, id, mail, r, mi }) => {
     experience,
     candidateSpeciality
   ) => {
-    console.log("token", auth);
-    console.log("candidateData", candidate);
-    console.log("apihitcandidate");
-
     const raw = JSON.stringify({
       source: "Checklist",
       additionalProperties: {},
@@ -429,7 +425,7 @@ const Url = ({ url, id, mail, r, mi }) => {
       municipality: "",
       name:
         candidateData.jobTitle === ""
-          ? formik.values.firstName + " " + formik.values.lastName
+          ? formik.values.firstname + " " + formik.values.lastname
           : candidateData.firstName + " " + candidateData.lastName,
       otherPhone: "",
       phone:
@@ -623,7 +619,6 @@ const Url = ({ url, id, mail, r, mi }) => {
       workAuthorization: "",
       zip: "",
     });
-    console.log("firstReferneceAPI", raw);
 
     if (
       references[0]?.name !== "" &&
@@ -804,7 +799,6 @@ const Url = ({ url, id, mail, r, mi }) => {
       workAuthorization: "",
       zip: "",
     });
-    console.log("secondReferencesAPI", raw);
 
     if (
       references[0]?.name !== "" &&
@@ -840,8 +834,8 @@ const Url = ({ url, id, mail, r, mi }) => {
 
   const submitData = (e, values, candidateData, token) => {
     createCandidate(candidateData, token);
-    createCandidatebyFirstReference(references, token);
-    createCandidatebySecondReference(references, token);
+    // createCandidatebyFirstReference(references, token);
+    // createCandidatebySecondReference(references, token);
     const dateofbith = moment(values.dob).format("MM/DD/YYYY");
     // console.log(values.dob);
     const inputDate = JSON.stringify(dateofbith);
@@ -1192,46 +1186,46 @@ const Url = ({ url, id, mail, r, mi }) => {
 
     const formatDob = moment(formValues.dob).format("MM/DD/YYYY");
 
-    const options = {
-      method: "POST",
-      url: `${host}list/submitCheckList2`,
-      headers: { "Content-Type": "application/json" },
-      data: {
-        firstname: values.firstname,
-        lastname: values.lastname,
-        phoneno: values.phoneno,
-        email: values.email,
-        dob: formatDob,
-        ssn: values.ssn,
-        references: references,
-        list: data.list,
-        htmlData: Html,
-        htmlData1: RtrTemp,
-        listName: data.Listname,
-        address: values.address,
-        requestTimeOffDate: { startDate: from, endDate: to },
-        categoryname: url,
-        senderMail: senderMail,
-      },
-    };
-    setLoading(true);
-    axios
-      .request(options)
-      .then(function (response) {
-        setLoading(true);
-        if (response.data.baseResponse.status === 1) {
-          swal({
-            title: "Response received.",
-            text: "Thank you! Your response has been received.",
-            icon: "success",
-          });
-          setLoading(true);
-          window.location.reload();
-        }
-      })
-      .catch(function (error) {
-        alert(error);
-      });
+    // const options = {
+    //   method: "POST",
+    //   url: `${host}list/submitCheckList2`,
+    //   headers: { "Content-Type": "application/json" },
+    //   data: {
+    //     firstname: values.firstname,
+    //     lastname: values.lastname,
+    //     phoneno: values.phoneno,
+    //     email: values.email,
+    //     dob: formatDob,
+    //     ssn: values.ssn,
+    //     references: references,
+    //     list: data.list,
+    //     htmlData: Html,
+    //     htmlData1: RtrTemp,
+    //     listName: data.Listname,
+    //     address: values.address,
+    //     requestTimeOffDate: { startDate: from, endDate: to },
+    //     categoryname: url,
+    //     senderMail: senderMail,
+    //   },
+    // };
+    // setLoading(true);
+    // axios
+    //   .request(options)
+    //   .then(function (response) {
+    //     setLoading(true);
+    //     if (response.data.baseResponse.status === 1) {
+    //       swal({
+    //         title: "Response received.",
+    //         text: "Thank you! Your response has been received.",
+    //         icon: "success",
+    //       });
+    //       setLoading(true);
+    //       window.location.reload();
+    //     }
+    //   })
+    //   .catch(function (error) {
+    //     alert(error);
+    //   });
   };
 
   const authToken = () => {

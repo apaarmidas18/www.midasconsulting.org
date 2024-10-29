@@ -395,7 +395,7 @@ const Url = ({ url, id, mail, r, mi }) => {
       municipality: "",
       name:
         candidateData.jobTitle === ""
-          ? formik.values.firstName + " " + formik.values.lastName
+          ? formik.values.firstname + " " + formik.values.lastname
           : candidateData.firstName + " " + candidateData.lastName,
       otherPhone: "",
       phone:
