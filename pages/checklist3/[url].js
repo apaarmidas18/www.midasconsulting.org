@@ -301,6 +301,7 @@ const Url = ({ url, id, mail, r, mi }) => {
     console.log("apihitcandidate");
 
     const raw = JSON.stringify({
+      source: "Checklist",
       additionalProperties: {},
       certifications: [{}],
       city: "",
@@ -486,6 +487,7 @@ const Url = ({ url, id, mail, r, mi }) => {
     candidateSpeciality
   ) => {
     const raw = JSON.stringify({
+      source: "Checklist",
       additionalProperties: {},
       certifications: [{}],
       city: "",
@@ -662,6 +664,7 @@ const Url = ({ url, id, mail, r, mi }) => {
     candidateSpeciality
   ) => {
     const raw = JSON.stringify({
+      source: "Checklist",
       additionalProperties: {},
       certifications: [{}],
       city: "",
