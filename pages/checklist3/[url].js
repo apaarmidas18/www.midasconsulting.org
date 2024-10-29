@@ -1186,46 +1186,46 @@ const Url = ({ url, id, mail, r, mi }) => {
 
     const formatDob = moment(formValues.dob).format("MM/DD/YYYY");
 
-    // const options = {
-    //   method: "POST",
-    //   url: `${host}list/submitCheckList2`,
-    //   headers: { "Content-Type": "application/json" },
-    //   data: {
-    //     firstname: values.firstname,
-    //     lastname: values.lastname,
-    //     phoneno: values.phoneno,
-    //     email: values.email,
-    //     dob: formatDob,
-    //     ssn: values.ssn,
-    //     references: references,
-    //     list: data.list,
-    //     htmlData: Html,
-    //     htmlData1: RtrTemp,
-    //     listName: data.Listname,
-    //     address: values.address,
-    //     requestTimeOffDate: { startDate: from, endDate: to },
-    //     categoryname: url,
-    //     senderMail: senderMail,
-    //   },
-    // };
-    // setLoading(true);
-    // axios
-    //   .request(options)
-    //   .then(function (response) {
-    //     setLoading(true);
-    //     if (response.data.baseResponse.status === 1) {
-    //       swal({
-    //         title: "Response received.",
-    //         text: "Thank you! Your response has been received.",
-    //         icon: "success",
-    //       });
-    //       setLoading(true);
-    //       window.location.reload();
-    //     }
-    //   })
-    //   .catch(function (error) {
-    //     alert(error);
-    //   });
+    const options = {
+      method: "POST",
+      url: `${host}list/submitCheckList2`,
+      headers: { "Content-Type": "application/json" },
+      data: {
+        firstname: values.firstname,
+        lastname: values.lastname,
+        phoneno: values.phoneno,
+        email: values.email,
+        dob: formatDob,
+        ssn: values.ssn,
+        references: references,
+        list: data.list,
+        htmlData: Html,
+        htmlData1: RtrTemp,
+        listName: data.Listname,
+        address: values.address,
+        requestTimeOffDate: { startDate: from, endDate: to },
+        categoryname: url,
+        senderMail: senderMail,
+      },
+    };
+    setLoading(true);
+    axios
+      .request(options)
+      .then(function (response) {
+        setLoading(true);
+        if (response.data.baseResponse.status === 1) {
+          swal({
+            title: "Response received.",
+            text: "Thank you! Your response has been received.",
+            icon: "success",
+          });
+          setLoading(true);
+          window.location.reload();
+        }
+      })
+      .catch(function (error) {
+        alert(error);
+      });
   };
 
   const authToken = () => {
