@@ -589,7 +589,11 @@ const Url = ({ url, id, mail, r, mi }) => {
     });
     console.log("firstReferneceAPI", raw);
 
-    if (candidateData.jobTitle === "") {
+    if (
+      references[0]?.name !== "" &&
+      references[0]?.phoneno !== "" &&
+      references[0]?.email !== ""
+    ) {
       try {
         const response = await fetch(
           "https://hrmsapi.midastech.org:8443/api/v1/candidateMidas/createCandidate",
@@ -766,7 +770,11 @@ const Url = ({ url, id, mail, r, mi }) => {
     });
     console.log("secondReferencesAPI", raw);
 
-    if (candidateData.jobTitle === "") {
+    if (
+      references[0]?.name !== "" &&
+      references[0]?.phoneno !== "" &&
+      references[0]?.email !== ""
+    ) {
       try {
         const response = await fetch(
           "https://hrmsapi.midastech.org:8443/api/v1/candidateMidas/createCandidate",
