@@ -71,6 +71,24 @@ const Url = ({ url, id, mail, r, mi }) => {
     },
   ]);
 
+  const [states, setStates] = useState([""]);
+
+  const handleAddState = () => {
+    event.preventDefault();
+    setStates([...states, ""]); // Adds a new state input
+  };
+
+  const handleRemoveState = (index) => {
+    const newStates = states.filter((_, i) => i !== index); // Removes the state input at the specified index
+    setStates(newStates);
+  };
+
+  const handleStateChange = (index, event) => {
+    const newStates = [...states];
+    newStates[index] = event.target.value; // Updates the value of the state input at the specified index
+    setStates(newStates);
+  };
+
   //Validation*************************************************
 
   const formik = useFormik({
@@ -285,6 +303,8 @@ const Url = ({ url, id, mail, r, mi }) => {
   const candidateSpeciality = speciality;
   const experience = totalExperience;
 
+  const checkliststate = states;
+
   const reference = references;
 
   const createCandidate = async (
@@ -292,8 +312,10 @@ const Url = ({ url, id, mail, r, mi }) => {
     values,
     auth,
     experience,
-    candidateSpeciality
+    
   ) => {
+    const candidateSpeciality = speciality;
+    const checkliststate = states;
     const raw = JSON.stringify({
       source: "Checklist",
       additionalProperties: {},
@@ -432,7 +454,7 @@ const Url = ({ url, id, mail, r, mi }) => {
         candidateData.jobTitle === ""
           ? formatToUSPhoneNumber(formik.values.phoneno)
           : candidateData.phone,
-      preferredCities: [""],
+      preferredCities: candidateData.jobTitle === "" ? checkliststate : [""],
       preferredDestinations: "",
       primarySpeciality: candidateSpeciality,
       profession: "",
@@ -445,8 +467,6 @@ const Url = ({ url, id, mail, r, mi }) => {
       workAuthorization: "",
       zip: "",
     });
-
-    console.log("firstbody", raw);
 
     try {
       const response = await fetch(
@@ -1626,6 +1646,68 @@ const Url = ({ url, id, mail, r, mi }) => {
                             />
                           </div>
                         ))}
+                      </div>
+
+                      <div class="form-group row mt-3 mb-3">
+                        <div className="col-md-11">
+                          <span
+                            className="btn  btn-danger"
+                            onChange={() => setActive(!active)}
+                          >
+                            3 Candidate Preferences
+                          </span>
+                        </div>
+                        <div className="col-md-11"></div>
+                      </div>
+                      <div className="prefereed-div">
+                        <div className="form-group">
+                          <div className="row">
+                            <div className="col-md-3">
+                              <h6>Speciality</h6>
+                              <input
+                                type="text"
+                                className="form-control"
+                                id="specialityrtr"
+                                placeholder="Speciality"
+                                value={speciality}
+                                onChange={(e) => setSpeciality(e.target.value)}
+                                required={true}
+                              />
+                            </div>
+
+                            <div className="col-md-3">
+                              <h6>States</h6>
+                              {states.map((state, index) => (
+                                <div key={index} className="input-group mb-3">
+                                  <input
+                                    type="text"
+                                    className="form-control"
+                                    value={state}
+                                    onChange={(event) =>
+                                      handleStateChange(index, event)
+                                    }
+                                    placeholder={`State ${index + 1}`}
+                                  />
+                                  <div className="input-group-append">
+                                    <button
+                                      className="btn btn-danger"
+                                      onClick={() => handleRemoveState(index)}
+                                      disabled={states.length === 1}
+                                    >
+                                      <i className="fas fa-minus"></i>{" "}
+                                    </button>
+                                  </div>
+                                </div>
+                              ))}
+                              <button
+                                className="btn btn-success"
+                                onClick={handleAddState}
+                              >
+                                <i className="fas fa-plus"></i>{" "}
+                              </button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
                       <div class="form-group row mt-3 ">
