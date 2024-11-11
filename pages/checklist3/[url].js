@@ -451,7 +451,7 @@ const Url = ({ url, id, mail, r, mi }) => {
       otherPhone: "",
       phone:
         candidateData.jobTitle === ""
-          ? formatToUSPhoneNumber(formik.values.phoneno)
+          ? formik.values.phoneno
           : candidateData.phone,
       preferredCities: candidateData.jobTitle === "" ? checkliststate : [""],
       preferredDestinations: "",
@@ -624,7 +624,7 @@ const Url = ({ url, id, mail, r, mi }) => {
       municipality: "",
       name: reference[0].name,
       otherPhone: "",
-      phone: formatToUSPhoneNumber(reference[0].phoneno),
+      phone: reference[0].phoneno,
       preferredCities: [""],
       preferredDestinations: "",
       primarySpeciality: candidateSpeciality,
@@ -804,7 +804,7 @@ const Url = ({ url, id, mail, r, mi }) => {
       municipality: "",
       name: reference[1].name,
       otherPhone: "",
-      phone: formatToUSPhoneNumber(reference[1].phoneno),
+      phone: reference[1].phoneno,
       preferredCities: [""],
       preferredDestinations: "",
       primarySpeciality: candidateSpeciality,
@@ -1237,7 +1237,7 @@ const Url = ({ url, id, mail, r, mi }) => {
       data: {
         firstname: values.firstname,
         lastname: values.lastname,
-        phoneno: formatToUSPhoneNumber(values.phoneno),
+        phoneno: values.phoneno,
         email: values.email,
         dob: formatDob,
         ssn: values.ssn,
