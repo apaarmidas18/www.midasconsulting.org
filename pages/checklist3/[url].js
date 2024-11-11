@@ -451,7 +451,7 @@ const Url = ({ url, id, mail, r, mi }) => {
       otherPhone: "",
       phone:
         candidateData.jobTitle === ""
-          ? formik.values.phoneno
+          ? formatToUSPhoneNumber(formik.values.phoneno)
           : candidateData.phone,
       preferredCities: candidateData.jobTitle === "" ? checkliststate : [""],
       preferredDestinations: "",
@@ -624,7 +624,7 @@ const Url = ({ url, id, mail, r, mi }) => {
       municipality: "",
       name: reference[0].name,
       otherPhone: "",
-      phone: reference[0].phoneno,
+      phone: formatToUSPhoneNumber(reference[0].phoneno),
       preferredCities: [""],
       preferredDestinations: "",
       primarySpeciality: candidateSpeciality,
@@ -804,7 +804,7 @@ const Url = ({ url, id, mail, r, mi }) => {
       municipality: "",
       name: reference[1].name,
       otherPhone: "",
-      phone: reference[1].phoneno,
+      phone: formatToUSPhoneNumber(reference[1].phoneno),
       preferredCities: [""],
       preferredDestinations: "",
       primarySpeciality: candidateSpeciality,
@@ -850,6 +850,31 @@ const Url = ({ url, id, mail, r, mi }) => {
       console.log("Job title is not empty, API call skipped.");
     }
   };
+
+  function formatToUSPhoneNumber(phone) {
+    // Remove any non-numeric characters
+    const cleaned = ("" + phone).replace(/\D/g, "");
+
+    // Format based on the length of the cleaned number
+    if (cleaned.length === 10) {
+      // Format as (XXX) XXX-XXXX
+      return `(${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)}-${cleaned.slice(
+        6
+      )}`;
+    } else if (cleaned.length === 11 && cleaned.startsWith("1")) {
+      // Format as +1 (XXX) XXX-XXXX
+      return `+1 (${cleaned.slice(1, 4)}) ${cleaned.slice(
+        4,
+        7
+      )}-${cleaned.slice(7)}`;
+    } else if (cleaned.length === 7) {
+      // Format as XXX-XXXX for 7-digit numbers
+      return `${cleaned.slice(0, 3)}-${cleaned.slice(3)}`;
+    }
+
+    // Return the original input if it doesn't match common US phone number lengths
+    return phone;
+  }
 
   const submitData = (e, values, candidateData, token) => {
     createCandidate(candidateData, token);
@@ -1212,7 +1237,7 @@ const Url = ({ url, id, mail, r, mi }) => {
       data: {
         firstname: values.firstname,
         lastname: values.lastname,
-        phoneno: values.phoneno,
+        phoneno: formatToUSPhoneNumber(values.phoneno),
         email: values.email,
         dob: formatDob,
         ssn: values.ssn,
@@ -1270,6 +1295,14 @@ const Url = ({ url, id, mail, r, mi }) => {
   useEffect(() => {
     authToken();
   }, []);
+
+  //   useEffect(()=>{
+  //     setPhoneUS(formatToUSPhoneNumber(formik.values.phoneno))
+  //   },[formik.values.phoneno])
+
+  //   useEffect(()=>{
+  //     formik.setFieldValue("phoneno",phoneus)
+  //   },[phoneus])
 
   const handleReferences = (e, index) => {
     e.preventDefault();
