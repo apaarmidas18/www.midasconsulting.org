@@ -212,7 +212,6 @@ const Url = ({ url, id, mail, r, mi }) => {
 
   // console.log("local", localStorage.getItem("authUser"));
 
-  //Validation*************************************************
   const newDate = moment().tz("US/Central").format("MM-DD-YYYY");
 
   const from =
