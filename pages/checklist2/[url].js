@@ -1580,7 +1580,7 @@ const Url = ({ url, id, mail, r, mi }) => {
                             <InputField
                               label={"Referre's E-mail"}
                               value={item.email}
-                              type={"text"}
+                              type={"email"}
                               placeholder={"Enter Referre's E-mail"}
                               onChange={(e) => handleReferences(e, index)}
                               id={"validationCustom03"}
@@ -2627,7 +2627,7 @@ const Url = ({ url, id, mail, r, mi }) => {
                             <InputField
                               label={"Enter Referre's E-mail"}
                               value={item.email}
-                              type={"text"}
+                              type={"email"}
                               placeholder={"Enter Referre's E-mail"}
                               onChange={(e) => handleReferences(e, index)}
                               id={"validationCustom03"}

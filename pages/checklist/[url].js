@@ -721,7 +721,7 @@ const Url = ({ url }) => {
                           <InputField
                             label={"Referre's E-mail"}
                             value={item.email}
-                            type={"text"}
+                            type={"email"}
                             placeholder={"Enter Referre's E-mail"}
                             onChange={(e) => handleReferences(e, index)}
                             id={"validationCustom03"}

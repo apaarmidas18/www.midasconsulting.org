@@ -306,13 +306,7 @@ const Url = ({ url, id, mail, r, mi }) => {
 
   const reference = references;
 
-  const createCandidate = async (
-    candidate,
-    values,
-    auth,
-    experience,
-    
-  ) => {
+  const createCandidate = async (candidate, values, auth, experience) => {
     const candidateSpeciality = speciality;
     const checkliststate = states;
     const raw = JSON.stringify({
@@ -1636,7 +1630,7 @@ const Url = ({ url, id, mail, r, mi }) => {
                             <InputField
                               label={"Referre's E-mail"}
                               value={item.email}
-                              type={"text"}
+                              type={"email"}
                               placeholder={"Enter Referre's E-mail"}
                               onChange={(e) => handleReferences(e, index)}
                               id={"validationCustom03"}
@@ -2672,7 +2666,7 @@ const Url = ({ url, id, mail, r, mi }) => {
                             <InputField
                               label={"Enter Referre's E-mail"}
                               value={item.email}
-                              type={"text"}
+                              type={"email"}
                               placeholder={"Enter Referre's E-mail"}
                               onChange={(e) => handleReferences(e, index)}
                               id={"validationCustom03"}
